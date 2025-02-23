@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'DripOctoper';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Drip Octoper'), 
+         url('../../assets/fonts/name-font.ttf') format('truetype');
+}
