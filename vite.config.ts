@@ -13,6 +13,10 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  build: {
+    outDir: "dist",
+    assetsDir: "assets", // Ensure assets are properly placed
+  },
   css: {
     postcss: {},
   },
