@@ -6,7 +6,7 @@ const Experience: React.FC = () => {
     <div className="timeline">
       <div className="outer">
         <div className="vj-pf-exp-card before:text-amber-700 dark:before:text-amber-500">
-          <div className="info bg-gray-200 dark:bg-zinc-800 border border-[#c5c5c5] dark:border-zinc-600">
+          <div className="exp-info bg-gray-200 dark:bg-zinc-800 border border-[#c5c5c5] dark:border-zinc-600">
             <h3 className="title text-base azure-icon text-amber-700 dark:text-amber-500 font-bold">
               Azure Soft Tech Solutions
             </h3>
@@ -28,7 +28,7 @@ const Experience: React.FC = () => {
           </div>
         </div>
         <div className="vj-pf-exp-card before:text-amber-700 dark:before:text-amber-500">
-          <div className="info bg-gray-200 dark:bg-zinc-800 border border-[#c5c5c5] dark:border-zinc-600">
+          <div className="exp-info bg-gray-200 dark:bg-zinc-800 border border-[#c5c5c5] dark:border-zinc-600">
             <h3 className="title ramsol-icon text-amber-700 dark:text-amber-500 font-bold">
               RAMSOL PVT LTD
             </h3>
@@ -51,7 +51,7 @@ const Experience: React.FC = () => {
           </div>
         </div>
         <div className="vj-pf-exp-card before:text-amber-700 dark:before:text-amber-500">
-          <div className="info bg-gray-200 dark:bg-zinc-800 border border-[#c5c5c5] dark:border-zinc-600">
+          <div className="exp-info bg-gray-200 dark:bg-zinc-800 border border-[#c5c5c5] dark:border-zinc-600">
             <h3 className="title infoapto-icon text-amber-700 dark:text-amber-500 font-bold">
               Infoapto Technologies
             </h3>
@@ -80,7 +80,7 @@ const Experience: React.FC = () => {
           </div>
         </div>
         <div className="vj-pf-exp-card before:text-amber-700 dark:before:text-amber-500">
-          <div className="info bg-gray-200 dark:bg-zinc-800 border border-[#c5c5c5] dark:border-zinc-600">
+          <div className="exp-info bg-gray-200 dark:bg-zinc-800 border border-[#c5c5c5] dark:border-zinc-600">
             <h3 className="title next-company-icon text-amber-700 dark:text-amber-500 font-bold">
               May Be Situation Decide?
             </h3>

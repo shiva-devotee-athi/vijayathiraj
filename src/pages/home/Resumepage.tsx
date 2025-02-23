@@ -24,7 +24,7 @@ const Resumepage: React.FC = () => {
               Resume
             </h1>
             <h2 className="mb-4 text-black dark:text-white">Resume</h2>
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-600 dark:text-white/45 mt-4">
               A small river named Duden flows by their place and supplies it
               with the necessary regelialia. It is a paradisematic country, in
               which roasted parts of sentences fly into your mouth.

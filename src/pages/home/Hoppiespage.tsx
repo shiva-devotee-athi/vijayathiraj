@@ -120,7 +120,7 @@ const Hoppiespage: React.FC = () => {
             Hoppies
           </h1>
           <h2 className="mb-4 text-black dark:text-white">Happiness</h2>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-600 dark:text-white/45 mt-4">
             Here, you can explore the various projects and code repositories
             I've been working on. As a passionate developer, I'm constantly
             striving to learn and create new software solutions. Feel free to

@@ -9,7 +9,7 @@ import HomeLayout from "./layout/home/HomeLayout.tsx";
 import Mainpage from "./pages/home/Mainpage.tsx";
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/vijayathiraj">
     <Routes>
       <Route element={<HomeLayout />}>
         <Route index element={<Mainpage />} />

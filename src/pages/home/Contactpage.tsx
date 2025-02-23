@@ -15,7 +15,7 @@ const Contactpage: React.FC = () => {
             Contact
           </h1>
           <h2 className="mb-4 text-black dark:text-white">Contact Me</h2>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-600 dark:text-white/45 mt-4">
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia
           </p>
@@ -24,7 +24,7 @@ const Contactpage: React.FC = () => {
         {/* Left Column */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           <div className="lg:col-span-5 col-span-12 gap-8">
-            <div className="bg-white dark:bg-[#1d1e22] dark:text-gray-400 p-6 rounded-lg shadow-lg w-full info">
+            <div className="bg-white dark:bg-[#1d1e22] dark:text-gray-400 px-2 py-4 sm:px-8 sm:py-8 rounded-lg shadow-lg w-full info">
               <div className=" flex items-center vj-pf-contact-details">
                 <LuMapPin className="w-8 h-8 text-gray-800 dark:text-amber-500 contact-icon" />
                 <h4 className="text-lg font-bold text-amber-600 dark:text-amber-500">Location:</h4>
@@ -63,7 +63,7 @@ const Contactpage: React.FC = () => {
           <div className="lg:col-span-7 col-span-12 gap-8">
             <form
               id="contact-form"
-              className="w-full h-full bg-white dark:bg-[#1d1e22] p-6 shadow-lg rounded-lg php-email-forms"
+              className="w-full h-full bg-white dark:bg-[#1d1e22] px-2 py-4 sm:px-8 sm:py-8 shadow-lg rounded-lg php-email-forms"
             >
               <div className="flex">
                 <h3 className="text-lg lg:text-2xl text-gray-800 dark:text-white">

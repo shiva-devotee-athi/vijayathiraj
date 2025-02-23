@@ -39,7 +39,7 @@ const educationDetails = [
 function Educationpage() {
   // const [tags,setTags]= useState<string[]>([])
   return (
-    <div className="bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-md p-4  relative">
+    <div className="bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-md pt-2 p-0 md:p-4 relative">
       <TabsProvider defaultValue={educationDetails[0].title}>
         <div className="flex justify-center my-2">
           <div className="flex items-center w-fit dark:bg-[#1d2025] bg-gray-200 p-1 text-black rounded-md border">
@@ -58,7 +58,7 @@ function Educationpage() {
 
         {educationDetails.map((item, index) => (
           <TabsContent key={index} value={item.title} className="p-0">
-            <div className="bg-white dark:bg-[#1d1e22] p-6 rounded-lg shadow-lg flex flex-col item-start md:items-end md:flex-row">
+            <div className="bg-white dark:bg-[#1d1e22] px-0 py-4 md:px-6 md:py-6 rounded-lg shadow-lg flex flex-col item-start md:items-end md:flex-row">
               <img
                 className="object-contain w-full rounded-t-lg h-48 md:h-auto md:w-48 lg:w-72 md:rounded-none md:rounded-s-lg"
                 src={item.imgSrc}

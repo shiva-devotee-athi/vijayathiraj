@@ -11,7 +11,7 @@ const WorkExperiencepage: React.FC = () => {
         <div className="heading-section mb-12 text-center">
           <h1 className="big big-2 text-black/20 dark:text-white/10">Work</h1>
           <h2 className="mb-4 text-black dark:text-white">Experience</h2>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-600 dark:text-white/45 mt-4">
             Throughout my career, I've had the privilege of working with two
             outstanding companies, each contributing to my growth and expertise
             in different ways. Here's a glimpse into my journey with these
