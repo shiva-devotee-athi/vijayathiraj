@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import personalDp from "@/assets/images/personal/personal-dp.jpg";
+import sampleResumeFile from "@/assets/files/resume_sample.pdf";
 
 const Aboutpage: React.FC = () => {
   return (
@@ -39,13 +40,13 @@ const Aboutpage: React.FC = () => {
                   About
                 </h1>
                 <h2 className="mb-4 text-black dark:text-white">About Me</h2>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-white/45">
                   Passionate web developer skilled in HTML, CSS, JavaScript,
                   Node.js, React.js, and Next.js. Dedicated to creating seamless
                   and engaging user experiences through high-quality web
                   solutions.
                 </p>
-                <p className="text-gray-600 mt-2">
+                <p className="text-gray-600 dark:text-white/45 mt-2">
                   Explore my portfolio to see samples of my work that highlight
                   my UI design standards and attention to detail.
                 </p>
@@ -114,7 +115,7 @@ const Aboutpage: React.FC = () => {
               {/* Counter Section */}
               <div className="mt-8 flex items-center space-x-4 counter-wrap">
                 <div className="text-4xl font-bold text-green-600 dark:text-green-500">
-                  120
+                  12
                 </div>
                 <span className="text-gray-600 dark:text-gray-300">
                   Projects Completed
@@ -124,7 +125,9 @@ const Aboutpage: React.FC = () => {
               {/* Download CV Button */}
               <div className="mt-6">
                 <a
-                  href="#"
+                  href={sampleResumeFile}
+                  target="_blank"
+                  download={true}
                   className="btn-main bg-btn2 lnk py-3 px-6 rounded-md"
                 >
                   Download CV

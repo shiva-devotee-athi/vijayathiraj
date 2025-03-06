@@ -69,7 +69,7 @@ $text_color_white_shade: rgba(255, 255, 255, 0.9);
   .obito_uchicha_container {
     &::after {
       content: "";
-      background: url("../../assets/images/hero/sharingan.png");
+      background: url("../../assets/images/hero/sharingan.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -87,7 +87,6 @@ $text_color_white_shade: rgba(255, 255, 255, 0.9);
     }
     &::before {
       content: "";
-      // background: url(/src/assets/images/hero/blackhole.jpg);
       background: url(/src/assets/images/hero/hypnosi2.png);
       background-position: center;
       background-repeat: no-repeat;
@@ -291,8 +290,8 @@ $text_color_white_shade: rgba(255, 255, 255, 0.9);
 //about page
 .vj-pf-about {
   .mask1 {
-    -webkit-mask-image: url(../../assets//images//icons/circle-mask.png);
-    mask-image: url(../../assets//images//icons/circle-mask.png);
+    -webkit-mask-image: url(../../assets//images//icons/sqare-mask-1.png);
+    mask-image: url(../../assets//images//icons/sqare-mask-1.png);
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
@@ -634,6 +633,7 @@ $text_color_white_shade: rgba(255, 255, 255, 0.9);
     font-size: 40px;
     font-weight: 900;
     text-shadow: -3px 3px rgba(20, 20, 20, 0.9);
+    color: white;
   }
 }
 
@@ -708,33 +708,6 @@ button {
   }
 }
 
-// skill card
-.tamil-skill-quote {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: -14px;
-    width: 18px;
-    height: 18px;
-    background: url(../../assets/images/icons/double-quotes.svg) center
-      no-repeat;
-    background-size: contain;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 6px;
-    right: -18px;
-    width: 18px;
-    height: 18px;
-    background: url(../../assets/images/icons/double-quotes.svg) center
-      no-repeat;
-    background-size: contain;
-    transform: rotate(180deg);
-  }
-}
 
 .vj-pf-skill-card {
   position: relative;
@@ -995,13 +968,6 @@ button {
   .vj-pf-list-boxs {
     .vj-pf-card {
       width: 95%;
-    }
-  }
-  .tamil-skill-quote {
-    position: relative;
-    ::after {
-      position: absolute;
-      right: 6px !important;
     }
   }
 }

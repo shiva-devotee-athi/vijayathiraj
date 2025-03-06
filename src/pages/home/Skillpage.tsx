@@ -7,8 +7,9 @@ import js_logo from "@/assets/images/skills/javascript.svg";
 import react_js_logo from "@/assets/images/skills/react-js.svg";
 import next_js_logo from "@/assets/images/skills/next-js.svg";
 import electron_js_logo from "@/assets/images/skills/electron-js.svg";
-import useDarkMode from "@/hooks/useDarkMode";
 import { motion } from "framer-motion";
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
+import { useTheme } from "@/context/ThemeContext";
 
 const skillCards = [
   {
@@ -70,7 +71,7 @@ const skillCards = [
 ];
 
 const Skillpage: React.FC = () => {
-  const [theme] = useDarkMode();
+  const { theme } = useTheme();
 
   const generateStars = (rating: number) => {
     const fullStars = Math.floor(rating);
@@ -110,10 +111,19 @@ const Skillpage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center gap-2 mb-6">
-          <p className="text-black dark:text-white/70 text-2xl font-bold">One of My Fav Quote</p>
+          <p className="text-black dark:text-white/70 text-2xl font-bold">
+            One of My Fav Quote
+          </p>
           <div>
             <p className="text-gray-600">
-              <strong className="text-gray-600 dark:text-white/50">Tamil Quote:</strong> <span className="text-amber-700 dark:text-amber-500 italic tamil-skill-quote text-base lg:text-lg ms-2 w-full">கற்றது கைமண் அளவு, கல்லாதது உலகளவு.</span> 
+              <strong className="text-gray-600 dark:text-white/50">
+                Tamil Quote:
+              </strong>{" "}
+              <span className="relative text-amber-700 dark:text-amber-500 italic tamil-skill-quote text-base lg:text-lg ms-2 w-full">
+                <RiDoubleQuotesL className="absolute -left-4 -top-1.5 inline" />
+                கற்றது கைமண் அளவு, கல்லாதது உலகளவு.
+                <RiDoubleQuotesR className="absolute -right-4 inline" />
+              </span>
             </p>
             <p className="text-gray-600 dark:text-white/50">
               <strong>Translation:</strong> What you have learned is but a

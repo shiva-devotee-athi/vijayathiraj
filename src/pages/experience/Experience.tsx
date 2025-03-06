@@ -82,7 +82,7 @@ const Experience: React.FC = () => {
         <div className="vj-pf-exp-card before:text-amber-700 dark:before:text-amber-500">
           <div className="exp-info bg-gray-200 dark:bg-zinc-800 border border-[#c5c5c5] dark:border-zinc-600">
             <h3 className="title next-company-icon text-amber-700 dark:text-amber-500 font-bold">
-              May Be Situation Decide?
+              Wherever the wind takes me...
             </h3>
             <p className="text-justify text-zinc-700 dark:text-zinc-400">
               The future is fluid. Each act, each decision, and each development

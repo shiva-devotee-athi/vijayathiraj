@@ -18,7 +18,7 @@ const Footer:React.FC = () => {
             <div className="px-5 py-2" key={item.href}>
               <a
                 href={item.href}
-                className="text-base leading-6 dark:text-gray-500 dark:hover:text-gray-100"
+                className="text-base leading-6 text-gray-300 hover:text-gray-400 dark:text-gray-500 dark:hover:text-gray-100"
               >
                 {item.title}
               </a>

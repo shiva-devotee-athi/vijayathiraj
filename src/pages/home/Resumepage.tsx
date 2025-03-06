@@ -1,6 +1,7 @@
 import React from "react";
 import Educationpage from "./Educationpage";
 import { motion } from "framer-motion";
+import sampleResumeFile from "@/assets/files/resume_sample.pdf"
 
 const Resumepage: React.FC = () => {
   return (
@@ -47,7 +48,9 @@ const Resumepage: React.FC = () => {
         >
           <div className="flex justify-center mt-12">
             <a
-              href="https://www.mindnotix.com/get-quote"
+              href={sampleResumeFile}
+              target="_blank"
+              download={true}
               className="btn-main bg-btn2 lnk py-4 px-8 rounded-full"
             >
               Download CV

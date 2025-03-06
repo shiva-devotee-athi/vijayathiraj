@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const stats = [
-  { number: 100, label: "Awards" },
-  { number: 1200, label: "Complete Projects" },
-  { number: 1200, label: "Happy Customers" },
-  { number: 500, label: "Cups of Coffee" },
+  { number: 10, label: "Awards" },
+  { number: 12, label: "Complete Projects" },
+  { number: 0, label: "Happy Customers" },
+  { number: 0, label: "Cups of Coffee" },
 ];
 const Statisticpage: React.FC = () => {
   // const count = useMotionValue(0);
@@ -37,10 +37,12 @@ const Statisticpage: React.FC = () => {
                 <div className="block-18 dark:bg-[#191919] bg-amber-100 border-b-8  border-amber-500 dark:border-gray-500">
                   <div className="text text-center">
                     <strong className="number text-black dark:text-[#ffbd39]">
-                    <motion.h1>{stat.number.toLocaleString()}</motion.h1>
+                      <motion.h1>{stat.number.toLocaleString()}</motion.h1>
                       {/* {stat.number.toLocaleString()} */}
                     </strong>
-                    <span className="text-[#414141cc] dark:text-gray-200">{stat.label}</span>
+                    <span className="text-[#414141cc] dark:text-gray-200">
+                      {stat.label}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -56,9 +58,9 @@ const Statisticpage: React.FC = () => {
                 I'm <span className="text-amber-500">Available</span> for
                 freelancing
               </h2>
-              <p className="mb-6">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
+              <p className="mb-6 text-white">
+                Let's collaborate! I'm available for freelance projects and
+                excited to contribute.
               </p>
               <p className="mb-0">
                 <a
