@@ -201,7 +201,7 @@ const Header: React.FC = () => {
                     href={link.href}
                     className={`nav-link ${
                       index == 0 ? "active focus:bg-amber-100" : ""
-                    } text-black dark:text-white dark:hover:text-white/75 outline-none focus:bg-amber-100`}
+                    } text-black dark:text-white dark:hover:text-white/75 outline-none`}
                   >
                     <span>{link.title}</span>
                   </a>
