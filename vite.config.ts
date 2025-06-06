@@ -16,6 +16,10 @@ export default defineConfig({
   build: {
     outDir: "dist",
     assetsDir: "assets", // Ensure assets are properly placed
+    minify: 'esbuild',
+    sourcemap: true, 
+    // sourcemap: false,
+    // reportCompressedSize: true,
   },
   css: {
     postcss: {},
@@ -24,4 +28,5 @@ export default defineConfig({
     port: 5173, // Change if needed
     host: "localhost",
   },
+  
 });

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "@/styles/scss/homepage.scss";
-import hero_img from "@/assets/images/hero/Tobi.png";
+import hero_img from "@/assets/images/hero/tobi.webp";
 
 import { motion } from "framer-motion";
 import clsx from "clsx";
@@ -93,6 +93,7 @@ const Heropage: React.FC = () => {
         >
           <img
             src={hero_img}
+            loading="eager"
             className="obito_uchicha"
             width="100%"
             alt="hero-img"
@@ -101,11 +102,13 @@ const Heropage: React.FC = () => {
       </div>
 
       <div className="max-w-screen-sm absolute bottom-0 left-0 right-0 mx-auto flex justify-center">
-        <label className="vj-pf-nav-switch">
+        <label htmlFor="kamui-toggle" className="vj-pf-nav-switch">
           <input
+            id="kamui-toggle"
             type="checkbox"
             className="vj-pf-nav-switch-chk"
             checked={isKamui}
+            aria-label="Kamui Activator"
             onChange={handleIllusion}
           />
           <span className="vj-pf-nav-switch-slider"></span>

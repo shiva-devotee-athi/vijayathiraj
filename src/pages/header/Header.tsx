@@ -60,14 +60,13 @@ const Header: React.FC = () => {
     };
   }, []);
 
-
-  useEffect(()=>{
+  useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-    }else{
+    } else {
       document.body.style.overflow = "auto";
     }
-  },[isOpen])
+  }, [isOpen]);
 
   const handleScrollWindow = () => {
     const { scrollY } = window;
@@ -82,7 +81,6 @@ const Header: React.FC = () => {
       setIsAwake(false);
     }
   };
-  
 
   const togglePlay = () => {
     setPlaySong(!playSong);
@@ -139,6 +137,7 @@ const Header: React.FC = () => {
       >
         <div className="container flex justify-between items-center">
           <a
+            aria-label="logo text"
             className="navbar-brand text-amber-700 dark:text-amber-500 text-xl font-bold"
             href="#hero"
           >
@@ -156,7 +155,7 @@ const Header: React.FC = () => {
                   variants={sidebar}
                 >
                   <div className="absolute bottom-0 px-6 pb-6">
-                    <label className="switch">
+                    <label htmlFor="theme-toggle" className="switch">
                       <span className="sun">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -177,6 +176,8 @@ const Header: React.FC = () => {
                         </svg>
                       </span>
                       <input
+                        id="theme-toggle"
+                        aria-label="Toggle Dark Mode"
                         type="checkbox"
                         className="input"
                         checked={theme === "dark"}
@@ -198,6 +199,7 @@ const Header: React.FC = () => {
               {headerLinks.map((link, index) => (
                 <li key={link.href} className="nav-item">
                   <a
+                    aria-label="Nav Link"
                     href={link.href}
                     className={`nav-link ${
                       index == 0 ? "active focus:bg-amber-100" : ""
@@ -208,7 +210,7 @@ const Header: React.FC = () => {
                 </li>
               ))}
             </ul>
-            <label className="switch">
+            <label htmlFor="theme-toggle" className="switch">
               <span className="sun">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <g fill="#ffd43b">
@@ -223,6 +225,8 @@ const Header: React.FC = () => {
                 </svg>
               </span>
               <input
+                id="theme-toggle"
+                aria-label="Toggle Dark Mode"
                 type="checkbox"
                 className="input"
                 checked={theme === "dark"}
@@ -284,8 +288,17 @@ const MusicVoulme = ({
   }, [playSong]);
 
   return (
-    <label className="vj_pf_vol_container !absolute top-[34px] right-[90px] lg:right-[75px]">
-      <input checked={playSong} type="checkbox" onChange={togglePlay} />
+    <label
+      htmlFor="play-music"
+      className="vj_pf_vol_container !absolute top-[34px] right-[90px] lg:right-[75px]"
+    >
+      <input
+        id="play-music"
+        aria-label={playSong ? "Mute background music" : "Play background music"}
+        checked={playSong}
+        type="checkbox"
+        onChange={togglePlay}
+      />
       <svg
         viewBox="0 0 576 512"
         height="1em"

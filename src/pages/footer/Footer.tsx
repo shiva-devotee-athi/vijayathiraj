@@ -9,7 +9,7 @@ const footerLinks = [
   { href: "#projects-section", title: "Projects" },
   { href: "#contact-section", title: "Contact" },
 ];
-const Footer:React.FC = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-950 dark:bg-transparent">
       <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
@@ -18,7 +18,7 @@ const Footer:React.FC = () => {
             <div className="px-5 py-2" key={item.href}>
               <a
                 href={item.href}
-                className="text-base leading-6 text-gray-300 hover:text-gray-400 dark:text-gray-500 dark:hover:text-gray-100"
+                className="text-base leading-6 text-gray-300 hover:text-gray-400 dark:text-gray-300 dark:hover:text-white"
               >
                 {item.title}
               </a>
@@ -27,6 +27,7 @@ const Footer:React.FC = () => {
         </nav>
         <div className="flex justify-center mt-8 space-x-6">
           <a
+            aria-label="Twitter Profile"
             href="https://www.facebook.com/athi.vignesh.58/"
             className="text-gray-400 hover:text-gray-500"
           >
@@ -34,6 +35,7 @@ const Footer:React.FC = () => {
             <FaFacebook className="w-6 h-6" />
           </a>
           <a
+            aria-label="Instagram Profile"
             href="https://www.instagram.com/shiva_devotee_athi"
             className="text-gray-400 hover:text-gray-500"
           >
@@ -41,18 +43,21 @@ const Footer:React.FC = () => {
             <FaInstagram className="w-6 h-6" />
           </a>
           <a
+            aria-label="Twitter Profile"
             href="https://twitter.com/shiva_devotee"
             className="text-gray-400 hover:text-gray-500"
           >
             <FaXTwitter className="w-6 h-6" />
           </a>
           <a
+            aria-label="Github Profile"
             href="https://github.com/shiva-devotee-athi"
             className="text-gray-400 hover:text-gray-500"
           >
             <FaGithub className="w-6 h-6" />
           </a>
           <a
+            aria-label="Linkedin Profile"
             href="https://www.linkedin.com/mwlite/in/vijayathiraj-s-519966210"
             className="text-gray-400 hover:text-gray-500"
           >

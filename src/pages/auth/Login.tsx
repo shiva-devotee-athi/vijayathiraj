@@ -62,6 +62,7 @@ const Login = () => {
           >
             I agree with the{" "}
             <a
+              aria-label="terms and conditions"
               href="#"
               className="text-blue-600 hover:underline dark:text-blue-500"
             >

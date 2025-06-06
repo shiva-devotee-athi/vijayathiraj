@@ -252,6 +252,7 @@ $text_color_white_shade: rgba(255, 255, 255, 0.9);
     right: 0;
     position: absolute;
     z-index: 1;
+    opacity: 0.2;
   }
   h2 {
     font-size: 50px;
@@ -290,8 +291,8 @@ $text_color_white_shade: rgba(255, 255, 255, 0.9);
 //about page
 .vj-pf-about {
   .mask1 {
-    -webkit-mask-image: url(../../assets//images//icons/sqare-mask-1.png);
-    mask-image: url(../../assets//images//icons/sqare-mask-1.png);
+    -webkit-mask-image: url(../../assets//images//icons/sqare-mask-1.webp);
+    mask-image: url(../../assets//images//icons/sqare-mask-1.webp);
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
@@ -610,7 +611,7 @@ $text_color_white_shade: rgba(255, 255, 255, 0.9);
 }
 
 .vj-pf-hireme {
-  background: url(/src/assets/images/banner/hokage_stone_faces.jpg)
+  background: url(/src/assets/images/banner/hokage_stone_faces.webp)
     rgb(135, 95, 95);
   z-index: 0;
   background-position-y: 20%;

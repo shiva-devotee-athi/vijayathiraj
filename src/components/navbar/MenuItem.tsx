@@ -36,21 +36,19 @@ export const MenuItem: React.FC<{ title: string; href: string }> = ({
       whileTap={{ scale: 0.95 }}
       className="vj_pf_mobile_nav_bar_ul_li"
     >
-      <a href={href} className="flex items-center gap-2 mb-2">
+      <a aria-label="naruto-seal-pointer" href={href} className="flex items-center gap-2 mb-2">
         <div className="icon-placeholder" style={style}>
           {theme === "light" ? (
             <img
               src={seal_png}
-              className="w-5 h-5"
+              className="w-5 h-5 object-contain"
               alt="seal logo"
-              width="100%"
             />
           ) : (
             <img
               src={seal_dark_png}
-              className="w-5 h-5"
+              className="w-5 h-5 object-contain"
               alt="seal logo"
-              width="100%"
             />
           )}
         </div>

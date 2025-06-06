@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import personalDp from "@/assets/images/personal/personal-dp.jpg";
+import personalDp from "@/assets/images/personal/personal-dp.webp";
 import sampleResumeFile from "@/assets/files/resume_sample.pdf";
 
 const Aboutpage: React.FC = () => {
@@ -25,21 +25,24 @@ const Aboutpage: React.FC = () => {
             <div className="">
               <div className="relative w-full h-96 md:h-auto">
                 <div className="absolute inset-0 rounded-lg"></div>
-                <div
-                  className="w-full h-full bg-cover bg-center rounded-lg mask1 "
-                >
-                  <img src={personalDp} alt="vijay personal dp" width="600" height="400"/>
-                </div>
+                <picture className="w-full h-full bg-cover bg-center rounded-lg mask1">
+                  <img
+                    src={personalDp}
+                    alt="vijay personal dp"
+                    width="600"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
 
             {/* Right Side - Text Content */}
             <div className=" md:col-span-1 lg:col-span-2 xl:col-span-3 pl-0 md:pl-12 pt-8 md:pt-0">
               <div className="pb-6 heading-section">
-                <h1 className="big big-2 text-black/20 dark:text-white/10">
+                <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">
                   About
                 </h1>
-                <h2 className="mb-4 text-black dark:text-white">About Me</h2>
+                <h2 className="mb-4 text-black dark:text-white relative z-1">About Me</h2>
                 <p className="text-gray-600 dark:text-white/45">
                   Passionate web developer skilled in HTML, CSS, JavaScript,
                   Node.js, React.js, and Next.js. Dedicated to creating seamless
@@ -125,6 +128,7 @@ const Aboutpage: React.FC = () => {
               {/* Download CV Button */}
               <div className="mt-6">
                 <a
+                  aria-label="Download CV"
                   href={sampleResumeFile}
                   target="_blank"
                   download={true}

@@ -1,7 +1,7 @@
 import React from "react";
 import Educationpage from "./Educationpage";
 import { motion } from "framer-motion";
-import sampleResumeFile from "@/assets/files/resume_sample.pdf"
+import sampleResumeFile from "@/assets/files/resume_sample.pdf";
 
 const Resumepage: React.FC = () => {
   return (
@@ -21,10 +21,10 @@ const Resumepage: React.FC = () => {
           }}
         >
           <div className="heading-section mb-12 text-center">
-            <h1 className="big big-2 text-black/20 dark:text-white/10">
+            <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">
               Resume
             </h1>
-            <h2 className="mb-4 text-black dark:text-white">Resume</h2>
+            <h2 className="mb-4 text-black dark:text-white relative z-1">Resume</h2>
             <p className="text-gray-600 dark:text-white/45 mt-4">
               A small river named Duden flows by their place and supplies it
               with the necessary regelialia. It is a paradisematic country, in
@@ -48,6 +48,7 @@ const Resumepage: React.FC = () => {
         >
           <div className="flex justify-center mt-12">
             <a
+              aria-label="Download Resume"
               href={sampleResumeFile}
               target="_blank"
               download={true}

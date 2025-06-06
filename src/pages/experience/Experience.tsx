@@ -10,9 +10,9 @@ const Experience: React.FC = () => {
             <h3 className="title text-base azure-icon text-amber-700 dark:text-amber-500 font-bold">
               Azure Soft Tech Solutions
             </h3>
-            <h5 className="font-medium text-gray-900 text-base dark:text-zinc-300">
+            <h4 className="font-medium text-gray-900 text-base dark:text-zinc-300">
               Software Associate
-            </h5>
+            </h4>
             <p className="text-justify text-base text-zinc-700 dark:text-zinc-400">
               During my tenure at Azure Soft Tech Solutions, I served as a
               Software Associate, contributing to the development of various
@@ -32,9 +32,9 @@ const Experience: React.FC = () => {
             <h3 className="title ramsol-icon text-amber-700 dark:text-amber-500 font-bold">
               RAMSOL PVT LTD
             </h3>
-            <h5 className="text-right font-medium text-gray-900 text-sm dark:text-zinc-300">
+            <h4 className="text-right font-medium text-gray-900 text-sm dark:text-zinc-300">
               Consultant Front-end Dev
-            </h5>
+            </h4>
             <p className="text-justify text-zinc-700 dark:text-zinc-400">
               Joining Ramsol Private Ltd as a Frontend Developer marked the next
               exciting chapter in my career. In this role, I took on the

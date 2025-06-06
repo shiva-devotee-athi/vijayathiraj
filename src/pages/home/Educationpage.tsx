@@ -1,7 +1,7 @@
 import { TabsBtn, TabsContent, TabsProvider } from "@/components/tabs/Tabs";
-import education_img_1 from "@/assets/images/education/edu_image_1.jpg";
-import education_img_2 from "@/assets/images/education/edu_image_2.jpg";
-import education_img_3 from "@/assets/images/education/edu_image_3.jpg";
+import education_img_1 from "@/assets/images/education/edu_image_1.webp";
+import education_img_2 from "@/assets/images/education/edu_image_2.webp";
+import education_img_3 from "@/assets/images/education/edu_image_3.webp";
 
 const educationDetails = [
   {
@@ -59,11 +59,14 @@ function Educationpage() {
         {educationDetails.map((item, index) => (
           <TabsContent key={index} value={item.title} className="p-0">
             <div className="bg-white dark:bg-[#1d1e22] px-0 py-4 md:px-6 md:py-6 rounded-lg shadow-lg flex flex-col item-start md:items-end md:flex-row">
-              <img
-                className="object-contain w-full rounded-t-lg h-48 md:h-auto md:w-48 lg:w-72 md:rounded-none md:rounded-s-lg"
-                src={item.imgSrc}
-                alt=""
-              />
+              <picture className="w-full h-full">
+                <img
+                  className="object-contain w-full rounded-t-lg h-48 md:h-auto md:w-48 lg:w-72 md:rounded-none md:rounded-s-lg"
+                  src={item.imgSrc}
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
               <div className="flex flex-col justify-between p-4 pb-0 leading-normal">
                 <span className="block text-amber-600 font-semibold">
                   {item.date}
