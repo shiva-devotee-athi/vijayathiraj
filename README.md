@@ -6,4 +6,4 @@ Passionate web developer skilled in HTML, CSS, JavaScript, Node.js, React.js, an
 
 ## GitHub User
 
-https://asset.cloudinary.com/deu93r3up/5f606211ab1212d85d131a34ca39a41a
+![image](https://github.com/user-attachments/assets/b4f850d6-8289-4f07-a190-e1c2c2cda854)
