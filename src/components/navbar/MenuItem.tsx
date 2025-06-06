@@ -53,7 +53,7 @@ export const MenuItem: React.FC<{ title: string; href: string }> = ({
           )}
         </div>
 
-        <div className="text-placeholder dark:text-white/80">{title}</div>
+        <div className="text-placeholder dark:text-white/80 leading-4.5">{title}</div>
       </a>
     </motion.li>
   );
