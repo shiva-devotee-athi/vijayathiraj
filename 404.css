@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --super-primary-color: #d3631b;
+  --eye-pupil-color: #d80000;
+  --bg-color: #fff;
+  --text-color: #000;
+  --fs-heading: 36px;
+  --fs-text: 26px;
+  --fs-button: 18px;
+  --fs-icon: 30px;
+  --pupil-size: 20px;
+  --eye-size: 80px;
+  --button-padding: 15px 30px;
+}
+@media only screen and (max-width: 567px) {
+  :root {
+    --fs-heading: 30px;
+    --fs-text: 22px;
+    --fs-button: 16px;
+    --fs-icon: 24px;
+    --button-padding: 12px 24px;
+  }
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Fira Sans", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  text-align: center;
+}
+.error-page {
+  margin: auto;
+}
+.error-page__heading-title {
+  text-transform: capitalize;
+  font-size: var(--fs-heading);
+  font-weight: 500;
+  color: var(--super-primary-color);
+}
+.error-page__heading-desciption {
+  margin-top: 10px;
+  font-size: var(--fs-text);
+  font-weight: 200;
+}
+.error-page__button {
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid var(--super-primary-color);
+  font-size: var(--fs-button);
+  font-weight: 200;
+  padding: var(--button-padding);
+  border-radius: 15px;
+  box-shadow: 0px 7px 0px -2px var(--super-primary-color);
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+.error-page__button:hover {
+  box-shadow: none;
+  background-color: var(--super-primary-color);
+  color: #fff;
+}
+.eyes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.eye {
+  width: var(--eye-size);
+  height: var(--eye-size);
+  background-color: var(--super-primary-color);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 0;
+}
+.eye-background-container {
+  width: var(--eye-size);
+  height: var(--eye-size);
+  /* background-image: url("404-eye.jpg"); */
+  background-size: cover; /* or contain, or specific size */
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+.eye::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  z-index: 1;
+}
+.eye__pupil {
+  width: var(--pupil-size);
+  height: var(--pupil-size);
+  background-color: var(--eye-pupil-color);
+  border-radius: 50%;
+  animation: movePupil 2s infinite ease-in-out;
+  transform-origin: center center;
+  position: relative;
+  z-index: 1;
+  /* To reverse the animation of the right eye, uncomment this. */
+}
+@keyframes movePupil {
+  0%,
+  100% {
+    transform: translate(0px, -50px);
+  }
+  25% {
+    transform: translate(-20px, -50px);
+  }
+  50% {
+    transform: translate(20px, -60px);
+  }
+  75% {
+    transform: translate(-10px, -70px);
+  }
+}
+.color-switcher {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  background-color: transparent;
+  font-size: var(--fs-icon);
+  cursor: pointer;
+  color: var(--super-primary-color);
+  border: 0;
+}
