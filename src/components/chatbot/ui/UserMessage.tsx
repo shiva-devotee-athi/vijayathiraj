@@ -1,12 +1,14 @@
 import { CiUser } from "react-icons/ci";
 import { IBotmessage } from "../Chatbot";
 import { format, isToday, isYesterday } from "date-fns";
+import { useTranslation } from "react-i18next";
 
 export default function UserMessage({
   userMessage,
 }: {
   userMessage: IBotmessage;
 }) {
+  const { t } = useTranslation();
   function formatChatMessageTime(timestamp: string | number | Date) {
     const date = new Date(timestamp);
 
@@ -24,7 +26,7 @@ export default function UserMessage({
       <div className="flex flex-col items-end gap-1 w-full max-w-[320px]">
         <div className="flex items-center justify-end space-x-2 mr-2 rtl:space-x-reverse">
           <span className="text-sm font-semibold text-gray-900 dark:text-white">
-            Visitor
+            {t("Visitor")}
           </span>
           <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
             {formatChatMessageTime(userMessage.user.createdAt)}
@@ -32,11 +34,11 @@ export default function UserMessage({
         </div>
         <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-amber-600 rounded-s-xl rounded-br-xl dark:bg-amber-100 w-fit">
           <p className="text-sm font-normal text-gray-100 dark:text-black">
-            {userMessage.user.message}
+            {t(userMessage.user.message)}
           </p>
         </div>
         <span className="text-sm font-normal text-right text-gray-500 dark:text-gray-400">
-          {userMessage.user.status}
+          {t(userMessage.user.status)}
         </span>
       </div>
       <div className="flex justify-center p-1 w-6 h-6 bg-slate-800 rounded-full mr-2">

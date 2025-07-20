@@ -2,11 +2,13 @@ import React from "react";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { BsEnvelope } from "react-icons/bs";
 import { LuMapPin } from "react-icons/lu";
+import { useTranslation } from "react-i18next";
 
 const Contactpage: React.FC = () => {
   const dialNumber = (number: string) => {
     window.location.href = `tel:${number}`;
   };
+  const {t} = useTranslation()
   return (
     <section
       id="contact-section"
@@ -15,12 +17,11 @@ const Contactpage: React.FC = () => {
       <div className="container">
         <div className="heading-section mb-12 text-center">
           <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">
-            Contact
+            {t("Contact")}
           </h1>
-          <h2 className="mb-4 text-black dark:text-white relative z-1">Contact Me</h2>
+          <h2 className="mb-4 text-black dark:text-white relative z-1">{t("Contact Me")}</h2>
           <p className="text-gray-600 dark:text-white/45 mt-4">
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia
+            {t("Far far away, behind the word mountains, far from the countries Vokalia and Consonantia")}
           </p>
         </div>
 
@@ -31,7 +32,7 @@ const Contactpage: React.FC = () => {
               <div className=" flex items-center vj-pf-contact-details">
                 <LuMapPin className="w-8 h-8 text-gray-800 dark:text-amber-500 contact-icon" />
                 <h2 className="text-lg font-bold text-amber-600 dark:text-amber-500">
-                  Location:
+                  {t("Location")}:
                 </h2>
               </div>
               <p className="text-gray-700 dark:text-gray-400">
@@ -41,7 +42,7 @@ const Contactpage: React.FC = () => {
               <div className="flex items-center vj-pf-contact-details">
                 <BsEnvelope className="w-8 h-8 text-gray-800 dark:text-amber-500 contact-icon" />
                 <h3 className="text-lg font-bold text-amber-600 dark:text-amber-500">
-                  Email:
+                  {t("Email")}:
                 </h3>
               </div>
               <p className="text-gray-700 dark:text-gray-400">
@@ -54,7 +55,7 @@ const Contactpage: React.FC = () => {
               >
                 <IoPhonePortraitOutline className="w-8 h-8 text-gray-800 dark:text-amber-500 contact-icon" />
                 <h4 className="text-lg font-bold text-amber-600 dark:text-amber-500">
-                  Call:
+                  {t("Call")}:
                 </h4>
               </div>
               <p className="text-gray-700 dark:text-gray-400 cursor-pointer hover:text-blue-600 transition">
@@ -77,7 +78,7 @@ const Contactpage: React.FC = () => {
             >
               <div className="flex">
                 <h3 className="text-lg lg:text-2xl text-gray-800 dark:text-white">
-                  Reach Me
+                  {t("Reach Me")}
                 </h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -92,7 +93,7 @@ const Contactpage: React.FC = () => {
                     htmlFor="name"
                     className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-amber-600 peer-focus:dark:text-blue-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                   >
-                    Name
+                    {t("Name")}
                   </label>
                 </div>
                 <div className="relative">
@@ -106,7 +107,7 @@ const Contactpage: React.FC = () => {
                     htmlFor="email"
                     className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-amber-600 peer-focus:dark:text-blue-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                   >
-                    Email
+                    {t("Email")}
                   </label>
                 </div>
               </div>
@@ -121,7 +122,7 @@ const Contactpage: React.FC = () => {
                   htmlFor="subject"
                   className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-amber-600 peer-focus:dark:text-blue-200 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                 >
-                  Subject
+                  {t("Subject")}
                 </label>
               </div>
 
@@ -130,7 +131,7 @@ const Contactpage: React.FC = () => {
                   className="mb-3 block text-gray-700 font-semibold dark:text-gray-100"
                   htmlFor="message"
                 >
-                  Message
+                  {t("Message")}
                 </label>
                 <textarea
                   name="message"
@@ -155,7 +156,7 @@ const Contactpage: React.FC = () => {
                   type="submit"
                   className="w-full bg-amber-700 text-white px-4 py-2 rounded-md hover:bg-amber-800 transition"
                 >
-                  Send Message
+                  {t("Send Message")}
                 </button>
               </div>
             </form>

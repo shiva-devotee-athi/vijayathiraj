@@ -1,6 +1,7 @@
 import React from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const footerLinks = [
   { href: "#about-section", title: "About" },
@@ -10,6 +11,7 @@ const footerLinks = [
   { href: "#contact-section", title: "Contact" },
 ];
 const Footer: React.FC = () => {
+  const {t} = useTranslation()
   return (
     <footer className="bg-slate-950 dark:bg-transparent">
       <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
@@ -20,7 +22,7 @@ const Footer: React.FC = () => {
                 href={item.href}
                 className="text-base leading-6 text-gray-300 hover:text-gray-400 dark:text-gray-300 dark:hover:text-white"
               >
-                {item.title}
+                {t(item.title)}
               </a>
             </div>
           ))}
@@ -65,7 +67,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
         <p className="mt-8 text-base leading-6 text-center text-gray-400">
-          © 2025 Vijayathiraj, Just a simple work of imagination.
+          © 2025 Vijayathiraj, {t("Just a simple work of imagination.")}
         </p>
       </div>
     </footer>

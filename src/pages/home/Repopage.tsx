@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FaGithub } from "react-icons/fa";
 
 const repoDetails = [
@@ -45,6 +46,7 @@ const repoDetails = [
 ];
 
 const Repopage: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section
       id="projects-section"
@@ -52,14 +54,14 @@ const Repopage: React.FC = () => {
     >
       <div className="container">
         <div className="heading-section mb-12 text-center">
-          <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">Repos</h1>
-          <h2 className="mb-4 text-black dark:text-white relative z-1">Repositories</h2>
+          <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">
+            {t("Repos")}
+          </h1>
+          <h2 className="mb-4 text-black dark:text-white relative z-1">
+            {t("Repositories")}
+          </h2>
           <p className="text-gray-600 dark:text-white/45 mt-4">
-            Here, you can explore the various projects and code repositories
-            I've been working on. As a passionate developer, I'm constantly
-            striving to learn and create new software solutions. Feel free to
-            browse through my repositories and provide feedback or even
-            collaborate if you find something interesting.
+            {t("Here, you can explore the various projects and code repositories I've been working on. As a passionate developer, I'm constantly striving to learn and create new software solutions. Feel free to browse through my repositories and provide feedback or even collaborate if you find something interesting.")}
           </p>
         </div>
 
@@ -79,13 +81,13 @@ const Repopage: React.FC = () => {
                     type="button"
                     className="px-3 py-1 text-xs font-medium text-center inline-flex items-center text-blue-500 bg-blue-100 rounded-lg  focus:ring-0 focus:outline-none  dark:text-blue-100 dark:bg-blue-900 "
                   >
-                    {item.type==="PERSONAL" && <FaGithub className="me-1" />}
-                    {item.type==="COMPANY" && <FaGithub className="me-1" />}
-                    Personal
+                    {item.type === "PERSONAL" && <FaGithub className="me-1" />}
+                    {item.type === "COMPANY" && <FaGithub className="me-1" />}
+                    {t("Personal")}
                   </button>
                 </span>
                 <p className="mt-2 text-gray-600 dark:text-gray-400">
-                  {item.description}
+                  {t(item.description)}
                 </p>
               </div>
             ))}

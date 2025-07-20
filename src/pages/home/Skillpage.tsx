@@ -10,6 +10,7 @@ import electron_js_logo from "@/assets/images/skills/electron-js.svg";
 import { motion } from "framer-motion";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { useTheme } from "@/context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 const skillCards = [
   {
@@ -72,6 +73,7 @@ const skillCards = [
 
 const Skillpage: React.FC = () => {
   const { theme } = useTheme();
+  const {t} = useTranslation()
 
   const generateStars = (rating: number) => {
     const fullStars = Math.floor(rating);
@@ -98,26 +100,21 @@ const Skillpage: React.FC = () => {
     >
       <div className="container">
         <div className="heading-section mb-8 text-center">
-          <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">Skills</h1>
-          <h2 className="mb-4 text-black dark:text-white relative z-1">Talents</h2>
+          <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">{t("Skills")}</h1>
+          <h2 className="mb-4 text-black dark:text-white relative z-1">{t("Talents")}</h2>
           <p className="text-gray-600 dark:text-white/45 mt-4">
-            In my journey toward independence and self-reliance, I'm
-            continuously developing a range of practical skills. The progress
-            bars below represent my current self-assessment, which is subjective
-            and subject to change as I learn and grow. Remember, skill
-            development is a lifelong process, and I'm committed to deepening my
-            understanding through ongoing learning and real-world experience.
+            {t("In my journey toward independence and self-reliance, I'm continuously developing a range of practical skills. The progress bars below represent my current self-assessment, which is subjective and subject to change as I learn and grow. Remember, skill development is a lifelong process, and I'm committed to deepening my understanding through ongoing learning and real-world experience.")}
           </p>
         </div>
 
         <div className="flex flex-col items-center gap-2 mb-6">
           <p className="text-black dark:text-white/70 text-2xl font-bold">
-            One of My Fav Quote
+            {t("One of My Fav Quote")}
           </p>
           <div>
             <p className="text-gray-600">
               <strong className="text-gray-600 dark:text-white/50">
-                Tamil Quote:
+                {t("Tamil Quote")}:
               </strong>{" "}
               <span className="relative text-amber-700 dark:text-amber-500 italic tamil-skill-quote text-base lg:text-lg ms-2 w-full">
                 <RiDoubleQuotesL className="absolute -left-4 -top-1.5 inline" />
@@ -126,9 +123,7 @@ const Skillpage: React.FC = () => {
               </span>
             </p>
             <p className="text-gray-600 dark:text-white/50">
-              <strong>Translation:</strong> What you have learned is but a
-              handful of sand; what you have not learned is the size of the
-              world.
+              <strong>{t("Translation")}:</strong> {t("What you have learned is but a handful of sand; what you have not learned is the size of the world")}.
             </p>
           </div>
         </div>
@@ -155,7 +150,7 @@ const Skillpage: React.FC = () => {
                         translateX: 0,
                         transition: { delay: i * 0.2 },
                       }),
-                      hidden: { opacity: 0, translateX: 250 },
+                      hidden: { opacity: 0, translateX: 150 },
                     }}
                     key={index}
                   >
@@ -169,10 +164,10 @@ const Skillpage: React.FC = () => {
                         <img src={image} alt="nike-air-shoe" />
                       </div>
                       <div className="contentBx">
-                        <h2>{title}</h2>
+                        <h2>{t(title)}</h2>
 
                         <div className="size">
-                          <h3>Rating :</h3>
+                          <h3>{t("Rating")} :</h3>
                           <div className="flex text-yellow-400">
                             {generateStars(star)}
                           </div>

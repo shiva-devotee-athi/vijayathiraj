@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import seal_png from "@/assets/images/icons/naruto_seal.png";
 import seal_dark_png from "@/assets/images/icons/naruto_seal_dark.png";
 import { useTheme } from "@/context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 const variants = {
   open: {
@@ -28,6 +29,8 @@ export const MenuItem: React.FC<{ title: string; href: string }> = ({
   //   const style = { color: `${colors[i]}` };
   const style = { color: `red` };
   const { theme } = useTheme();
+  const { t } = useTranslation();
+
 
   return (
     <motion.li
@@ -53,7 +56,7 @@ export const MenuItem: React.FC<{ title: string; href: string }> = ({
           )}
         </div>
 
-        <div className="text-placeholder dark:text-white/80 leading-4.5">{title}</div>
+        <div className="text-placeholder dark:text-white/80 leading-4.5">{t(title)}</div>
       </a>
     </motion.li>
   );

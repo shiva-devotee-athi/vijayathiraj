@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const stats = [
   { number: 10, label: "Awards" },
@@ -20,7 +21,7 @@ const Statisticpage: React.FC = () => {
   //     duration: 2
   //   });
   // }
-
+  const { t } = useTranslation();
   return (
     <>
       <section
@@ -41,7 +42,7 @@ const Statisticpage: React.FC = () => {
                       {/* {stat.number.toLocaleString()} */}
                     </strong>
                     <span className="text-[#414141cc] dark:text-gray-200">
-                      {stat.label}
+                      {t(stat.label)}
                     </span>
                   </div>
                 </div>
@@ -55,12 +56,10 @@ const Statisticpage: React.FC = () => {
           <div className="flex justify-center">
             <div className="w-full md:w-7/12 text-center">
               <h2>
-                I'm <span className="text-amber-500">Available</span> for
-                freelancing
+                {t("I'm")} <span className="text-amber-500">{t("Available")}</span> {t("for freelancing")}
               </h2>
               <p className="mb-6 text-white">
-                Let's collaborate! I'm available for freelance projects and
-                excited to contribute.
+                {t("Let's collaborate! I'm available for freelance projects and excited to contribute.")}
               </p>
               <p className="mb-0">
                 <a
@@ -68,7 +67,7 @@ const Statisticpage: React.FC = () => {
                   href="#contact-section"
                   className="btn bg-amber-600 text-white py-3 px-5 rounded-md hover:bg-amber-700 transition cursor-pointer"
                 >
-                  Contact Me
+                  {t("Contact Me")}
                 </a>
               </p>
             </div>

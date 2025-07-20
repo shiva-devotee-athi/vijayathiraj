@@ -8,6 +8,8 @@ import { Navigation } from "@/components/navbar/Navigation";
 import { MenuToggle } from "@/components/navbar/MenuToggle";
 import naruto_bgm from "@/assets/files/naruto_bgm.mp3";
 import { useTheme } from "@/context/ThemeContext";
+import MenuDropdown from "@/components/navbar/MenuDropdown";
+import { useTranslation } from "react-i18next";
 
 const headerLinks = [
   { href: "#hero", title: "Home" },
@@ -40,10 +42,11 @@ const sidebar = {
 
 const Header: React.FC = () => {
   // const [isNavOpen, setIsNavOpen] = useState(false);
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isAwake, setIsAwake] = useState(false);
   const [playSong, setPlaySong] = useState(false);
-  const isDesktop = useMediaQuery("(max-width: 990px)");
+  const isSmallDevices = useMediaQuery("(max-width: 990px)");
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
@@ -143,7 +146,7 @@ const Header: React.FC = () => {
           >
             VJSHRI
           </a>
-          {isDesktop && (
+          {isSmallDevices && (
             <>
               <motion.nav
                 initial={false}
@@ -188,7 +191,9 @@ const Header: React.FC = () => {
                   </div>
                 </motion.div>
                 <Navigation />
+
                 <MenuToggle toggle={() => toggleOpen()} />
+                <MenuDropdown />
                 <MusicVoulme playSong={playSong} togglePlay={togglePlay} />
               </motion.nav>
             </>
@@ -205,11 +210,12 @@ const Header: React.FC = () => {
                       index == 0 ? "active focus:bg-amber-100" : ""
                     } text-black dark:text-white dark:hover:text-white/75 outline-none`}
                   >
-                    <span>{link.title}</span>
+                    <span>{t(link.title)}</span>
                   </a>
                 </li>
               ))}
             </ul>
+            <MenuDropdown />
             <label htmlFor="theme-toggle" className="switch">
               <span className="sun">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -294,7 +300,9 @@ const MusicVoulme = ({
     >
       <input
         id="play-music"
-        aria-label={playSong ? "Mute background music" : "Play background music"}
+        aria-label={
+          playSong ? "Mute background music" : "Play background music"
+        }
         checked={playSong}
         type="checkbox"
         onChange={togglePlay}

@@ -12,6 +12,7 @@ import image_8 from "@/assets/images/hoppies/image-8.webp";
 import image_9 from "@/assets/images/hoppies/image-9.webp";
 import image_10 from "@/assets/images/hoppies/image-10.webp";
 import image_11 from "@/assets/images/hoppies/image-11.webp";
+import { useTranslation } from "react-i18next";
 
 const hoppieImage = [
   {
@@ -60,7 +61,7 @@ const hoppieImage = [
   },
   {
     title: "lee",
-    image: image_11
+    image: image_11,
   },
 ];
 
@@ -113,20 +114,19 @@ const ChunkedArrayDisplay = () => {
 };
 
 const Hoppiespage: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className="bg-gray-100 dark:bg-transparent vj-pf-section">
       <div className="container">
         <div className="heading-section mb-12 text-center">
           <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">
-            Hoppies
+            {t("Hoppies")}
           </h1>
-          <h2 className="mb-4 text-black dark:text-white relative z-1">Happiness</h2>
+          <h2 className="mb-4 text-black dark:text-white relative z-1">
+            {t("Happiness")}
+          </h2>
           <p className="text-gray-600 dark:text-white/45 mt-4">
-            Here, you can explore the various projects and code repositories
-            I've been working on. As a passionate developer, I'm constantly
-            striving to learn and create new software solutions. Feel free to
-            browse through my repositories and provide feedback or even
-            collaborate if you find something interesting.
+            {t("Here, you can explore the various projects and code repositories I've been working on. As a passionate developer, I'm constantly striving to learn and create new software solutions. Feel free to browse through my repositories and provide feedback or even collaborate if you find something interesting.")}
           </p>
         </div>
         {ChunkedArrayDisplay()}

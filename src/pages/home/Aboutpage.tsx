@@ -2,8 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import personalDp from "@/assets/images/personal/personal-dp.webp";
 import sampleResumeFile from "@/assets/files/resume_sample.pdf";
+import { useTranslation } from "react-i18next";
 
 const Aboutpage: React.FC = () => {
+  const {t} = useTranslation()
   return (
     <motion.div
       initial="hidden"
@@ -40,18 +42,14 @@ const Aboutpage: React.FC = () => {
             <div className=" md:col-span-1 lg:col-span-2 xl:col-span-3 pl-0 md:pl-12 pt-8 md:pt-0">
               <div className="pb-6 heading-section">
                 <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">
-                  About
+                  {t("About")}
                 </h1>
                 <h2 className="mb-4 text-black dark:text-white relative z-1">About Me</h2>
                 <p className="text-gray-600 dark:text-white/45">
-                  Passionate web developer skilled in HTML, CSS, JavaScript,
-                  Node.js, React.js, and Next.js. Dedicated to creating seamless
-                  and engaging user experiences through high-quality web
-                  solutions.
+                  {t("Passionate web developer skilled in HTML, CSS, JavaScript, Node.js, React.js, and Next.js. Dedicated to creating seamless and engaging user experiences through high-quality web solutions.")}
                 </p>
                 <p className="text-gray-600 dark:text-white/45 mt-2">
-                  Explore my portfolio to see samples of my work that highlight
-                  my UI design standards and attention to detail.
+                  {t("Explore my portfolio to see samples of my work that highlight my UI design standards and attention to detail.")}
                 </p>
               </div>
 
@@ -59,7 +57,7 @@ const Aboutpage: React.FC = () => {
               <ul className="mt-6 space-y-3 about-info">
                 <li className="flex">
                   <span className="font-semibold text-gray-700 dark:text-gray-300 w-32">
-                    Name:
+                    {t("Name")}:
                   </span>
                   <span className="text-gray-600 dark:text-gray-300">
                     Vijay Athiraj
@@ -67,7 +65,7 @@ const Aboutpage: React.FC = () => {
                 </li>
                 <li className="flex">
                   <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                    Date of birth:
+                    {t("Date of birth")}:
                   </span>
                   <span className="text-gray-600 dark:text-gray-300">
                     June 02, 2000
@@ -75,7 +73,7 @@ const Aboutpage: React.FC = () => {
                 </li>
                 <li className="flex">
                   <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                    Address:
+                    {t("Address")}:
                   </span>
                   <span className="text-gray-600 dark:text-gray-300">
                     10A/39 Perumalpatti Nadar, 1st west st,
@@ -83,7 +81,7 @@ const Aboutpage: React.FC = () => {
                 </li>
                 <li className="flex">
                   <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                    City:
+                    {t("City")}:
                   </span>
                   <span className="text-gray-600 dark:text-gray-300">
                     Srivilliputtur
@@ -91,7 +89,7 @@ const Aboutpage: React.FC = () => {
                 </li>
                 <li className="flex">
                   <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                    Pin code:
+                    {t("Pin code")}:
                   </span>
                   <span className="text-gray-600 dark:text-gray-300">
                     626125
@@ -99,7 +97,7 @@ const Aboutpage: React.FC = () => {
                 </li>
                 <li className="flex">
                   <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                    Email:
+                    {t("Email")}:
                   </span>
                   <span className="text-gray-600 dark:text-gray-300">
                     vijayathiraj99@gmail.com
@@ -107,7 +105,7 @@ const Aboutpage: React.FC = () => {
                 </li>
                 <li className="flex">
                   <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                    Phone:
+                    {t("Phone")}:
                   </span>
                   <span className="text-gray-600 dark:text-gray-300">
                     +91 8870762077
@@ -121,7 +119,7 @@ const Aboutpage: React.FC = () => {
                   12
                 </div>
                 <span className="text-gray-600 dark:text-gray-300">
-                  Projects Completed
+                  {t("Projects Completed")}
                 </span>
               </div>
 
@@ -134,7 +132,7 @@ const Aboutpage: React.FC = () => {
                   download={true}
                   className="btn-main bg-btn2 lnk py-3 px-6 rounded-md"
                 >
-                  Download CV
+                  {t("Download CV")}
                   <i className="fas fa-chevron-right fa-icon"></i>
                   <span className="circle"></span>
                 </a>

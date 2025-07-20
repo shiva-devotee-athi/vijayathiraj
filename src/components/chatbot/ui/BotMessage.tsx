@@ -1,13 +1,14 @@
 import { RiRobot2Line } from "react-icons/ri";
 import { IBotmessage } from "../Chatbot";
 import { format, isToday, isYesterday } from "date-fns";
-
+import { useTranslation } from "react-i18next";
 
 export default function BotMessage({
   botMessages,
 }: {
   botMessages: IBotmessage;
 }) {
+  const { t } = useTranslation();
   function formatChatMessageTime(timestamp: string | number | Date) {
     const date = new Date(timestamp);
 
@@ -36,11 +37,11 @@ export default function BotMessage({
         </div>
         <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-500 w-fit">
           <p className="text-sm font-normal whitespace-pre-line text-gray-900 dark:text-white">
-            {botMessages.bot.message}
+            {t(botMessages.bot.message)}
           </p>
         </div>
         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
-          {botMessages.bot.status}
+          {t(botMessages.bot.status)}
         </span>
       </div>
 

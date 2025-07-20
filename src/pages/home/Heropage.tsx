@@ -1,22 +1,33 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "@/styles/scss/homepage.scss";
 import hero_img from "@/assets/images/hero/tobi.webp";
 
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
+import kamui_track from "@/assets/files/kamui_track.mp3";
+
 
 const Heropage: React.FC = () => {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const { t } = useTranslation();
   const [isKamui, setIsKamui] = useState(false);
-  const text =
-    "Hello. my name is vijay athiraj. nice to meet you I would like to welcome you with my personal portfolio".split(
-      " "
-    );
+  const text = t(
+    "Hello. my name is vijay athiraj. nice to meet you I would like to welcome you with my personal portfolio"
+  ).split(" ");
 
   const handleIllusion = () => {
     setIsKamui(true);
+    handlePlayKamui();
     setTimeout(() => {
       setIsKamui(false);
-    }, 4000);
+    }, 5000);
+  };
+
+  const handlePlayKamui = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
   };
 
   const kamuiClassName = clsx(
@@ -112,6 +123,7 @@ const Heropage: React.FC = () => {
             onChange={handleIllusion}
           />
           <span className="vj-pf-nav-switch-slider"></span>
+          <audio className="hidden" ref={audioRef} src={kamui_track} />
         </label>
       </div>
       {/* <Samplepage/> */}

@@ -2,6 +2,7 @@ import { TabsBtn, TabsContent, TabsProvider } from "@/components/tabs/Tabs";
 import education_img_1 from "@/assets/images/education/edu_image_1.webp";
 import education_img_2 from "@/assets/images/education/edu_image_2.webp";
 import education_img_3 from "@/assets/images/education/edu_image_3.webp";
+import { useTranslation } from "react-i18next";
 
 const educationDetails = [
   {
@@ -38,6 +39,7 @@ const educationDetails = [
 
 function Educationpage() {
   // const [tags,setTags]= useState<string[]>([])
+  const { t } = useTranslation();
   return (
     <div className="bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-md pt-2 p-0 md:p-4 relative">
       <TabsProvider defaultValue={educationDetails[0].title}>
@@ -46,10 +48,10 @@ function Educationpage() {
             {educationDetails.map((item, index) => (
               <TabsBtn key={index} value={item.title}>
                 <span className="relative z-[2] uppercase hidden sm:block">
-                  {item.shortTitle}
+                  {t(item.shortTitle)}
                 </span>
                 <span className="relative z-[2] uppercase block sm:hidden">
-                  {item.tinyTitle}
+                  {t(item.tinyTitle)}
                 </span>
               </TabsBtn>
             ))}
@@ -59,7 +61,7 @@ function Educationpage() {
         {educationDetails.map((item, index) => (
           <TabsContent key={index} value={item.title} className="p-0">
             <div className="bg-white dark:bg-[#1d1e22] px-0 py-4 md:px-6 md:py-6 rounded-lg shadow-lg flex flex-col item-start md:items-end md:flex-row">
-              <picture className="w-full h-full">
+              <picture className="max-w-72 w-full h-full">
                 <img
                   className="object-contain w-full rounded-t-lg h-48 md:h-auto md:w-48 lg:w-72 md:rounded-none md:rounded-s-lg"
                   src={item.imgSrc}
@@ -69,16 +71,16 @@ function Educationpage() {
               </picture>
               <div className="flex flex-col justify-between p-4 pb-0 leading-normal">
                 <span className="block text-amber-600 font-semibold">
-                  {item.date}
+                  {t(item.date)}
                 </span>
                 <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mt-2">
-                  {item.title}
+                  {t(item.title)}
                 </h2>
                 <span className="block text-gray-600 dark:text-gray-400 italic">
-                  {item.position}
+                  {t(item.position)}
                 </span>
                 <p className="mt-4 text-gray-600 dark:text-gray-400">
-                  {item.description}
+                  {t(item.description)}
                 </p>
               </div>
             </div>

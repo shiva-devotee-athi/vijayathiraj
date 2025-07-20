@@ -10,6 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { chatbotFormData, chatbotSchema } from "@/zod/chatbot_schema";
 import { LuPaperclip } from "react-icons/lu";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 export interface IBotmessage {
   bot: {
@@ -25,6 +26,7 @@ export interface IBotmessage {
 }
 
 export default function Chatbot() {
+  const { t } = useTranslation();
   const [showChat, setShowChat] = useState(false);
   const [botMessages, setBotMessages] = useState<IBotmessage[]>(() => {
     const savedMessages = localStorage.getItem("chatMessages");
@@ -207,7 +209,9 @@ export default function Chatbot() {
                 <h2 className="font-semibold text-lg text-white tracking-tight">
                   Chatbot
                 </h2>
-                <p className="text-white/80">Assist My Personal Details</p>
+                <p className="text-white/80">
+                  {t("Assist My Personal Details")}
+                </p>
               </div>
               <div>
                 <IoCloseSharp
@@ -233,7 +237,7 @@ export default function Chatbot() {
                       onClick={() => handleCustomMessage("hello")}
                       className="text-white bg-amber-700 hover:bg-amber-800 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-amber-600 dark:hover:bg-amber-700"
                     >
-                      Say Hi..👋
+                      {t("Say Hi")}..👋
                     </button>
                   </>
                 ) : (
@@ -281,7 +285,7 @@ export default function Chatbot() {
             )}
 
             <p className="text-center text-xs py-1 dark:text-white/50">
-              Ask Freely to <strong>Obito Bot</strong>
+              {t("Ask Freely to")} <strong>Obito Bot</strong>
             </p>
           </div>
         </div>
