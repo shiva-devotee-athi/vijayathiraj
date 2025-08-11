@@ -7,6 +7,11 @@ $text_color_black: black;
 $text_color_black_shade: rgba(255, 255, 255, 0.1);
 $text_color_white_shade: rgba(255, 255, 255, 0.9);
 
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 .vj-pf-navbar {
   list-style: none;
   display: flex;

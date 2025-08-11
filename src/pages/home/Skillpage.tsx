@@ -95,7 +95,7 @@ const Skillpage: React.FC = () => {
 
   return (
     <section
-      id="skills-section"
+      id="skills"
       className="py-16 bg-gray-100 dark:bg-transparent vj-pf-section"
     >
       <div className="container">
@@ -103,7 +103,7 @@ const Skillpage: React.FC = () => {
           <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">{t("Skills")}</h1>
           <h2 className="mb-4 text-black dark:text-white relative z-1">{t("Talents")}</h2>
           <p className="text-gray-600 dark:text-white/45 mt-4">
-            {t("In my journey toward independence and self-reliance, I'm continuously developing a range of practical skills. The progress bars below represent my current self-assessment, which is subjective and subject to change as I learn and grow. Remember, skill development is a lifelong process, and I'm committed to deepening my understanding through ongoing learning and real-world experience.")}
+            {t("In my journey toward independence and self-reliance, I'm continuously developing a range of practical skills. The rating stars below represent my current self-assessment, which is subjective and subject to change as I learn and grow. Remember, skill development is a lifelong process, and I'm committed to deepening my understanding through ongoing learning and real-world experience.")}
           </p>
         </div>
 

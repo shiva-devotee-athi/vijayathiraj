@@ -40,16 +40,13 @@ export default function Chatbot() {
     }
   }, []);
 
-  // useEffect(() => {
-  // }, [showChat]);
-
   const handleCloseChatbot = () => {
     setShowChat(false);
     scrollHidePersonalContainer();
   };
-  const scrollPersonalContainer = () => {
-    document.body.style.overflow = "hidden";
-  };
+  // const scrollPersonalContainer = () => {
+  //   document.body.style.overflow = "hidden";
+  // };
 
   const scrollHidePersonalContainer = () => {
     document.body.style.overflow = "auto";
@@ -195,8 +192,6 @@ export default function Chatbot() {
       {showChat && (
         <div
           style={{ width: "calc(100% - 32px)" }}
-          onMouseEnter={scrollPersonalContainer}
-          onMouseLeave={scrollHidePersonalContainer}
           className="fixed z-50 right-4 bottom-4 rounded-xl bg-gray-200 dark:bg-gray-700 hover:cursor-pointer h-[85vh] md:h-[80vh] max-w-sm"
         >
           <div className="flex flex-col h-full">
@@ -222,7 +217,7 @@ export default function Chatbot() {
             </div>
 
             {/* CHAT CONTAINER  */}
-            <div className="px-4 overflow-y-auto">
+            <div className="px-4 overflow-y-auto slim-scroll">
               <div className="flex flex-col flex-1 items-center p-2 overflow-y-auto">
                 {botMessages.length <= 0 ? (
                   <>

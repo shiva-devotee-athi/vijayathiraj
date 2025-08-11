@@ -8,7 +8,7 @@ const Resumepage: React.FC = () => {
   const {t} = useTranslation()
   return (
     <section
-      id="resume-section"
+      id="education"
       className="py-16 bg-gray-100 dark:bg-transparent vj-pf-section"
     >
       <div className="container">
@@ -24,11 +24,11 @@ const Resumepage: React.FC = () => {
         >
           <div className="heading-section mb-12 text-center">
             <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">
-              {t("Resume")}
+              {t("Education")}
             </h1>
-            <h2 className="mb-4 text-black dark:text-white relative z-1">{t("Resume")}</h2>
+            <h2 className="mb-4 text-black dark:text-white relative z-1">{t("Education")}</h2>
             <p className="text-gray-600 dark:text-white/45 mt-4">
-              {t("A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.")}
+              {t("My journey of learning has been a continuous adventure, shaping me into the professional I am today. Here's a look at my academic background and key milestones that have equipped me with the knowledge and skills to excel.")}
             </p>
           </div>
           <div>

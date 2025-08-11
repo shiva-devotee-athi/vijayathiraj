@@ -8,7 +8,7 @@ const savedLang = localStorage.getItem("site-lang") || "en";
 
 export default i18next.use(initReactI18next).init({
   lng: savedLang, // default language
-  debug: true,
+  debug: false,
   resources: {
     en: {
       translation: en,
@@ -27,5 +27,5 @@ export default i18next.use(initReactI18next).init({
 
   // if you see an error like: "Argument of type 'DefaultTFuncReturn' is not assignable to parameter of type xyz"
   // set returnNull to false (and also in the i18next.d.ts options)
-  // returnNull: false,
+  returnNull: false,
 });

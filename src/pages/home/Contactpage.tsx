@@ -11,7 +11,7 @@ const Contactpage: React.FC = () => {
   const {t} = useTranslation()
   return (
     <section
-      id="contact-section"
+      id="contact"
       className="py-16 bg-gray-100 dark:bg-transparent vj-pf-section contact"
     >
       <div className="container">
@@ -21,7 +21,7 @@ const Contactpage: React.FC = () => {
           </h1>
           <h2 className="mb-4 text-black dark:text-white relative z-1">{t("Contact Me")}</h2>
           <p className="text-gray-600 dark:text-white/45 mt-4">
-            {t("Far far away, behind the word mountains, far from the countries Vokalia and Consonantia")}
+            {t("Your scroll, your jutsu, my inbox. Let's form an alliance and conquer the unknown, together!")}
           </p>
         </div>
 

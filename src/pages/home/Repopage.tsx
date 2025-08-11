@@ -49,7 +49,7 @@ const Repopage: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section
-      id="projects-section"
+      id="projects"
       className="py-16 bg-gray-100 dark:bg-transparent vj-pf-section"
     >
       <div className="container">
@@ -61,7 +61,7 @@ const Repopage: React.FC = () => {
             {t("Repositories")}
           </h2>
           <p className="text-gray-600 dark:text-white/45 mt-4">
-            {t("Here, you can explore the various projects and code repositories I've been working on. As a passionate developer, I'm constantly striving to learn and create new software solutions. Feel free to browse through my repositories and provide feedback or even collaborate if you find something interesting.")}
+            {t("Hoarding happiness in my free time, I love diving into the world of cartoons and anime. You can often find me laughing along with the antics of Naruto, Shinchan, and Tom and Jerry. I also enjoy revisiting classics like Ben 10, Courage the Cowardly Dog, Ninja Hattori, Doraemon, and Oggy. These shows are my go-to for a dose of fun and nostalgia.")}
           </p>
         </div>
 

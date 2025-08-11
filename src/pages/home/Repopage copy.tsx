@@ -46,7 +46,7 @@ const repoDetails = [
 const Repopage: React.FC = () => {
   return (
     <section
-      id="projects-section"
+      id="projects"
       className="py-16 bg-gray-100 dark:bg-transparent vj-pf-section"
     >
       <div className="container">

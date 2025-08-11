@@ -18,7 +18,7 @@ const Aboutpage: React.FC = () => {
       }}
     >
       <section
-        id="about-section"
+        id="about"
         className="bg-gray-100 dark:bg-transparent py-12 vj-pf-about vj-pf-section"
       >
         <div className="container">

@@ -29,7 +29,7 @@ const sample_data = {
   "UI UX DEVELOPMENT": "DÉVELOPPEMENT UI UX",
   "ICON DESIGN": "CONCEPTION D'ICÔNES",
 
-  "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.":
+  "My journey of learning has been a continuous adventure, shaping me into the professional I am today. Here's a look at my academic background and key milestones that have equipped me with the knowledge and skills to excel.":
     "Une petite rivière nommée Duden coule près de chez eux et leur fournit les regelialia nécessaires. C'est un pays paradisiaque, où des fragments de phrases grillées vous sautent aux lèvres.",
   "MSC (MATHEMATICS)": "MSC (MATHÉMATIQUES)",
   "BSC (MATHEMATICS)": "BSC (MATHÉMATIQUES)",
@@ -48,7 +48,7 @@ const sample_data = {
     "ExpériencMes années d'école étaient vraiment spéciales, remplies de précieux souvenirs et d'expériences précieuses. J'avais un groupe d'amis formidable et nous partagions d'innombrables moments de plaisir et de bonne humeur. Je me consacrais entièrement à mes études, toujours respectueux envers mes professeurs et valorisais les bonnes manières. Même si j'ai reçu quelques punitions ridicules de la part de mes professeurs, elles n'ont fait qu'ajouter au charme et à l'humour de ma vie scolaire. L'école offrait un environnement stimulant qui nous encourageait à exceller sur le plan scolaire et social. Ces années furent une période de rires, d'apprentissage et de développement personnel, qui ont posé des bases solides pour mes projets futurs.",
 
   Talents: "Talents",
-  "In my journey toward independence and self-reliance, I'm continuously developing a range of practical skills. The progress bars below represent my current self-assessment, which is subjective and subject to change as I learn and grow. Remember, skill development is a lifelong process, and I'm committed to deepening my understanding through ongoing learning and real-world experience.":
+  "In my journey toward independence and self-reliance, I'm continuously developing a range of practical skills. The rating stars below represent my current self-assessment, which is subjective and subject to change as I learn and grow. Remember, skill development is a lifelong process, and I'm committed to deepening my understanding through ongoing learning and real-world experience.":
     "Dans mon cheminement vers l'indépendance et l'autonomie, je développe continuellement diverses compétences pratiques. Les barres de progression ci-dessous représentent mon auto-évaluation actuelle, subjective et susceptible d'évoluer au fil de mes apprentissages et de ma croissance. N'oubliez pas que le développement des compétences est un processus continu et que je m'engage à approfondir mes connaissances par l'apprentissage continu et l'expérience concrète.",
   "One of My Fav Quote": "Une de mes citations préférées",
   "Tamil Quote": "Citation tamoule",
@@ -82,7 +82,7 @@ const sample_data = {
 
   Repos: "Repos",
   Repositories: "Dépôts",
-  "Here, you can explore the various projects and code repositories I've been working on. As a passionate developer, I'm constantly striving to learn and create new software solutions. Feel free to browse through my repositories and provide feedback or even collaborate if you find something interesting.":
+  "Hoarding happiness in my free time, I love diving into the world of cartoons and anime. You can often find me laughing along with the antics of Naruto, Shinchan, and Tom and Jerry. I also enjoy revisiting classics like Ben 10, Courage the Cowardly Dog, Ninja Hattori, Doraemon, and Oggy. These shows are my go-to for a dose of fun and nostalgia.":
     "Ici, vous pouvez explorer les différents projets et dépôts de code sur lesquels j'ai travaillé. Développeur passionné, je m'efforce constamment d'apprendre et de créer de nouvelles solutions logicielles. N'hésitez pas à parcourir mes dépôts et à me faire part de vos commentaires, voire à collaborer si vous trouvez quelque chose d'intéressant.",
 
   "Projet VIJAY-MERN": "Projet VIJAY-MERN",
@@ -127,7 +127,7 @@ const sample_data = {
   Message: "Message",
   "Send Message": "Envoyer un message",
   "Contact Me": "Contactez-moi",
-  "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia":
+  "Your scroll, your jutsu, my inbox. Let's form an alliance and conquer the unknown, together!":
     "Loin, très loin, derrière les montagnes des mots, loin des pays de Vokalia et de Consonantia",
   "Just a simple work of imagination.":
     "Juste un simple travail d'imagination.",

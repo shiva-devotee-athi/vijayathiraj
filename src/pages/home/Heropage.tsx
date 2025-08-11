@@ -73,7 +73,7 @@ const Heropage: React.FC = () => {
               y: ["0rem", "2rem", "0rem"],
             }}
           >
-            <p className="text-gray-800 dark:text-black bg-[#fbe0d4] dark:bg-[#cb5000] p-4 rounded-lg text-lg font-semibold sm:text-lg lg:text-2xl after:bg-[#fbe0d4] dark:after:bg-[#cb5000] vj-pf-hero-thoughts">
+            <p className="text-gray-800 dark:text-black bg-[#fbe0d4] dark:bg-[#cb5000] p-4 rounded-lg text-xs font-semibold sm:text-sm lg:text-base after:bg-[#fbe0d4] dark:after:bg-[#cb5000] vj-pf-hero-thoughts">
               {text.map((el, i) => (
                 <motion.span
                   initial={{ opacity: 0 }}

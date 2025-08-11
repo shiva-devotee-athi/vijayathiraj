@@ -13,11 +13,11 @@ import { useTranslation } from "react-i18next";
 
 const headerLinks = [
   { href: "#hero", title: "Home" },
-  { href: "#about-section", title: "About" },
-  { href: "#skills-section", title: "Skills" },
-  { href: "#resume-section", title: "Resume" },
-  { href: "#projects-section", title: "Projects" },
-  { href: "#contact-section", title: "Contact" },
+  { href: "#about", title: "About" },
+  { href: "#skills", title: "Skills" },
+  { href: "#education", title: "Education" },
+  { href: "#projects", title: "Projects" },
+  { href: "#contact", title: "Contact" },
 ];
 
 const sidebar = {

@@ -64,7 +64,7 @@ const Statisticpage: React.FC = () => {
               <p className="mb-0">
                 <a
                   aria-label="Contact Me"
-                  href="#contact-section"
+                  href="#contact"
                   className="btn bg-amber-600 text-white py-3 px-5 rounded-md hover:bg-amber-700 transition cursor-pointer"
                 >
                   {t("Contact Me")}

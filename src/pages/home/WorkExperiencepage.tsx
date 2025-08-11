@@ -6,7 +6,7 @@ const WorkExperiencepage: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section
-      id="projects-section"
+      id="experience"
       className="py-16 bg-gray-100 dark:bg-transparent vj-pf-section"
     >
       <div className="container">

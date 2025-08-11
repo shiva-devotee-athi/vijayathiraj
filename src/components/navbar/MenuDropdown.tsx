@@ -83,6 +83,7 @@ const MenuDropdown: React.FC = () => {
           {/* Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" */}
           {languages.map((lang) => (
             <a
+              key={lang.label}
               onClick={() => handleChangeLanguage(lang.value)}
               className="block px-4 py-2 text-sm cursor-default whitespace-nowrap overflow-hidden text-ellipsis text-black dark:text-white dark:hover:text-white/75 dark:hover:bg-zinc-700"
               role="menuitem"

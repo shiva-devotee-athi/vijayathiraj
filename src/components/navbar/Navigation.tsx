@@ -11,12 +11,12 @@ const variants = {
 };
 
 const headerLinks = [
-  { href: "#home-section", title: "Home" },
-  { href: "#about-section", title: "About" },
-  { href: "#skills-section", title: "Skills" },
-  { href: "#resume-section", title: "Resume" },
-  { href: "#projects-section", title: "Projects" },
-  { href: "#contact-section", title: "Contact" },
+  { href: "#home", title: "Home" },
+  { href: "#about", title: "About" },
+  { href: "#skills", title: "Skills" },
+  { href: "#education", title: "Education" },
+  { href: "#projects", title: "Projects" },
+  { href: "#contact", title: "Contact" },
 ];
 
 export const Navigation = () => (
