@@ -127,6 +127,7 @@ const sample_data = {
   Message: "Message",
   "Send Message": "Envoyer un message",
   "Contact Me": "Contactez-moi",
+  "Reach Me": "Contactez-moi",
   "Your scroll, your jutsu, my inbox. Let's form an alliance and conquer the unknown, together!":
     "Loin, très loin, derrière les montagnes des mots, loin des pays de Vokalia et de Consonantia",
   "Just a simple work of imagination.":
@@ -139,7 +140,7 @@ const sample_data = {
   hello: "Bonjour",
   delivered: "livré",
   "Say Hi": "Dis bonjour",
-  "He Visitor, Sorry for the inconvenience. I've developed a chatbot using a custom-trained TensorFlow model and NLP methods, which performs well in my local environment. However, I've faced difficulties deploying it on free cloud services due to [mention a brief reason, e.g., resource constraints, specific dependencies]. I intend to deploy it on a dedicated cloud server (AWS, Google Cloud) or a local 24/7 server once I have the resources. I apologize for any inconvenience this may cause and appreciate your understanding.":
+  "He Visitor, Sorry for the inconvenience. I've developed a chatbot using a custom-trained TensorFlow model and NLP methods, which performs well in my local environment. However, I've faced difficulties deploying it on free cloud services. I intend to deploy it on a dedicated cloud server (AWS, Google Cloud) or a local 24/7 server once I have the resources. I apologize for any inconvenience this may cause and appreciate your understanding.":
     "Cher visiteur, veuillez nous excuser pour la gêne occasionnée. J'ai développé un chatbot utilisant un modèle TensorFlow personnalisé et des méthodes de traitement du langage naturel (TALN), qui fonctionne bien dans mon environnement local. Cependant, j'ai rencontré des difficultés pour le déployer sur des services cloud gratuits en raison de [mentionner une brève raison, par exemple : contraintes de ressources, dépendances spécifiques]. Je compte le déployer sur un serveur cloud dédié (AWS, Google Cloud) ou un serveur local 24h/24 et 7j/7 dès que j'aurai les ressources nécessaires. Je vous prie de m'excuser pour la gêne occasionnée et vous remercie de votre compréhension.",
   "Ask Freely to": "Demandez librement à Obito Bot",
 };

@@ -281,6 +281,7 @@
   --vj-pf-root-bg-color: #f3f4f6;
   --vj-pf-navbar-scrolled: #ffffff;
   --vj-pf-navbar-link-color: #000000;
+  --vj-pf-social-icon-color: #ffffff;
 }
 
 :root[class~="dark"] {
@@ -288,6 +289,7 @@
   --vj-pf-root-bg-color: #121212;
   --vj-pf-navbar-scrolled: #000000;
   --vj-pf-navbar-link-color: #ffffff;
+  --vj-pf-social-icon-color: #393939;
 }
 
 
@@ -323,4 +325,14 @@ html.dark {
  
 .slim-scroll::-webkit-scrollbar-thumb {
   background: #666; 
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

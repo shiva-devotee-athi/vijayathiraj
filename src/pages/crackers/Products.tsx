@@ -10,7 +10,6 @@ const Products: React.FC = () => {
   const fetchUserData = async () => {
     const response = await axios.get("http://localhost:3005/user/");
 
-    console.log(response.data.data);
     if (response.status === 200) {
     }
   };

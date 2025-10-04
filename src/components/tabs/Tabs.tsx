@@ -45,13 +45,6 @@ export const TabsProvider: React.FC<TabsProviderProps> = ({
   const [tabsOrder, setTabsOrder] = useState<string[]>([]);
   useEffect(() => {
     const order: string[] = [];
-    // children?.map((child) => {
-    //   if (isValidElement(child)) {
-    //     if (child.type === TabsContent) {
-    //       order.push(child?.props?.value);
-    //     }
-    //   }
-    // });
     setTabsOrder(order);
   }, [children]);
 
@@ -94,7 +87,7 @@ export const TabsBtn = ({ children, className, value }: any) => {
       <>
         <motion.div
           className={cn(
-            `cursor-pointer sm:p-2 p-1 sm:px-4 px-2 rounded-md relative `,
+            `cursor-pointer sm:p-2 p-1 sm:px-4 px-2 rounded-md relative`,
             className
           )}
           onFocus={() => {
@@ -118,7 +111,7 @@ export const TabsBtn = ({ children, className, value }: any) => {
                   },
                 }}
                 layoutId={defaultValue}
-                className="absolute w-full h-full left-0 top-0 dark:bg-base-dark bg-white rounded-md  z-[1]"
+                className="absolute w-full h-full left-0 top-0 dark:bg-zinc-700 dark:text-white bg-white rounded-md z-[1]"
               />
             </AnimatePresence>
           )}
@@ -136,7 +129,7 @@ export const TabsBtn = ({ children, className, value }: any) => {
                       },
                     }}
                     layoutId={defaultValue}
-                    className="absolute w-full h-full left-0 top-0 dark:bg-base-dark bg-white rounded-md  z-[1] tab-shadow"
+                    className="absolute w-full h-full left-0 top-0 dark:bg-zinc-700 dark:text-white bg-white rounded-md z-[1] tab-shadow"
                   />
                 </AnimatePresence>
               )}
@@ -151,7 +144,7 @@ export const TabsBtn = ({ children, className, value }: any) => {
                       },
                     }}
                     layoutId={`${defaultValue}b`}
-                    className="absolute w-full h-full left-0 top-0 dark:bg-base-dark bg-white rounded-md z-[1] tab-shadow"
+                    className="absolute w-full h-full left-0 top-0 dark:bg-zinc-700 dark:text-white bg-white rounded-md z-[1] tab-shadow"
                   />
                 </AnimatePresence>
               )}

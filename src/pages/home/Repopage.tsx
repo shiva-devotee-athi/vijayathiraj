@@ -1,74 +1,63 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { projects } from "@/pages/data/information";
 
-const repoDetails = [
-  {
-    date: "2014-2015",
-    title: "VIJAY-MERN-project",
-    position: "Cambridge University",
-    type: "PERSONAL",
-    description:
-      "I'm excited to introduce my MERN project, a web application that combines the power of MongoDB, Express.js, React, and Node.js to create a seamless user experience. This project focuses on two essential aspects: User Authentication, Profile Page Management with File System",
+
+const slideUpAndFade = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
   },
-  {
-    date: "2014-2015",
-    title: "React JS Food Order UI",
-    position: "Cambridge University",
-    type: "PERSONAL",
-    description:
-      "Introducing my Food Order UI Page React repository - a sleek and interactive user interface for ordering delicious meals. Explore a responsive design, seamless navigation, and a delightful ordering experience.",
-  },
-  {
-    date: "2014-2015",
-    title: "Shri-chat",
-    position: "Cambridge University",
-    type: "PERSONAL",
-    description:
-      "Discover my Chatting Application built with React.js and Firebase integration, featuring Google login for quick access. Connect with others effortlessly through five default chat groups, fostering real-time conversations and connections. Join the conversation now!",
-  },
-  {
-    date: "2014-2015",
-    title: "VJ-Shri-mens-Wear-cart",
-    position: "Cambridge University",
-    type: "PERSONAL",
-    description:
-      "Discover my Men's Cart Purchase Web Application, crafted with HTML, CSS, and JavaScript. It's a valuable resource for learning and practicing essential JavaScript functions while simulating a seamless shopping experience. Dive into coding and shopping simultaneously!",
-  },
-  {
-    date: "2017-2018",
-    title: "Responsive Design",
-    position: "Cambridge University",
-    type: "PERSONAL",
-    description:
-      "An emphasis on cutting-edge design and modern usability standards",
-  },
-];
+};
 
 const Repopage: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section
       id="projects"
-      className="py-16 bg-gray-100 dark:bg-transparent vj-pf-section"
+      className="py-16 bg-gray-100 dark:bg-transparent vj-pf-bottom-section"
     >
       <div className="container">
         <div className="heading-section mb-12 text-center">
-          <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">
+          <motion.h1
+            className="big big-2 text-[#d3d4d5] dark:text-[#303030]"
+            variants={slideUpAndFade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {t("Repos")}
-          </h1>
-          <h2 className="mb-4 text-black dark:text-white relative z-1">
+          </motion.h1>
+          <motion.h2
+            className="mb-4 text-black dark:text-white relative z-1"
+            variants={slideUpAndFade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {t("Repositories")}
-          </h2>
-          <p className="text-gray-600 dark:text-white/45 mt-4">
-            {t("Hoarding happiness in my free time, I love diving into the world of cartoons and anime. You can often find me laughing along with the antics of Naruto, Shinchan, and Tom and Jerry. I also enjoy revisiting classics like Ben 10, Courage the Cowardly Dog, Ninja Hattori, Doraemon, and Oggy. These shows are my go-to for a dose of fun and nostalgia.")}
-          </p>
+          </motion.h2>
+          <motion.p
+            className="text-gray-600 dark:text-white/45 mt-4"
+            variants={slideUpAndFade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {t(
+              "Hoarding happiness in my free time, I love diving into the world of cartoons and anime. You can often find me laughing along with the antics of Naruto, Shinchan, and Tom and Jerry. I also enjoy revisiting classics like Ben 10, Courage the Cowardly Dog, Ninja Hattori, Doraemon, and Oggy. These shows are my go-to for a dose of fun and nostalgia."
+            )}
+          </motion.p>
         </div>
 
         {/* Left Column */}
         <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {repoDetails.map((item, index) => (
+            {projects.map((item, index) => (
               <div
                 key={index}
                 className="bg-white dark:bg-[#1d1e22] p-6 rounded-lg shadow-lg"
@@ -81,8 +70,8 @@ const Repopage: React.FC = () => {
                     type="button"
                     className="px-3 py-1 text-xs font-medium text-center inline-flex items-center text-blue-500 bg-blue-100 rounded-lg  focus:ring-0 focus:outline-none  dark:text-blue-100 dark:bg-blue-900 "
                   >
-                    {item.type === "PERSONAL" && <FaGithub className="me-1" />}
-                    {item.type === "COMPANY" && <FaGithub className="me-1" />}
+                    {item.type === "Personal" && <FaGithub className="me-1" />}
+                    {item.type === "Company" && <FaGithub className="me-1" />}
                     {t("Personal")}
                   </button>
                 </span>

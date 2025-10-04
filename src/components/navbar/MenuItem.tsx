@@ -31,6 +31,13 @@ export const MenuItem: React.FC<{ title: string; href: string }> = ({
   const { theme } = useTheme();
   const { t } = useTranslation();
 
+  const handleScroll = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const section = document.querySelector(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <motion.li
@@ -39,7 +46,11 @@ export const MenuItem: React.FC<{ title: string; href: string }> = ({
       whileTap={{ scale: 0.95 }}
       className="vj_pf_mobile_nav_bar_ul_li"
     >
-      <a aria-label="naruto-seal-pointer" href={href} className="flex items-center gap-2 mb-2">
+      <button
+        aria-label="naruto-seal-pointer"
+        onClick={handleScroll}
+        className="flex items-center gap-2 mb-2 cursor-pointer"
+      >
         <div className="icon-placeholder" style={style}>
           {theme === "light" ? (
             <img
@@ -56,8 +67,10 @@ export const MenuItem: React.FC<{ title: string; href: string }> = ({
           )}
         </div>
 
-        <div className="text-placeholder dark:text-white/80 leading-4.5">{t(title)}</div>
-      </a>
+        <div className="text-placeholder dark:text-white/80 leading-4.5">
+          {t(title)}
+        </div>
+      </button>
     </motion.li>
   );
 };

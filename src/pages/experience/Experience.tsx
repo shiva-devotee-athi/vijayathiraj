@@ -6,20 +6,20 @@ import { motion } from "framer-motion";
 const Experience: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="timeline">
+    <div className="timeline overflow-x-hidden">
       <div className="outer">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, damping: 15 }}
+          transition={{ type: "spring", stiffness: 60, damping: 15 }}
           variants={{
             visible: (i) => ({
               opacity: 1,
               translateX: 0,
               transition: { delay: i * 0.2 },
             }),
-            hidden: { opacity: 0, translateX: -150 },
+            hidden: { opacity: 0, translateX: -100 },
           }}
           className="vj-pf-exp-card before:text-amber-700 dark:before:text-amber-500"
         >
@@ -31,9 +31,9 @@ const Experience: React.FC = () => {
               {t("Software Associate")}
             </h4>
             <p className="text-justify text-base text-zinc-700 dark:text-zinc-400">
-              {
+              {t(
                 "During my tenure at Azure Soft Tech Solutions, I served as a Software Associate, contributing to the development of various software solutions. This experience allowed me to apply my skills and knowledge in practical settings, working on diverse projects that enriched my understanding of software development processes and technologies. I collaborated closely with a talented team, gaining valuable insights into problem-solving, coding best practices, and project management. My time at Azure Softtech Solutions was instrumental in shaping my career and providing a strong foundation for my future endeavors."
-              }
+              )}
             </p>
           </div>
         </motion.div>
@@ -41,14 +41,14 @@ const Experience: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, damping: 15 }}
+          transition={{ type: "spring", stiffness: 60, damping: 15 }}
           variants={{
             visible: (i) => ({
               opacity: 1,
               translateX: 0,
               transition: { delay: i * 0.2 },
             }),
-            hidden: { opacity: 0, translateX: 150 },
+            hidden: { opacity: 0, translateX: 100 },
           }}
           className="vj-pf-exp-card before:text-amber-700 dark:before:text-amber-500"
         >
@@ -70,14 +70,14 @@ const Experience: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, damping: 15 }}
+          transition={{ type: "spring", stiffness: 60, damping: 15 }}
           variants={{
             visible: (i) => ({
               opacity: 1,
               translateX: 0,
               transition: { delay: i * 0.2 },
             }),
-            hidden: { opacity: 0, translateX: -150 },
+            hidden: { opacity: 0, translateX: -100 },
           }}
           className="vj-pf-exp-card before:text-amber-700 dark:before:text-amber-500"
         >
@@ -96,14 +96,14 @@ const Experience: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, damping: 15 }}
+          transition={{ type: "spring", stiffness: 60, damping: 15 }}
           variants={{
             visible: (i) => ({
               opacity: 1,
               translateX: 0,
               transition: { delay: i * 0.2 },
             }),
-            hidden: { opacity: 0, translateX: 150 },
+            hidden: { opacity: 0, translateX: 100 },
           }}
           className="vj-pf-exp-card before:text-amber-700 dark:before:text-amber-500"
         >

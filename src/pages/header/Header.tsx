@@ -10,15 +10,7 @@ import naruto_bgm from "@/assets/files/naruto_bgm.mp3";
 import { useTheme } from "@/context/ThemeContext";
 import MenuDropdown from "@/components/navbar/MenuDropdown";
 import { useTranslation } from "react-i18next";
-
-const headerLinks = [
-  { href: "#hero", title: "Home" },
-  { href: "#about", title: "About" },
-  { href: "#skills", title: "Skills" },
-  { href: "#education", title: "Education" },
-  { href: "#projects", title: "Projects" },
-  { href: "#contact", title: "Contact" },
-];
+import { headerLinks } from "../data/navigation";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -89,6 +81,15 @@ const Header: React.FC = () => {
     setPlaySong(!playSong);
   };
 
+  const scrollToSection = (elemId: string) => {
+    const targetElement = document.querySelector(elemId);
+    console.log(elemId,targetElement,'in')
+    if (targetElement) {
+      console.log('element-in')
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   //   var scrollWindow = function() {
   //     $(window).scroll(function(){
   //         var $w = $(this),
@@ -151,7 +152,7 @@ const Header: React.FC = () => {
               <motion.nav
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
-                className="vj_pf_mobile_nav_bar "
+                className="vj_pf_mobile_nav_bar"
               >
                 <motion.div
                   className="vj_pf_mobile_nav_bar_background relative bg-slate-100 dark:bg-[#121212]"
@@ -190,9 +191,33 @@ const Header: React.FC = () => {
                     </label>
                   </div>
                 </motion.div>
-                <Navigation />
-
+                {/* <div className={isOpen ? "block" : "hidden"}>
+                  <Navigation />
+                  </div> */}
+                <motion.div
+                  initial={false}
+                  animate={isOpen ? "open" : "closed"}
+                  variants={{
+                    open: {
+                      opacity: 1,
+                      height: "auto",
+                      transition: { duration: 0.3 },
+                    },
+                    closed: {
+                      opacity: 0,
+                      height: 0,
+                      transition: { duration: 0.3 },
+                    },
+                  }}
+                  style={{
+                    overflow: "hidden",
+                    display: isOpen ? "block" : "none",
+                  }}
+                >
+                  <Navigation />
+                </motion.div>
                 <MenuToggle toggle={() => toggleOpen()} />
+
                 <MenuDropdown />
                 <MusicVoulme playSong={playSong} togglePlay={togglePlay} />
               </motion.nav>
@@ -203,15 +228,15 @@ const Header: React.FC = () => {
             <ul className="navbar-nav nav ml-auto !flex-nowrap flex space-x-3">
               {headerLinks.map((link, index) => (
                 <li key={link.href} className="nav-item">
-                  <a
+                  <button
                     aria-label="Nav Link"
-                    href={link.href}
+                    onClick={() => scrollToSection(link.href)}
                     className={`nav-link ${
                       index == 0 ? "active focus:bg-amber-100" : ""
-                    } text-black dark:text-white dark:hover:text-white/75 outline-none`}
+                    } text-black dark:text-white dark:hover:text-white/75 cursor-pointer outline-none`}
                   >
                     <span>{t(link.title)}</span>
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>

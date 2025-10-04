@@ -1,53 +1,12 @@
 import React from "react";
+import { projects } from "@/pages/data/information";
 
-const repoDetails = [
-  {
-    date: "2014-2015",
-    title: "VIJAY-MERN-project",
-    position: "Cambridge University",
-    type: "PERSONAL",
-    description:
-      "I'm excited to introduce my MERN project, a web application that combines the power of MongoDB, Express.js, React, and Node.js to create a seamless user experience. This project focuses on two essential aspects: User Authentication, Profile Page Management with File System",
-  },
-  {
-    date: "2014-2015",
-    title: "React JS Food Order UI",
-    position: "Cambridge University",
-    type: "PERSONAL",
-    description:
-      "Introducing my Food Order UI Page React repository - a sleek and interactive user interface for ordering delicious meals. Explore a responsive design, seamless navigation, and a delightful ordering experience.",
-  },
-  {
-    date: "2014-2015",
-    title: "Shri-chat",
-    position: "Cambridge University",
-    type: "PERSONAL",
-    description:
-      "Discover my Chatting Application built with React.js and Firebase integration, featuring Google login for quick access. Connect with others effortlessly through five default chat groups, fostering real-time conversations and connections. Join the conversation now!",
-  },
-  {
-    date: "2014-2015",
-    title: "VJ-Shri-mens-Wear-cart",
-    position: "Cambridge University",
-    type: "PERSONAL",
-    description:
-      "Discover my Men's Cart Purchase Web Application, crafted with HTML, CSS, and JavaScript. It's a valuable resource for learning and practicing essential JavaScript functions while simulating a seamless shopping experience. Dive into coding and shopping simultaneously!",
-  },
-  {
-    date: "2017-2018",
-    title: "Responsive Design",
-    position: "Cambridge University",
-    type: "PERSONAL",
-    description:
-      "An emphasis on cutting-edge design and modern usability standards",
-  },
-];
 
 const Repopage: React.FC = () => {
   return (
     <section
       id="projects"
-      className="py-16 bg-gray-100 dark:bg-transparent vj-pf-section"
+      className="py-16 bg-gray-100 dark:bg-transparent vj-pf-bottom-section"
     >
       <div className="container">
         <div className="heading-section mb-12 text-center">
@@ -65,7 +24,7 @@ const Repopage: React.FC = () => {
         {/* Left Column */}
         <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {repoDetails.map((item, index) => (
+            {projects.map((item, index) => (
               <div
                 key={index}
                 className="bg-white dark:bg-[#1d1e22] p-6 rounded-lg shadow-lg"

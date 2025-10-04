@@ -130,7 +130,7 @@ export default function Chatbot() {
         },
         bot: {
           message:
-            "He Visitor,\n Sorry for the inconvenience.\n I've developed a chatbot using a custom-trained TensorFlow model and NLP methods, which performs well in my local environment. However, I've faced difficulties deploying it on free cloud services due to [mention a brief reason, e.g., resource constraints, specific dependencies]. I intend to deploy it on a dedicated cloud server (AWS, Google Cloud) or a local 24/7 server once I have the resources. I apologize for any inconvenience this may cause and appreciate your understanding.",
+            "He Visitor,\n Sorry for the inconvenience.\n I've developed a chatbot using a custom-trained TensorFlow model and NLP methods, which performs well in my local environment. However, I've faced difficulties deploying it on free cloud services. I intend to deploy it on a dedicated cloud server (AWS, Google Cloud) or a local 24/7 server once I have the resources. I apologize for any inconvenience this may cause and appreciate your understanding.",
           createdAt: currentTime,
           status: "delivered",
         },

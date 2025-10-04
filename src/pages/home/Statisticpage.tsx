@@ -1,13 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { statistics } from "@/pages/data/information";
 
-const stats = [
-  { number: 10, label: "Awards" },
-  { number: 12, label: "Complete Projects" },
-  { number: 0, label: "Happy Customers" },
-  { number: 0, label: "Cups of Coffee" },
-];
 const Statisticpage: React.FC = () => {
   // const count = useMotionValue(0);
   // const rounded = useTransform(count, Math.round);
@@ -30,7 +25,7 @@ const Statisticpage: React.FC = () => {
       >
         <div className="container">
           <div className="flex flex-wrap md:flex-nowrap items-center gap-8 ">
-            {stats.map((stat, index) => (
+            {statistics.map((stat, index) => (
               <div
                 key={index}
                 className="w-full md:w-1/4 flex justify-center counter-wrap"
@@ -51,15 +46,18 @@ const Statisticpage: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="vj-pf-section vj-pf-hireme img margin-top bg-cover bg-center">
+      <section className="vj-pf-hireme img margin-top bg-cover bg-center">
         <div className="container">
           <div className="flex justify-center">
             <div className="w-full md:w-7/12 text-center">
               <h2>
-                {t("I'm")} <span className="text-amber-500">{t("Available")}</span> {t("for freelancing")}
+                {t("I am currently")}{" "}
+                <span className="text-amber-500">{t("Available")}</span>{" "}
               </h2>
               <p className="mb-6 text-white">
-                {t("Let's collaborate! I'm available for freelance projects and excited to contribute.")}
+                {t(
+                  "Let's connect and discuss how my skills align with your hiring needs."
+                )}
               </p>
               <p className="mb-0">
                 <a

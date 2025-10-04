@@ -40,6 +40,7 @@ const Heropage: React.FC = () => {
   return (
     <section
       id="hero"
+      // style={{background:'#2f2f2f'}}
       className="relative vj-pf-hero-section w-full h-screen bg-white dark:bg-transparent overflow-hidden"
     >
       <div className="container">

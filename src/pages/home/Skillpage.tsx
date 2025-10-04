@@ -1,79 +1,25 @@
 import React, { CSSProperties } from "react";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
-import html_logo from "@/assets/images/skills/html.svg";
-import css_logo from "@/assets/images/skills/css3.svg";
-import js_logo from "@/assets/images/skills/javascript.svg";
-import react_js_logo from "@/assets/images/skills/react-js.svg";
-import next_js_logo from "@/assets/images/skills/next-js.svg";
-import electron_js_logo from "@/assets/images/skills/electron-js.svg";
 import { motion } from "framer-motion";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { useTheme } from "@/context/ThemeContext";
 import { useTranslation } from "react-i18next";
+import { skillCards } from "@/pages/data/skills";
 
-const skillCards = [
-  {
-    title: "HTML",
-    name: "HTML",
-    bgColor: "#381506",
-    color: "#ef6428",
-    image: html_logo,
-    star: 4.5,
+
+const slideUpAndFade = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
   },
-  {
-    title: "CSS",
-    name: "CSS",
-    bgColor: "#040d31",
-    color: "#264de4",
-    image: css_logo,
-    star: 4.5,
-  },
-  {
-    title: "Java Script",
-    name: "JS",
-    bgColor: "#2d2804",
-    color: "#f0db4f",
-    image: js_logo,
-    star: 4.0,
-  },
-  {
-    title: "React JS",
-    name: "REACT",
-    bgColor: "#052b35",
-    color: "#60dafa",
-    image: react_js_logo,
-    star: 4.0,
-  },
-  {
-    title: "NEXT JS",
-    name: "NEXT",
-    bgColor: "#3f2109",
-    color: "#e67113",
-    image: next_js_logo,
-    star: 3.5,
-  },
-  {
-    title: "React Native",
-    name: "NATIVE",
-    bgColor: "#052b35",
-    color: "#60dafa",
-    image: react_js_logo,
-    star: 3.5,
-  },
-  {
-    title: "Electron JS",
-    name: "ELECTRON",
-    bgColor: "#052b35",
-    color: "#60dafa",
-    image: electron_js_logo,
-    star: 2.0,
-  },
-];
+};
 
 const Skillpage: React.FC = () => {
   const { theme } = useTheme();
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   const generateStars = (rating: number) => {
     const fullStars = Math.floor(rating);
@@ -96,15 +42,39 @@ const Skillpage: React.FC = () => {
   return (
     <section
       id="skills"
-      className="py-16 bg-gray-100 dark:bg-transparent vj-pf-section"
+      className="py-16 bg-gray-100 dark:bg-transparent vj-pf-bottom-section"
     >
       <div className="container">
         <div className="heading-section mb-8 text-center">
-          <h1 className="big big-2 text-[#575757] dark:text-[#A6A6A6]">{t("Skills")}</h1>
-          <h2 className="mb-4 text-black dark:text-white relative z-1">{t("Talents")}</h2>
-          <p className="text-gray-600 dark:text-white/45 mt-4">
-            {t("In my journey toward independence and self-reliance, I'm continuously developing a range of practical skills. The rating stars below represent my current self-assessment, which is subjective and subject to change as I learn and grow. Remember, skill development is a lifelong process, and I'm committed to deepening my understanding through ongoing learning and real-world experience.")}
-          </p>
+          <motion.h1
+            className="big big-2 text-[#575757] dark:text-[#A6A6A6]"
+            variants={slideUpAndFade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {t("Skills")}
+          </motion.h1>
+          <motion.h2
+            className="mb-4 text-black dark:text-white relative z-1"
+            variants={slideUpAndFade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {t("Talents")}
+          </motion.h2>
+          <motion.p
+            className="text-gray-600 dark:text-white/45 mt-4"
+            variants={slideUpAndFade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {t(
+              "In my journey toward independence and self-reliance, I'm continuously developing a range of practical skills. The rating stars below represent my current self-assessment, which is subjective and subject to change as I learn and grow. Remember, skill development is a lifelong process, and I'm committed to deepening my understanding through ongoing learning and real-world experience."
+            )}
+          </motion.p>
         </div>
 
         <div className="flex flex-col items-center gap-2 mb-6">
@@ -123,7 +93,11 @@ const Skillpage: React.FC = () => {
               </span>
             </p>
             <p className="text-gray-600 dark:text-white/50">
-              <strong>{t("Translation")}:</strong> {t("What you have learned is but a handful of sand; what you have not learned is the size of the world")}.
+              <strong>{t("Translation")}:</strong>{" "}
+              {t(
+                "What you have learned is but a handful of sand; what you have not learned is the size of the world"
+              )}
+              .
             </p>
           </div>
         </div>

@@ -4,13 +4,25 @@ import "@/styles/css/font.css";
 import App from "./App";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { I18nextProvider } from "react-i18next";
-import '@/i18n/config';
+import "@/i18n/config";
 import i18next from "i18next";
+import { ToastContainer } from "react-toastify";
 
 createRoot(document.getElementById("root")!).render(
   <I18nextProvider i18n={i18next}>
     <ThemeProvider>
       <App />
+      <ToastContainer
+        position="top-right"
+        autoClose={false}
+        // autoClose={4000}
+        closeButton={false}
+        toastStyle={{ background: "transparent", boxShadow: "none" }}
+        hideProgressBar
+        closeOnClick
+        pauseOnHover
+        theme="colored"
+      />
     </ThemeProvider>
   </I18nextProvider>
 );

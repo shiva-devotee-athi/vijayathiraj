@@ -1,12 +1,6 @@
+import { languages } from "@/pages/data/navigation";
 import i18next from "i18next";
 import React, { useEffect, useRef, useState } from "react";
-
-const languages = [
-  { label: "English", value: "en" },
-  { label: "French", value: "fr" },
-  { label: "Japanese", value: "ja" },
-  // { label: "Tamil", value: "tn" },
-];
 
 const MenuDropdown: React.FC = () => {
   const isLangDropdownRef = useRef<HTMLDivElement | null>(null);
@@ -40,6 +34,7 @@ const MenuDropdown: React.FC = () => {
       className="lg:relative inline-block text-left group absolute top-[14px] right-28 lg:right-0 lg:top-0"
     >
       <button
+        aria-label="menu-button"
         type="button"
         onClick={() => setIsLangDropdown(!isLangDropdown)}
         className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium outline-none bg-transparent fill-black dark:fill-white text-black dark:text-white dark:hover:text-white/75 border-gray-300 rounded-md focus:outline-none focus:ring-0"
@@ -72,29 +67,29 @@ const MenuDropdown: React.FC = () => {
         </svg>
       </button>
       {isLangDropdown && (
-      <div
-        className="absolute right-0 z-10 min-w-30 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 dark:bg-zinc-900 ring-black/5 focus:outline-hidden"
-        role="menu"
-        aria-orientation="vertical"
-        aria-labelledby="menu-button"
-        tabIndex={-1}
-      >
-        <div className="py-1 w-full" role="none">
-          {/* Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" */}
-          {languages.map((lang) => (
-            <a
-              key={lang.label}
-              onClick={() => handleChangeLanguage(lang.value)}
-              className="block px-4 py-2 text-sm cursor-default whitespace-nowrap overflow-hidden text-ellipsis text-black dark:text-white dark:hover:text-white/75 dark:hover:bg-zinc-700"
-              role="menuitem"
-              tabIndex={-1}
-              id="menu-item-0"
-            >
-              {lang.label}
-            </a>
-          ))}
+        <div
+          className="absolute right-0 z-10 min-w-30 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 dark:bg-zinc-900 ring-black/5 focus:outline-hidden"
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="menu-button"
+          tabIndex={-1}
+        >
+          <div className="py-1 w-full" role="none">
+            {/* Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" */}
+            {languages.map((lang) => (
+              <a
+                key={lang.label}
+                onClick={() => handleChangeLanguage(lang.value)}
+                className="block px-4 py-2 text-sm cursor-default whitespace-nowrap overflow-hidden text-ellipsis text-black dark:text-white dark:hover:text-white/75 dark:hover:bg-zinc-700"
+                role="menuitem"
+                tabIndex={-1}
+                id="menu-item-0"
+              >
+                {lang.label}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
       )}
     </div>
   );

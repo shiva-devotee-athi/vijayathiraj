@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
+import { headerLinks } from "@/pages/data/navigation";
 
 const variants = {
   open: {
@@ -9,15 +10,6 @@ const variants = {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
   },
 };
-
-const headerLinks = [
-  { href: "#home", title: "Home" },
-  { href: "#about", title: "About" },
-  { href: "#skills", title: "Skills" },
-  { href: "#education", title: "Education" },
-  { href: "#projects", title: "Projects" },
-  { href: "#contact", title: "Contact" },
-];
 
 export const Navigation = () => (
   <motion.ul variants={variants} className="vj_pf_mobile_nav_bar_ul">

@@ -6,6 +6,11 @@
   "Education": "Éducation",
   "Projects": "Projets",
   "Contact": "Contact",
+  "Frontend": "L'extrémité avant",
+  "Developer": "Développeuse",
+  "Hi! I'm": "Salut ! Je suis",
+  "A creative Frontend Developer with 3+ years of experience in building high-performance, scalable, and responsive web solutions": "Un développeur front-end créatif avec plus de 3 ans d'expérience dans la création de solutions Web performantes, évolutives et réactives",
+
   "Hello. my name is vijay athiraj. nice to meet you I would like to welcome you with my personal portfolio": "Bonjour. Je m'appelle Vijay Athiraj. Enchanté de vous rencontrer, je vous souhaite la bienvenue avec mon portfolio personnel.",
 
   "About Me": "Sur moi",
@@ -18,8 +23,10 @@
   "City": "Ville",
   "Pin code": "Code PIN",
   "Phone": "Téléphone",
+  "Current Location": "Emplacement actuel",
   "Projects Completed": "Projets terminés",
   "Download CV": "Télécharger le CV",
+  "For HRs": "Pour les RH",
 
   "HUMAN BEING": "ÊTRE HUMAIN",
   "UI UX DESIGN": "CONCEPTION UI UX",
@@ -48,12 +55,23 @@
   "My school days were truly special, filled with cherished memories and valuable experiences. I had a wonderful group of friends, and we shared countless fun and mischievous moments together. I was dedicated to my studies, always respectful towards my teachers, and valued good behavior. Though I received a few silly punishments from my teachers, they only added to the charm and humor of my school life. The school provided a nurturing environment that encouraged us to excel academically and socially. Those years were a time of laughter, learning, and personal development, laying a strong foundation for my future endeavors.": "ExpériencMes années d'école étaient vraiment spéciales, remplies de précieux souvenirs et d'expériences précieuses. J'avais un groupe d'amis formidable et nous partagions d'innombrables moments de plaisir et de bonne humeur. Je me consacrais entièrement à mes études, toujours respectueux envers mes professeurs et valorisais les bonnes manières. Même si j'ai reçu quelques punitions ridicules de la part de mes professeurs, elles n'ont fait qu'ajouter au charme et à l'humour de ma vie scolaire. L'école offrait un environnement stimulant qui nous encourageait à exceller sur le plan scolaire et social. Ces années furent une période de rires, d'apprentissage et de développement personnel, qui ont posé des bases solides pour mes projets futurs.",
 
   "Talents": "Talents",
+  "Technical": "Technique",
   "In my journey toward independence and self-reliance, I'm continuously developing a range of practical skills. The rating stars below represent my current self-assessment, which is subjective and subject to change as I learn and grow. Remember, skill development is a lifelong process, and I'm committed to deepening my understanding through ongoing learning and real-world experience.": "Dans mon cheminement vers l'indépendance et l'autonomie, je développe continuellement diverses compétences pratiques. Les étoiles ci-dessous représentent mon auto-évaluation actuelle, subjective et susceptible d'évoluer au fil de mes apprentissages et de ma croissance. N'oubliez pas que le développement des compétences est un processus continu et que je m'engage à approfondir mes connaissances par l'apprentissage continu et l'expérience concrète.",
   "One of My Fav Quote": "Une de mes citations préférées",
   "Tamil Quote": "Citation tamoule",
   "Translation": "Traduction",
   "What you have learned is but a handful of sand; what you have not learned is the size of the world": "Ce que vous avez appris n'est qu'une poignée de sable ; ce que vous n'avez pas appris, c'est la taille du monde",
   "Rating": "Notation",
+  "Backend": "Backend",
+  "Database": "Base de données",
+  "Fundamentals": "Fundamentals",
+  "DevOps": "DevOps",
+
+  "Building responsive and dynamic user interfaces": "Créer des interfaces utilisateur réactives et dynamiques",
+  "Creating robust APIs and server-side applications": "Création d'API robustes et d'applications côté serveur",
+  "Managing and designing efficient data storage solutions": "Gérer et concevoir des solutions de stockage de données efficaces",
+  "Deployment, CI/CD, and server management": "Deployment, CI/CD, and server management",
+  "Core web development concepts and best practices": "Concepts de base et meilleures pratiques en matière de développement Web",
 
   "Experience": "Expérience",
   "Work": "Travail",
@@ -74,6 +92,7 @@
   "The future is fluid. Each act, each decision, and each development creates new possibilities and eliminates others. Be not afraid of discomfort. If you can't put yourself in a situation where you are uncomfortable, then you will never grow. You will never change. You'll never learn. so We only have control over the choice; we have no control over what is happening.": "L'avenir est fluide. Chaque acte, chaque décision et chaque évolution crée de nouvelles possibilités et en élimine d'autres. N'ayez pas peur de l'inconfort. Si vous ne pouvez pas vous mettre dans une situation inconfortable, vous ne progresserez jamais. Vous ne changerez jamais. Vous n'apprendrez jamais. Nous n'avons donc de contrôle que sur nos choix ; nous n'avons aucun contrôle sur ce qui se passe.",
 
   "Repos": "Repos",
+  "Dev": "Développeur",
   "Repositories": "Dépôts",
   "Hoarding happiness in my free time, I love diving into the world of cartoons and anime. You can often find me laughing along with the antics of Naruto, Shinchan, and Tom and Jerry. I also enjoy revisiting classics like Ben 10, Courage the Cowardly Dog, Ninja Hattori, Doraemon, and Oggy. These shows are my go-to for a dose of fun and nostalgia.": "Pendant mon temps libre, j'adore me plonger dans l'univers des dessins animés et des animes. On me retrouve souvent à rire en écoutant les pitreries de Naruto, Shinchan et Tom et Jerry. J'aime aussi revisiter des classiques comme Ben 10, Courage le chien froussard, Ninja Hattori, Doraemon et Oggy. Ces séries sont mes préférées pour une dose de fun et de nostalgie.",
 
@@ -106,12 +125,15 @@
   "Let's collaborate! I'm available for freelance projects and excited to contribute.": "Collaborons ! Je suis disponible pour des projets en freelance et ravi de contribuer.",
 
   "Location": "Emplacement",
+  "Current": "Actuel",
+  "Native": "Natif",
   "Email": "E-mail",
   "Call": "Appel",
   "Subject": "Sujet",
   "Message": "Message",
   "Send Message": "Envoyer un message",
   "Contact Me": "Contactez-moi",
+  "Reach Me": "Contactez-moi",
   "Your scroll, your jutsu, my inbox. Let's form an alliance and conquer the unknown, together!": "Ton parchemin, tes techniques, ma boîte mail. Formons une alliance et partons à la conquête de l'inconnu, ensemble !",
   "Just a simple work of imagination.": "Juste un simple travail d'imagination.",
 
@@ -121,6 +143,17 @@
   "hello": "Bonjour",
   "delivered": "livré",
   "Say Hi": "Dis bonjour",
-  "He Visitor, Sorry for the inconvenience. I've developed a chatbot using a custom-trained TensorFlow model and NLP methods, which performs well in my local environment. However, I've faced difficulties deploying it on free cloud services due to [mention a brief reason, e.g., resource constraints, specific dependencies]. I intend to deploy it on a dedicated cloud server (AWS, Google Cloud) or a local 24/7 server once I have the resources. I apologize for any inconvenience this may cause and appreciate your understanding.": "Cher visiteur, veuillez nous excuser pour la gêne occasionnée. J'ai développé un chatbot utilisant un modèle TensorFlow personnalisé et des méthodes de traitement du langage naturel (TALN), qui fonctionne bien dans mon environnement local. Cependant, j'ai rencontré des difficultés pour le déployer sur des services cloud gratuits en raison de [mentionner une brève raison, par exemple : contraintes de ressources, dépendances spécifiques]. Je compte le déployer sur un serveur cloud dédié (AWS, Google Cloud) ou un serveur local 24h/24 et 7j/7 dès que j'aurai les ressources nécessaires. Je vous prie de m'excuser pour la gêne occasionnée et vous remercie de votre compréhension.",
-  "Ask Freely to": "Demandez librement à Obito Bot"
+  "He Visitor, Sorry for the inconvenience. I've developed a chatbot using a custom-trained TensorFlow model and NLP methods, which performs well in my local environment. However, I've faced difficulties deploying it on free cloud services. I intend to deploy it on a dedicated cloud server (AWS, Google Cloud) or a local 24/7 server once I have the resources. I apologize for any inconvenience this may cause and appreciate your understanding.": "Cher visiteur, veuillez nous excuser pour la gêne occasionnée. J'ai développé un chatbot utilisant un modèle TensorFlow personnalisé et des méthodes de traitement du langage naturel (TALN), qui fonctionne bien dans mon environnement local. Cependant, j'ai rencontré des difficultés pour le déployer sur des services cloud gratuits en raison de [mentionner une brève raison, par exemple : contraintes de ressources, dépendances spécifiques]. Je compte le déployer sur un serveur cloud dédié (AWS, Google Cloud) ou un serveur local 24h/24 et 7j/7 dès que j'aurai les ressources nécessaires. Je vous prie de m'excuser pour la gêne occasionnée et vous remercie de votre compréhension.",
+  "Ask Freely to": "Demandez librement à Obito Bot",
+
+  "A curated selection of my recent professional and personal projects. Each artifact demonstrates my capabilities in full-stack development, robust code architecture using TypeScript, and effective user interface creation with modern frameworks like React and Node.js. Explore the repository links below to see how I translate complex ideas into functional, real-world applications": "Une sélection rigoureuse de mes récents projets professionnels et personnels. Chaque artefact illustre mes compétences en développement full-stack, en architecture de code robuste avec TypeScript et en création d'interfaces utilisateur performantes avec des frameworks modernes comme React et Node.js. Explorez les liens du dépôt ci-dessous pour découvrir comment je traduis des idées complexes en applications fonctionnelles et concrètes.",
+  "My Academic Score": "Mon Score Académique",
+  "My official, quantified result based on the established scoring criteria for this academic submission.": "Mon résultat officiel et quantifié, basé sur les critères d'évaluation établis pour cette soumission académique.",
+  "Percentage": "Pourcentage",
+  "Gallery": "Galerie",
+  "Memories": "Souvenirs",
+  "Return to Home": "Retour à l'accueil",
+  "I am currently": "Je suis actuellement",
+  "Years Experience": "Années d'Expérience",
+  "All": "Tout"
 }

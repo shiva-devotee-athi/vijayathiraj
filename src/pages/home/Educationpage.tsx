@@ -1,108 +1,139 @@
-import { TabsBtn, TabsContent, TabsProvider } from "@/components/tabs/Tabs";
-import education_img_1 from "@/assets/images/education/edu_image_1.webp";
-import education_img_2 from "@/assets/images/education/edu_image_2.webp";
-import education_img_3 from "@/assets/images/education/edu_image_3.webp";
+import React from "react";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { TabsBtn, TabsContent, TabsProvider } from "@/components/tabs/Tabs";
+import { Link } from "react-router";
+import { educationDetails } from "../data/information";
 
-const educationDetails = [
-  {
-    date: "2020-2022",
-    title: "Master Degree in Mathematics",
-    shortTitle: "MSC (MATHEMATICS)",
-    tinyTitle: "MSC (MATHS)",
-    imgSrc: education_img_3,
-    position: "Ayya Nadar Janaki Ammal College",
-    description:
-      "My M.Sc. journey at Ayya Nadar Janaki Ammal College in Sivakasi was an enriching chapter of my life. The institution not only honed my mathematical skills but also became the canvas for countless memories. From late-night study sessions to joyous celebrations, I experienced a spectrum of emotions. The college, with its dedicated faculty and supportive peers, fostered an environment for both academic growth and personal development. It's where I cultivated lasting friendships, faced challenges, and celebrated triumphs, creating a tapestry of happy and sometimes bittersweet moments that I'll cherish forever. and Still i have four Arrears..",
+const slideUpAndFade = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
   },
-  {
-    date: "2017-2020",
-    title: "Bachelor's Degree in Mathematics",
-    shortTitle: "BSC (MATHEMATICS)",
-    tinyTitle: "BSC (MATHS)",
-    imgSrc: education_img_2,
-    position: "Arulmigu Kalasalingam College of Arts and Science",
-    description:
-      "My B.Sc. journey at Arulmigu Kalasalingam College of Arts & Science, Krishnankoil, began with uncertainty about my course choice. However, as time went on, I found clarity and realized my passion for mathematics. The college provided a nurturing environment that allowed me to discover and develop my skills. It was a transformative period, where I not only gained knowledge but also honed my abilities, setting the foundation for my academic and personal growth.",
-  },
-  {
-    date: "2010-2017",
-    title: "High school education (TN)",
-    shortTitle: "Class XII",
-    tinyTitle: "Class XII",
-    imgSrc: education_img_1,
-    position: "G S Hindu Higher Secondary School",
-    description:
-      "My school days were truly special, filled with cherished memories and valuable experiences. I had a wonderful group of friends, and we shared countless fun and mischievous moments together. I was dedicated to my studies, always respectful towards my teachers, and valued good behavior. Though I received a few silly punishments from my teachers, they only added to the charm and humor of my school life. The school provided a nurturing environment that encouraged us to excel academically and socially. Those years were a time of laughter, learning, and personal development, laying a strong foundation for my future endeavors.",
-  },
-];
+};
 
-function Educationpage() {
-  // const [tags,setTags]= useState<string[]>([])
+const Educationpage: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-md pt-2 p-0 md:p-4 relative">
-      <TabsProvider defaultValue={educationDetails[0].title}>
-        <div className="flex justify-center my-2">
-          <div className="flex items-center w-fit dark:bg-[#1d2025] bg-gray-200 p-1 text-black rounded-md border">
-            {educationDetails.map((item, index) => (
-              <TabsBtn key={index} value={item.title}>
-                <span className="relative z-[2] uppercase hidden sm:block">
-                  {t(item.shortTitle)}
-                </span>
-                <span className="relative z-[2] uppercase block sm:hidden">
-                  {t(item.tinyTitle)}
-                </span>
-              </TabsBtn>
-            ))}
+    <section
+      id="education"
+      className="py-16 bg-gray-100 dark:bg-transparent vj-pf-bottom-section"
+    >
+      <div className="container">
+        <div className="heading-section mb-12 text-center">
+          <motion.h1
+            className="big big-2 text-[#d3d4d5] dark:text-[#303030]"
+            variants={slideUpAndFade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {t("Education")}
+          </motion.h1>
+          <motion.h2
+            className="mb-4 text-black dark:text-white relative z-1"
+            variants={slideUpAndFade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {t("Education")}
+          </motion.h2>
+          <motion.p
+            className="text-gray-600 dark:text-white/45 mt-4"
+            variants={slideUpAndFade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {t(
+              "My journey of learning has been a continuous adventure, shaping me into the professional I am today. Here's a look at my academic background and key milestones that have equipped me with the knowledge and skills to excel."
+            )}
+          </motion.p>
+        </div>
+        <div>
+          <div className="bg-white/10 dark:bg-transparent backdrop-blur-sm rounded-md pt-2 p-0 md:py-4 relative">
+            <TabsProvider defaultValue={educationDetails[0].title} wobbly>
+              <div className="flex justify-center my-2">
+                <div className="flex items-center w-fit dark:bg-[#1d2025] dark:text-gray-400 bg-gray-200 p-1 text-black rounded-md border dark:border-zinc-800">
+                  {educationDetails.map((item, index) => (
+                    <TabsBtn key={index} value={item.title}>
+                      <span className="relative z-[2] uppercase hidden sm:block">
+                        {t(item.shortTitle)}
+                      </span>
+                      <span className="relative z-[2] uppercase block sm:hidden">
+                        {t(item.tinyTitle)}
+                      </span>
+                    </TabsBtn>
+                  ))}
+                </div>
+              </div>
+
+              {educationDetails.map((item, index) => (
+                <TabsContent key={index} value={item.title} className="p-0">
+                  <div className="bg-white dark:bg-[#1d1e22] rounded-lg shadow-lg grid md:grid-cols-5">
+                    <picture className="w-full h-full group md:col-span-2 bg-black/20 rounded-t-lg md:rounded-none md:rounded-s-lg relative z-1 overflow-hidden">
+                      <img
+                        className="absolute z-0 blur-xs w-full"
+                        src={item.imgSrc}
+                        loading="lazy"
+                        alt=""
+                        width="100%"
+                        height="auto"
+                      />
+                      <img
+                        className="object-contain w-full h-full max-w-80 max-h-80 m-auto md:h-auto relative z-1"
+                        src={item.imgSrc}
+                        loading="lazy"
+                        alt=""
+                        width="100%"
+                        height="auto"
+                      />
+                    </picture>
+                    <div className="flex flex-col justify-start px-4 py-4 md:px-6 md:py-6 leading-normal md:col-span-3">
+                      <span className="block text-amber-600 font-semibold">
+                        {t(item.date)}
+                      </span>
+                      <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mt-2">
+                        {t(item.title)}
+                      </h2>
+                      <span className="block text-gray-600 dark:text-gray-400 italic">
+                        {t(item.position)}
+                      </span>
+                      <p className="mt-4 text-gray-600 dark:text-gray-400">
+                        {t(item.description)}
+                      </p>
+                    </div>
+                  </div>
+                </TabsContent>
+              ))}
+            </TabsProvider>
           </div>
         </div>
 
-        {educationDetails.map((item, index) => (
-          <TabsContent key={index} value={item.title} className="p-0">
-            <div className="bg-white dark:bg-[#1d1e22] px-0 py-4 md:px-6 md:py-6 rounded-lg shadow-lg flex flex-col item-start md:items-end md:flex-row">
-              <picture className="max-w-72 w-full h-full">
-                <img
-                  className="object-contain w-full rounded-t-lg h-48 md:h-auto md:w-48 lg:w-72 md:rounded-none md:rounded-s-lg"
-                  src={item.imgSrc}
-                  loading="lazy"
-                  alt=""
-                />
-              </picture>
-              <div className="flex flex-col justify-between p-4 pb-0 leading-normal">
-                <span className="block text-amber-600 font-semibold">
-                  {t(item.date)}
-                </span>
-                <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mt-2">
-                  {t(item.title)}
-                </h2>
-                <span className="block text-gray-600 dark:text-gray-400 italic">
-                  {t(item.position)}
-                </span>
-                <p className="mt-4 text-gray-600 dark:text-gray-400">
-                  {t(item.description)}
-                </p>
-              </div>
-            </div>
-          </TabsContent>
-        ))}
-      </TabsProvider>
-      {/* <TagsInput tags={tags} setTags={setTags} editTag={true}/>
-      <div className='mt-4'>
-        <p>Current Tags:</p>
-        <div className='flex gap-2 mt-2'>
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className='px-2 py-1 text-sm text-gray-700 bg-gray-200 rounded'
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div> */}
-    </div>
+        <motion.div
+          className="flex justify-center mt-12"
+          variants={slideUpAndFade}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <Link
+            aria-label="Education Know More Details"
+            to="/info/education"
+            target="_blank"
+            className="btn-main bg-btn2 lnk py-4 px-8 rounded-full"
+          >
+            {t("Know More")}
+            <i className="fas fa-chevron-right fa-icon"></i>
+            <span className="circle"></span>
+          </Link>
+        </motion.div>
+      </div>
+    </section>
   );
-}
+};
 
 export default Educationpage;
