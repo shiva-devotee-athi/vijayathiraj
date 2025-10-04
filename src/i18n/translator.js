@@ -127,7 +127,6 @@ const sample_data = {
   Message: "Message",
   "Send Message": "Envoyer un message",
   "Contact Me": "Contactez-moi",
-  "Reach Me": "Contactez-moi",
   "Your scroll, your jutsu, my inbox. Let's form an alliance and conquer the unknown, together!":
     "Loin, très loin, derrière les montagnes des mots, loin des pays de Vokalia et de Consonantia",
   "Just a simple work of imagination.":
