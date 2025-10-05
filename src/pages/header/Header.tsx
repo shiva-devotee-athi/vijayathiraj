@@ -83,9 +83,7 @@ const Header: React.FC = () => {
 
   const scrollToSection = (elemId: string) => {
     const targetElement = document.querySelector(elemId);
-    console.log(elemId,targetElement,'in')
     if (targetElement) {
-      console.log('element-in')
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
   };

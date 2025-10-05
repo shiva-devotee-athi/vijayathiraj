@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { statistics } from "@/pages/data/information";
+import { JOB_SEARCH } from "@/utils/utils";
 
 const Statisticpage: React.FC = () => {
   // const count = useMotionValue(0);
@@ -52,12 +53,17 @@ const Statisticpage: React.FC = () => {
             <div className="w-full md:w-7/12 text-center">
               <h2>
                 {t("I am currently")}{" "}
-                <span className="text-amber-500">{t("Available")}</span>{" "}
+                {JOB_SEARCH ? (
+                  <span className="text-green-400">{t("Available")}</span>
+                ) : (
+                  <span className="text-red-500">{t("Not Available")}</span>
+                )}
               </h2>
               <p className="mb-6 text-white">
                 {t(
-                  "Let's connect and discuss how my skills align with your hiring needs."
+                  "Let's connect and discuss how my skills align with your hiring needs"
                 )}
+                .
               </p>
               <p className="mb-0">
                 <a

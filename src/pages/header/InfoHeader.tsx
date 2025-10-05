@@ -2,16 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import "@/styles/css/nav_page.css";
 import "@/styles/scss/theme_switch.scss";
 import "@/styles/scss/mobile_nav_bar.scss";
-import { motion, useCycle } from "framer-motion";
+import { useCycle } from "framer-motion";
 import naruto_bgm from "@/assets/files/naruto_bgm.mp3";
 import { useTheme } from "@/context/ThemeContext";
-import MenuDropdown from "@/components/navbar/MenuDropdown";
-import { useTranslation } from "react-i18next";
 import InfoLangMenuDropdown from "@/components/navbar/InfoLangMenuDropdown";
 
 const InfoHeader: React.FC = () => {
   // const [isNavOpen, setIsNavOpen] = useState(false);
-  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isAwake, setIsAwake] = useState(false);
   const [playSong, setPlaySong] = useState(false);
@@ -20,7 +17,7 @@ const InfoHeader: React.FC = () => {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isOpen] = useCycle(false, true);
 
   useEffect(() => {
     handleScrollWindow();

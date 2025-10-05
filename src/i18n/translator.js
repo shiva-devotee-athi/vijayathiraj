@@ -151,5 +151,3 @@ const transformedData = Object.keys(sample_data).reduce((acc, key) => {
   acc[key] = key;
   return acc;
 }, {});
-
-console.log(transformedData);

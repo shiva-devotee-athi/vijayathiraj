@@ -1,5 +1,5 @@
 import { JSX, useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { motion, useScroll, MotionValue } from "framer-motion";
 import { projects } from "@/pages/data/information";
 import { useTranslation } from "react-i18next";
 import { FaGithub } from "react-icons/fa6";
@@ -45,36 +45,37 @@ export default function Index(): JSX.Element {
 
 // ----- Card Component -----
 interface CardProps {
-  i: number;
+  i?: number;
   title: string;
   description: string;
   type: string;
   src: string;
-  url: string;
-  link: string;
-  color: string;
+  url?: string;
+  color?: string;
   skills?: string[] | null;
-  progress: MotionValue<number>;
-  range: [number, number];
-  targetScale: number;
+  link?: string;
+  progress?: MotionValue<number>;
+  range?: [number, number];
+  targetScale?: number;
 }
 
 export const NewStackingCards: React.FC<CardProps> = ({
-  i,
   title,
   description,
   src,
-  url,
-  color,
   skills,
   type,
-  link,
-  progress,
-  range,
-  targetScale,
+  // i,
+  // url,
+  // color,
+  // link,
+  // progress,
+  // range,
+  // targetScale,
 }) => {
-  const scale = useTransform(progress, range, [1, targetScale]);
+  // const scale = useTransform(progress, range, [1, targetScale]);
   const { t } = useTranslation();
+  // console.info(i,url,color,link,progress,range,targetScale)
   return (
     <div
       // ref={container}
@@ -118,24 +119,6 @@ export const NewStackingCards: React.FC<CardProps> = ({
                         {skill}
                       </li>
                     ))}
-                  {/* <li className="rounded-full bg-rose-700 px-3 py-1 text-[0.7rem] uppercase tracking-wider dark:bg-[#ddbea9] dark:text-black">
-                    TypeScript
-                  </li>
-                  <li className="rounded-full bg-rose-700 px-3 py-1 text-[0.7rem] uppercase tracking-wider dark:bg-[#ddbea9] dark:text-black">
-                    Reactjs
-                  </li>
-                  <li className="rounded-full bg-rose-700 px-3 py-1 text-[0.7rem] uppercase tracking-wider dark:bg-[#ddbea9] dark:text-black">
-                    Tailwind
-                  </li>
-                  <li className="rounded-full bg-rose-700 px-3 py-1 text-[0.7rem] uppercase tracking-wider dark:bg-[#ddbea9] dark:text-black">
-                    Framer-motion
-                  </li>
-                  <li className="rounded-full bg-rose-700 px-3 py-1 text-[0.7rem] uppercase tracking-wider dark:bg-[#ddbea9] dark:text-black">
-                    MongoDB
-                  </li>
-                  <li className="rounded-full bg-rose-700 px-3 py-1 text-[0.7rem] uppercase tracking-wider dark:bg-[#ddbea9] dark:text-black">
-                    Appwriter
-                  </li> */}
                 </ul>
               </div>
               <picture>
@@ -158,22 +141,3 @@ export const NewStackingCards: React.FC<CardProps> = ({
     </div>
   );
 };
-
-{
-  /* <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white border border-rose-500 px-4 py-2 text-sm cursor-pointer hover:bg-rose-500"
-                    href="https://asfakur-portfolio-nextjs.vercel.app"
-                  >
-                    Live view
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white border border-rose-500 px-4 py-2 text-sm cursor-pointer hover:bg-rose-500"
-                    href="https://github.com/NarizAsfakur/asfakur-portfolio-next"
-                  >
-                    Github Code
-                  </a> */
-}

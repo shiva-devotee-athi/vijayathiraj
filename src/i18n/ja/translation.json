@@ -102,6 +102,7 @@
   "Cups of Coffee": "コーヒーのカップ",
   "I'm": "私は",
   "Available": "利用可能",
+  "Not Available": "利用不可",
   "for freelancing": "フリーランスのため",
   "Let's collaborate! I'm available for freelance projects and excited to contribute.": "コラボレーションしましょう！",
   "Location": "位置",
@@ -133,6 +134,11 @@
   "Memories": "思い出",
   "Return to Home": "ホームに戻る",
   "I am currently": "私は現在",
+  "Let's connect and discuss how my skills align with your hiring needs": "私のスキルが貴社の採用ニーズにどのように合致するか、ぜひご相談ください。",
   "Years Experience": "経験年数",
-  "All": "全て"
+  "All": "全て",
+  "Human Resource": "人事",
+  "For HR": "人事向け",
+  "Hiring": "雇用",
+  "You can copy the details to the clipboard when you hover over the underlined text click": "下線付きのテキストにマウスを移動してクリックすると、詳細をクリップボードにコピーできます。"
 }

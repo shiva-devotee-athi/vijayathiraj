@@ -196,7 +196,7 @@ const Aboutpage: React.FC = () => {
             </motion.div>
 
             {/* Download CV Button */}
-            <div className="mt-6">
+            <div className="mt-6 flex flex-wrap gap-2 md:gap-4">
               <motion.a
                 aria-label="Download CV"
                 href={sampleResumeFile}
@@ -216,7 +216,7 @@ const Aboutpage: React.FC = () => {
                 variants={slideUpAndFade}
                 initial="hidden"
                 whileInView="visible"
-                className="inline-block ms-4"
+                className="inline-block"
                 viewport={{ once: true, amount: 0.3 }}
               >
                 <Link

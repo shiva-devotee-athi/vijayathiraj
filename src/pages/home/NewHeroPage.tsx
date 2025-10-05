@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import obitoPiece1 from "@/assets/images/hero/Obito-Piece-1.webp";
 import obitoPiece2 from "@/assets/images/hero/Obito-Piece-2.webp";
@@ -14,11 +14,19 @@ export default function NewHeroPage() {
     target: ref,
     offset: ["start start", "end start"],
   });
+
+  // Apply easing to make motion smoother
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    mass: 0.8,
+  });
+
   // const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   // const textY = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
   // const fontSize = useTransform(scrollYProgress, [0, 1], ["6em", "3.5em"]);
-  const slideUP = useTransform(scrollYProgress, [0, 1], ["0%", "-150%"]);
-  const slideDown = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+  const slideUP = useTransform(smoothProgress, [0, 1], ["0%", "-150%"]);
+  const slideDown = useTransform(smoothProgress, [0, 1], ["0%", "150%"]);
 
   const slideUpAndFade = {
     hidden: { opacity: 0, y: 50 },
@@ -28,7 +36,6 @@ export default function NewHeroPage() {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
-
 
   return (
     <div
@@ -78,10 +85,10 @@ export default function NewHeroPage() {
               animate="visible"
             >
               <span className="text-primary font-bold text-amber-700 dark:text-amber-500">
-                {t('FRONTEND')}
+                {t("FRONTEND")}
               </span>
               <br />
-              <span className="ml-4 font-bold">{t('DEVELOPER')}</span>
+              <span className="ml-4 font-bold">{t("DEVELOPER")}</span>
               <br />
             </motion.h1>
             <motion.p
@@ -91,12 +98,17 @@ export default function NewHeroPage() {
               animate="visible"
             >
               {t("Hi! I'm")}{" "}
-              <span className="font-medium text-foreground">Vijay Athiraj.{" "}</span>
-              {t("A creative Frontend Developer with 3+ years of experience in building high-performance, scalable, and responsive web solutions")}.
+              <span className="font-medium text-foreground">
+                Vijay Athiraj.{" "}
+              </span>
+              {t(
+                "A creative Frontend Developer with 3+ years of experience in building high-performance, scalable, and responsive web solutions"
+              )}
+              .
             </motion.p>
-            
+
             <div className="flex space-x-4 mt-9 vj-pf-social-icons">
-              {socialIcons.map(({ href, icon, ariaLabel}, index) => (
+              {socialIcons.map(({ href, icon, ariaLabel }, index) => (
                 <a
                   key={index}
                   href={href}
@@ -131,7 +143,7 @@ export default function NewHeroPage() {
               alt="Digital artwork of Obito from Naruto Piece 1"
             />
           </motion.div>
-          <div className="flex flex-row items-end">
+          <div className="flex flex-row items-end pb-8">
             <motion.div
               initial="hidden"
               whileInView="visible"

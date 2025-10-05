@@ -121,6 +121,7 @@
   "Cups of Coffee": "Tasses de café",
   "I'm": "Je suis",
   "Available": "disponible",
+  "Not Available": "Pas disponible",
   "for freelancing": "pour travailler en freelance",
   "Let's collaborate! I'm available for freelance projects and excited to contribute.": "Collaborons ! Je suis disponible pour des projets en freelance et ravi de contribuer.",
 
@@ -154,6 +155,11 @@
   "Memories": "Souvenirs",
   "Return to Home": "Retour à l'accueil",
   "I am currently": "Je suis actuellement",
+  "Let's connect and discuss how my skills align with your hiring needs":"Connectons-nous et discutons de la manière dont mes compétences correspondent à vos besoins en matière de recrutement",
   "Years Experience": "Années d'Expérience",
-  "All": "Tout"
+  "All": "Tout",
+  "Human Resource": "Ressources humaines",
+  "For HR": "Pour les RH",
+  "Hiring": "Embauche",
+  "You can copy the details to the clipboard when you hover over the underlined text click": "Vous pouvez copier les détails dans le presse-papiers lorsque vous passez la souris sur le texte souligné, cliquez"
 }

@@ -99,6 +99,7 @@
   "Cups of Coffee": "Cups of Coffee",
   "I'm": "I'm",
   "Available": "Available",
+  "Not Available": "Not Available",
   "for freelancing": "for freelancing",
   "Let's collaborate! I'm available for freelance projects and excited to contribute.": "Let's collaborate! I'm available for freelance projects and excited to contribute.",
   "Location": "Location",
@@ -122,7 +123,7 @@
   "He Visitor, Sorry for the inconvenience. I've developed a chatbot using a custom-trained TensorFlow model and NLP methods, which performs well in my local environment. However, I've faced difficulties deploying it on free cloud services. I intend to deploy it on a dedicated cloud server (AWS, Google Cloud) or a local 24/7 server once I have the resources. I apologize for any inconvenience this may cause and appreciate your understanding.": "He Visitor, Sorry for the inconvenience. I've developed a chatbot using a custom-trained TensorFlow model and NLP methods, which performs well in my local environment. However, I've faced difficulties deploying it on free cloud services. I intend to deploy it on a dedicated cloud server (AWS, Google Cloud) or a local 24/7 server once I have the resources. I apologize for any inconvenience this may cause and appreciate your understanding.",
   "Ask Freely to": "Ask Freely to",
 
-  "A curated selection of my recent professional and personal projects. Each artifact demonstrates my capabilities in full-stack development, robust code architecture using TypeScript, and effective user interface creation with modern frameworks like React and Node.js. Explore the repository links below to see how I translate complex ideas into functional, real-world applications":"A curated selection of my recent professional and personal projects. Each artifact demonstrates my capabilities in full-stack development, robust code architecture using TypeScript, and effective user interface creation with modern frameworks like React and Node.js. Explore the repository links below to see how I translate complex ideas into functional, real-world applications",
+  "A curated selection of my recent professional and personal projects. Each artifact demonstrates my capabilities in full-stack development, robust code architecture using TypeScript, and effective user interface creation with modern frameworks like React and Node.js. Explore the repository links below to see how I translate complex ideas into functional, real-world applications": "A curated selection of my recent professional and personal projects. Each artifact demonstrates my capabilities in full-stack development, robust code architecture using TypeScript, and effective user interface creation with modern frameworks like React and Node.js. Explore the repository links below to see how I translate complex ideas into functional, real-world applications",
   "My Academic Score": "My Academic Score",
   "My official, quantified result based on the established scoring criteria for this academic submission.": "My Academi Score",
   "Percentage": "Percentage",
@@ -130,6 +131,11 @@
   "Memories": "Memories",
   "Return to Home": "Return to Home",
   "I am currently": "I am currently",
+  "Let's connect and discuss how my skills align with your hiring needs": "Let's connect and discuss how my skills align with your hiring needs",
   "Years Experience": "Years Experience",
-  "All": "All"
+  "All": "All",
+  "Human Resource": "Human Resource",
+  "For HR": "For HR",
+  "Hiring": "Hiring",
+  "You can copy the details to the clipboard when you hover over the underlined text click": "You can copy the details to the clipboard when you hover over the underlined text click"
 }

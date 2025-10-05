@@ -17,7 +17,6 @@ const HoppieImageDisplay = () => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
       {hoppieImage.map((chunk, chunkIndex) => {
-        console.log(chunk);
         return (
           <div key={chunkIndex} className="grid gap-4">
             {chunk.chunk.map(({ title, image }, index) => (

@@ -14,8 +14,6 @@ import {
 } from "@/pages/data/humanResource";
 import { TOTAL_YEARS_OF_EXPERIENCE } from "../data/information";
 import { useTheme } from "@/context/ThemeContext";
-import { toast } from "react-toastify";
-import { CustomToast } from "@/components/toast/CustomToast";
 
 const slideUpAndFade = {
   hidden: { opacity: 0, y: 50 },
@@ -112,6 +110,13 @@ const HumanResource: React.FC = () => {
           {/* Left Column */}
           <div className="relative mx-auto w-full px-4 py-12">
             {/* Vertical line */}
+            <div className="md:mx-auto rounded shadow-xl w-full md:w-1/2 overflow-hidden">
+            <p>
+              <span className="text-red-500 dark:text-red-700">*</span>
+              {t("You can copy the details to the clipboard when you hover over the underlined text click")}.
+            </p>
+            </div>
+
             <div className="bg-white dark:bg-[#1d2025] md:mx-auto rounded shadow-xl w-full md:w-1/2 overflow-hidden">
               <div
                 className={`h-[140px] ${
@@ -313,8 +318,9 @@ const HumanResource: React.FC = () => {
                         </span>
                       </div>
                       <p className="text-sm self-start ml-auto">
-                        
-                        <span className="text-slate-500 dark:text-slate-400">As{" "}</span>
+                        <span className="text-slate-500 dark:text-slate-400">
+                          As{" "}
+                        </span>
                         <span
                           className={`hover:underline cursor-pointer ${
                             copied?.index === index &&

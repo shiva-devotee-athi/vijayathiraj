@@ -15,7 +15,6 @@ const slideUpAndFade = {
 
 const NewSkillPage: React.FC = () => {
   const { t } = useTranslation();
-  console.log(myskills.map(item=>item.skills.map(item=>item.title)))
   return (
     <section
       id="skills"
