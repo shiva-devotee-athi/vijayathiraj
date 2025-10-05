@@ -1,4 +1,4 @@
-import { HashRouter , Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router";
 import AuthLayout from "@/layout/Auth/AuthLayout.tsx";
 import Login from "@/pages/auth/Login.tsx";
 import Register from "@/pages/auth/Register.tsx";
@@ -11,7 +11,7 @@ import HumanResource from "./pages/info/HumanResource";
 
 function App() {
   return (
-    <HashRouter  basename="/vijayathiraj">
+    <BrowserRouter basename="/vijayathiraj">
       <Routes>
         <Route element={<HomeLayout />}>
           <Route index element={<Mainpage />} />
@@ -26,7 +26,7 @@ function App() {
           <Route path="register" element={<Register />} />
         </Route>
       </Routes>
-    </HashRouter >
+    </BrowserRouter>
   );
 }
 
