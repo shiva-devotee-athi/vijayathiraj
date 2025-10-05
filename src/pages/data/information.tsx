@@ -52,34 +52,109 @@ export const educationDetails = [
 
 export const educationInstidutionGallery = [
   {
-    id: 1,
+    id: 300,
     category: "MSC",
-    src: "/vijayathiraj/images/gallery/gallery-1.jpg",
+    src: "/vijayathiraj/images/education/anjac-1.webp",
   },
   {
-    id: 2,
+    id: 301,
     category: "MSC",
-    src: "/vijayathiraj/images/gallery/gallery-2.jpg",
+    src: "/vijayathiraj/images/education/anjac-2.webp",
   },
   {
-    id: 3,
+    id: 302,
+    category: "MSC",
+    src: "/vijayathiraj/images/education/anjac-3.webp",
+  },
+  {
+    id: 303,
+    category: "MSC",
+    src: "/vijayathiraj/images/education/anjac-4.webp",
+  },
+  {
+    id: 304,
+    category: "MSC",
+    src: "/vijayathiraj/images/education/anjac-5.webp",
+  },
+  {
+    id: 305,
+    category: "MSC",
+    src: "/vijayathiraj/images/education/anjac-6.webp",
+  },
+  {
+    id: 306,
+    category: "MSC",
+    src: "/vijayathiraj/images/education/anjac-7.webp",
+  },
+  {
+    id: 307,
+    category: "MSC",
+    src: "/vijayathiraj/images/education/anjac-8.webp",
+  },
+   {
+    id: 308,
+    category: "MSC",
+    src: "/vijayathiraj/images/education/anjac-9.webp",
+  },
+  {
+    id: 309,
+    category: "MSC",
+    src: "/vijayathiraj/images/education/anjac-10.webp",
+  },
+  {
+    id: 310,
+    category: "MSC",
+    src: "/vijayathiraj/images/education/anjac-11.webp",
+  },
+  {
+    id: 200,
     category: "BSC",
-    src: "/vijayathiraj/images/gallery/gallery-3.jpg",
+    src: "/vijayathiraj/images/education/akcas-1.webp",
   },
   {
-    id: 4,
+    id: 201,
     category: "BSC",
-    src: "/vijayathiraj/images/gallery/gallery-4.jpg",
+    src: "/vijayathiraj/images/education/akcas-2.webp",
+  },
+    {
+    id: 202,
+    category: "BSC",
+    src: "/vijayathiraj/images/education/akcas-3.webp",
   },
   {
-    id: 5,
-    category: "Class XII",
-    src: "/vijayathiraj/images/gallery/gallery-5.jpg",
+    id: 203,
+    category: "BSC",
+    src: "/vijayathiraj/images/education/akcas-4.webp",
+  },
+    {
+    id: 204,
+    category: "BSC",
+    src: "/vijayathiraj/images/education/akcas-5.webp",
   },
   {
-    id: 6,
+    id: 205,
+    category: "BSC",
+    src: "/vijayathiraj/images/education/akcas-6.webp",
+  },
+  {
+    id: 100,
     category: "Class XII",
-    src: "/vijayathiraj/images/gallery/gallery-6.jpg",
+    src: "/vijayathiraj/images/education/gs-1.webp",
+  },
+  {
+    id: 101,
+    category: "Class XII",
+    src: "/vijayathiraj/images/education/gs-2.webp",
+  },
+  {
+    id: 102,
+    category: "Class XII",
+    src: "/vijayathiraj/images/education/gs-3.webp",
+  },
+  {
+    id: 103,
+    category: "Class XII",
+    src: "/vijayathiraj/images/education/gs-4.webp",
   },
 ];
 
