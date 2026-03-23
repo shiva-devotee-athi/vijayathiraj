@@ -6,6 +6,7 @@ import { useCycle } from "framer-motion";
 import naruto_bgm from "@/assets/files/naruto_bgm.mp3";
 import { useTheme } from "@/context/ThemeContext";
 import InfoLangMenuDropdown from "@/components/navbar/InfoLangMenuDropdown";
+import { Link } from "react-router";
 
 const InfoHeader: React.FC = () => {
   // const [isNavOpen, setIsNavOpen] = useState(false);
@@ -63,13 +64,13 @@ const InfoHeader: React.FC = () => {
         id="ftco-navbar"
       >
         <div className="container flex justify-between items-center">
-          <a
+          <Link
             aria-label="logo text"
             className="navbar-brand text-amber-700 dark:text-amber-500 text-xl font-bold"
-            href="#hero"
+            to="/"
           >
             VJSHRI
-          </a>
+          </Link>
 
           <div
             className={`flex justify-end relative items-center`}

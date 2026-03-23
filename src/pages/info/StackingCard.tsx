@@ -2,10 +2,10 @@ import { JSX, useRef } from "react";
 import { motion, useScroll, MotionValue } from "framer-motion";
 import { projects } from "@/pages/data/information";
 import { useTranslation } from "react-i18next";
-import { FaGithub } from "react-icons/fa6";
+import { FaBuilding, FaGithub } from "react-icons/fa6";
 
 // ----- Main -----
-export default function Index(): JSX.Element {
+export default function Index({ type }: { type: string }): JSX.Element {
   const container = useRef(null);
 
   // Track scroll progress for stacking cards
@@ -18,7 +18,7 @@ export default function Index(): JSX.Element {
   return (
     <section className="text-white w-full">
       <div ref={container} className="relative w-full">
-        {projects.map((project, i) => {
+        {projects.filter((item) => item.type === type).map((project, i) => {
           const targetScale = 1 - (projects.length - i) * 0.05;
           return (
             <NewStackingCards
@@ -90,9 +90,9 @@ export const NewStackingCards: React.FC<CardProps> = ({
       >
         <div className="group mb-3 last:mb-0 sm:mb-8">
           <div>
-            <div className="relative w-full min-h-[360px] sm:w-[52rem] overflow-hidden rounded-lg border transition dark:hover:bg-primary-foreground bg-white dark:bg-[#1e1e1e] hover:bg-amber-100 dark:hover:bg-[#281e0f] hover:backdrop-blur-lg backdrop-blur-md cursor-pointer border-transparent group-hover:border-amber-500">
+            <div className="relative w-full min-h-[60vh] sm:w-[52rem] overflow-hidden rounded-lg border transition dark:hover:bg-primary-foreground bg-white dark:bg-[#1e1e1e] hover:bg-amber-100 dark:hover:bg-[#281e0f] hover:backdrop-blur-lg backdrop-blur-md cursor-pointer border-transparent group-hover:border-amber-500">
               <div className="flex h-full flex-col justify-start px-5 gap-2 pb-7 pt-4 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[18rem]">
-                <h3 className="text-xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-400 dark:from-orange-600 dark:to-amber-500 whitespace-nowrap text-ellipsis">
+                <h3 className="text-xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-400 dark:from-orange-600 dark:to-amber-500 whitespace-wrap text-ellipsis">
                   {title}
                 </h3>
                 <span className="block text-gray-600 dark:text-gray-200">
@@ -101,13 +101,12 @@ export const NewStackingCards: React.FC<CardProps> = ({
                     className="px-3 py-1 text-xs font-medium text-center inline-flex items-center text-blue-500 bg-blue-100 rounded-lg  focus:ring-0 focus:outline-none  dark:text-blue-100 dark:bg-blue-900"
                   >
                     {type === "Personal" && <FaGithub className="me-1" />}
-                    {type === "Company" && <FaGithub className="me-1" />}
-                    {t("Personal")}
+                    {type === "Office" && <FaBuilding className="me-1" />}
+                    {type === "Personal" ? t("Personal") : t("Office")}
                   </button>
                 </span>
-                <p className="mt-0 leading-relaxed text-sm text-justify text-black dark:text-slate-300 max-sm:text-justify">
-                  {description}
-                </p>
+                <div dangerouslySetInnerHTML={{ __html: description }} className="mt-0 leading-relaxed text-sm text-justify text-black dark:text-slate-300 max-sm:text-justify">
+                </div>
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {skills &&
                     skills.length > 0 &&

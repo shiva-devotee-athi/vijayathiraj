@@ -20,9 +20,19 @@ import {
   SiCss,
   SiCpanel,
   SiRender,
+  SiDocker,
+  SiUbuntu,
+  SiApache,
+  SiElectron,
+  SiJest,
+  SiNestjs,
+  SiPostgresql,
+  SiSequelize,
 } from "@icons-pack/react-simple-icons";
 import { FaMobileAlt } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa6";
+
+import { ViWindowsIcon, ViAWSIcon } from "@/assets/icons/skill-icons";
 
 import html_logo from "@/assets/images/skills/html.svg";
 import css_logo from "@/assets/images/skills/css3.svg";
@@ -54,6 +64,14 @@ export const myskills = [
         title: "Next.js",
         icon: <SiNextdotjs className="size-4 text-[#000000]" />,
       },
+      {
+        title: "React Native*",
+        icon: <SiReact className="size-4 text-[#61DAFB]" />,
+      },
+      {
+        title: "Electron.js*",
+        icon: <SiElectron className="size-4 text-[#47848F]" />,
+      },
       { title: "Redux", icon: <SiRedux className="size-4 text-[#764ABC]" /> },
       {
         title: "Tailwind CSS",
@@ -63,6 +81,7 @@ export const myskills = [
         title: "Framer Motion",
         icon: <SiFramer className="size-4 text-[#0055FF]" />,
       },
+      { title: "Jest*", icon: <SiJest className="size-4 text-[#C21325]" /> },
     ],
   },
   {
@@ -72,6 +91,10 @@ export const myskills = [
       {
         title: "Node.js",
         icon: <SiNodedotjs className="size-4 text-[#339933]" />,
+      },
+      {
+        title: "Nest.js",
+        icon: <SiNestjs className="size-4 text-[#E0234E]" />,
       },
       {
         title: "Express.js",
@@ -95,6 +118,14 @@ export const myskills = [
         title: "Mongoose",
         icon: <SiMongoose className="size-4 text-[#880000]" />,
       },
+      {
+        title: "Postgres SQL",
+        icon: <SiPostgresql className="size-4 text-[#4169E1]" />,
+      },
+      {
+        title: "Sequelize ORM",
+        icon: <SiSequelize className="size-4 text-[#52B0E7]" />,
+      },
     ],
   },
   {
@@ -102,12 +133,24 @@ export const myskills = [
     description: "Deployment, CI/CD, and server management",
     skills: [
       { title: "Git", icon: <SiGit className="size-4 text-[#F05032]" /> },
-      { title: "GitHub", icon: <SiGithub className="size-4 text-[#ab01ab]" /> },
-      { title: "Cpanel", icon: <SiCpanel className="size-4 text-[#E34F26]" /> },
-      { title: "Render", icon: <SiRender className="size-4 text-[#000000]" /> },
+      { title: "GitHub", icon: <SiGithub className="size-4 text-[#181717]" /> },
+      {
+        title: "Docker*",
+        icon: <SiDocker className="size-4 text-[#2496ED]" />,
+      },
+      {
+        title: "AWS (EC2/S3/RDS)",
+        icon: <ViAWSIcon className="size-4 text-[#FF9900]" />,
+      },
       {
         title: "Postman",
-        icon: <SiPostman className="size-4 text-[#E34F26]" />,
+        icon: <SiPostman className="size-4 text-[#FF6C37]" />,
+      },
+      { title: "Cpanel", icon: <SiCpanel className="size-4 text-[#FF6C2C]" /> },
+      { title: "Render", icon: <SiRender className="size-4 text-[#000000]" /> },
+      {
+        title: "Apache Config",
+        icon: <SiApache className="size-4 text-[#D22128]" />,
       },
     ],
   },
@@ -128,8 +171,13 @@ export const myskills = [
         icon: <SiLighthouse className="size-4 text-red-500" />,
       },
       {
-        title: "Component-Driven Architecture",
+        title: "Architecture",
         icon: <SiHackthebox className="size-4 text-pink-500" />,
+      },
+      { title: "Ubuntu", icon: <SiUbuntu className="size-4 text-[#E95420]" /> },
+      {
+        title: "Windows",
+        icon: <ViWindowsIcon className="size-4 text-[#0078D6]" />,
       },
     ],
   },

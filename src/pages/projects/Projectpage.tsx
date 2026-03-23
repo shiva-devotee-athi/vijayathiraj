@@ -10,6 +10,7 @@ import "swiper/swiper-bundle.css";
 import { Link } from "react-router";
 import { projects } from "@/pages/data/information";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { FaBuilding } from "react-icons/fa6";
 // import "swiper/swiper.min.css";
 // import "swiper/modules/pagination.min.css";
 
@@ -37,7 +38,7 @@ const Projectpage: React.FC = () => {
     //   : swiper.params.slidesPerView;
     setSlidesPerView(swiper.params.slidesPerView);
   };
-  const totalBullets = Math.ceil(projects.length / slidesPerView);
+  const totalBullets = Math.ceil(projects.filter((item) => item.type === "Office").slice(0, 6).length / slidesPerView);
 
   return (
     <section
@@ -106,13 +107,13 @@ const Projectpage: React.FC = () => {
             onSlideChange={(swiper) => {
               const groupIndex = Math.floor(swiper.realIndex / slidesPerView);
               setActiveIndex(groupIndex);
-              
+
               // const bulletIndex = swiper.realIndex % totalBullets;
               // setSlidingIndex(bulletIndex);
             }}
             onSwiper={(swiper) => setSwiperPage(swiper)}
           >
-            {projects.map((item, index) => (
+            {projects.filter((item) => item.type === "Office").slice(0, 6).map((item, index) => (
               <SwiperSlide key={index}>
                 <article className="w-full h-full bg-transparent hover:bg-white dark:hover:bg-[#1d1e22] rounded-lg hover:shadow-lg overflow-hidden">
                   <div>
@@ -134,15 +135,16 @@ const Projectpage: React.FC = () => {
                         {item.type === "Personal" && (
                           <FaGithub className="me-1" />
                         )}
-                        {item.type === "Company" && (
-                          <FaGithub className="me-1" />
+                        {item.type === "Office" && (
+                          <FaBuilding className="me-1" />
                         )}
-                        {t("Personal")}
+                        {item.type === "Personal" ? t("Personal") : t("Office")}
                       </button>
                     </span>
-                    <p className="mt-2 text-gray-600 dark:text-gray-400 h-full sm:min-h-20 sm:max-h-20 overflow-hidden overflow-ellipsis">
-                      {t(item.description)}
-                    </p>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: item.description }}
+                      className="mt-2 text-gray-600 dark:text-gray-400 h-full sm:min-h-20 sm:max-h-20 overflow-hidden overflow-ellipsis"
+                    ></div>
                   </div>
                 </article>
               </SwiperSlide>
@@ -173,11 +175,10 @@ const Projectpage: React.FC = () => {
                     <motion.svg
                       viewBox="0 0 20 20"
                       version="1.1"
-                      className={`w-3.5 h-3.5 md:w-6 md:h-6 cursor-pointer hover:scale-105 ${
-                        activeIndex === i
-                          ? "text-amber-700 dark:text-amber-500"
-                          : "text-black dark:text-gray-500"
-                      }`}
+                      className={`w-3.5 h-3.5 md:w-6 md:h-6 cursor-pointer hover:scale-105 ${activeIndex === i
+                        ? "text-amber-700 dark:text-amber-500"
+                        : "text-black dark:text-gray-500"
+                        }`}
                       xmlns="http://www.w3.org/2000/svg"
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                       fill="currentColor"

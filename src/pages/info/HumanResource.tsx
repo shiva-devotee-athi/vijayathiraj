@@ -69,7 +69,7 @@ const HumanResource: React.FC = () => {
 
   return (
     <div>
-      <HeroInfo title="Human Resource" />
+      <HeroInfo title="Human Resource" href="/info/human-resource" />
       <section
         id="human-resource"
         className="py-16 bg-gray-100 dark:bg-transparent vj-pf-info-section"
@@ -486,7 +486,7 @@ const HumanResource: React.FC = () => {
                   </li>
                   <li className="flex border-b py-2">
                     <span className="font-bold w-32">Current Location:</span>
-                    <span className="text-gray-700">Chromepet, Chennai</span>
+                    <span className="text-gray-700">Guindy, Chennai</span>
                   </li>
                   <li className="flex border-b py-2">
                     <span className="font-bold w-32">Native Location:</span>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { statistics } from "@/pages/data/information";
 import { JOB_SEARCH } from "@/utils/utils";
+import { Link } from "react-router";
 
 const Statisticpage: React.FC = () => {
   // const count = useMotionValue(0);
@@ -66,13 +67,14 @@ const Statisticpage: React.FC = () => {
                 .
               </p>
               <p className="mb-0">
-                <a
+                <Link
                   aria-label="Contact Me"
-                  href="#contact"
+                  to="/info/human-resource"
+                  target="_blank"
                   className="btn bg-amber-600 text-white py-3 px-5 rounded-md hover:bg-amber-700 transition cursor-pointer"
                 >
                   {t("Contact Me")}
-                </a>
+                </Link>
               </p>
             </div>
           </div>

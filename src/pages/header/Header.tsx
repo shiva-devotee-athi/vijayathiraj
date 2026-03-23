@@ -11,6 +11,7 @@ import { useTheme } from "@/context/ThemeContext";
 import MenuDropdown from "@/components/navbar/MenuDropdown";
 import { useTranslation } from "react-i18next";
 import { headerLinks } from "../data/navigation";
+import { Link } from "react-router";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -38,8 +39,10 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isAwake, setIsAwake] = useState(false);
   const [playSong, setPlaySong] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("#hero");
   const isSmallDevices = useMediaQuery("(max-width: 990px)");
   const { theme, setTheme } = useTheme();
+
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -87,6 +90,26 @@ const Header: React.FC = () => {
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.6 } // Adjust for sensitivity
+    );
+
+    headerLinks.forEach((link) => {
+      const section = document.querySelector(link.href);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   //   var scrollWindow = function() {
   //     $(window).scroll(function(){
@@ -138,13 +161,13 @@ const Header: React.FC = () => {
         id="ftco-navbar"
       >
         <div className="container flex justify-between items-center">
-          <a
+          <Link
             aria-label="logo text"
             className="navbar-brand text-amber-700 dark:text-amber-500 text-xl font-bold"
-            href="#hero"
+            to="/"
           >
             VJSHRI
-          </a>
+          </Link>
           {isSmallDevices && (
             <>
               <motion.nav
@@ -224,13 +247,13 @@ const Header: React.FC = () => {
 
           <div className={`navbar-collapse hidden lg:flex`}>
             <ul className="navbar-nav nav ml-auto !flex-nowrap flex space-x-3">
-              {headerLinks.map((link, index) => (
+              {headerLinks.map((link) => (
                 <li key={link.href} className="nav-item">
                   <button
                     aria-label="Nav Link"
                     onClick={() => scrollToSection(link.href)}
                     className={`nav-link ${
-                      index == 0 ? "active focus:bg-amber-100" : ""
+                      activeSection === link.href ? "active focus:bg-amber-100" : ""
                     } text-black dark:text-white dark:hover:text-white/75 cursor-pointer outline-none`}
                   >
                     <span>{t(link.title)}</span>

@@ -9,16 +9,16 @@ import { FaLinkedinIn } from "react-icons/fa6";
 export const headerLinks = [
   { href: "#hero", title: "Home" },
   { href: "#about", title: "About" },
-  { href: "#skills", title: "Skills" },
   { href: "#education", title: "Education" },
+  { href: "#skills", title: "Skills" },
   { href: "#projects", title: "Projects" },
   { href: "#contact", title: "Contact" },
 ];
 
 export const footerLinks = [
   { href: "#about", title: "About" },
-  { href: "#skills", title: "Skills" },
   { href: "#education", title: "Education" },
+  { href: "#skills", title: "Skills" },
   { href: "#projects", title: "Projects" },
   { href: "#contact", title: "Contact" },
 ];

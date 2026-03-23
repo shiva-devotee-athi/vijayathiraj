@@ -24,6 +24,7 @@
     "framer-motion": "^12.3.1",
     "i18next": "^25.3.2",
     "lottie-react": "^2.4.1",
+    "lucide-react": "^0.548.0",
     "motion": "^12.3.1",
     "path": "^0.12.7",
     "react": "19.0.0",

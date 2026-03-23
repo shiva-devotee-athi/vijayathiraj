@@ -40,7 +40,7 @@ const Education: React.FC = () => {
 
   return (
     <div>
-      <HeroInfo title="Education" />
+      <HeroInfo title="Education" href="/info/education" />
       <section
         id="education"
         className="py-16 bg-gray-100 dark:bg-transparent vj-pf-info-section"
@@ -55,7 +55,7 @@ const Education: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              {t("Dev")}
+              {t("Education")}
             </motion.h1>
             <motion.h2
               className="mb-4 text-black dark:text-white relative z-1"
@@ -153,7 +153,7 @@ const Education: React.FC = () => {
                   </span>
                 </dt>
                 <dd className="order-first text-5xl font-semibold tracking-tight text-white">
-                  6.9
+                  6.72
                 </dd>
               </div>
               <div className="flex flex-col gap-1 bg-white/5 p-8">
@@ -161,7 +161,7 @@ const Education: React.FC = () => {
                   BSC (CGPA){" "}
                 </dt>
                 <dd className="order-first text-5xl font-semibold tracking-tight text-white">
-                  7.4
+                  7.29
                 </dd>
               </div>
               <div className="flex flex-col gap-1 bg-white/5 p-8">
@@ -229,11 +229,10 @@ const Education: React.FC = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`relative z-0 flex-1 text-sm font-medium py-2 px-3 rounded-md transition-colors cursor-pointer select-none ${
-                  activeTab === tab
+                className={`relative z-0 flex-1 text-sm font-medium py-2 px-3 rounded-md transition-colors cursor-pointer select-none ${activeTab === tab
                     ? "text-amber-700 dark:text-white"
                     : "text-stone-700 dark:text-stone-500"
-                }`}
+                  }`}
               >
                 {t(tab)}
                 {activeTab === tab && (
@@ -304,7 +303,7 @@ const Education: React.FC = () => {
                     className="rounded-md w-full max-w-3xl max-h-[70vh] object-contain"
                     width="100%"
                     height="auto"
-                    // className="rounded-md w-full max-w-3xl max-h-[80vh] object-contain"
+                  // className="rounded-md w-full max-w-3xl max-h-[80vh] object-contain"
                   />
                 </motion.div>
               </motion.div>
@@ -337,9 +336,8 @@ function TimelineItem({ edu, index }: { edu: any; index: number }) {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       transition={{ duration: 0.6, delay: index * 0.2 }}
-      className={`relative flex flex-col md:flex-row items-center ${
-        isLeft ? "md:justify-start" : "md:justify-end"
-      }`}
+      className={`relative flex flex-col md:flex-row items-center ${isLeft ? "md:justify-start" : "md:justify-end"
+        }`}
     >
       {/* Circle marker */}
       <motion.div
@@ -355,9 +353,8 @@ function TimelineItem({ edu, index }: { edu: any; index: number }) {
 
       {/* Content Card */}
       <div
-        className={`mt-8 ps-8 md:ml-0 md:mt-0 w-full md:w-1/2 ${
-          isLeft ? "md:pr-4 lg:pr-8" : "md:pl-4 lg:pl-8"
-        }`}
+        className={`mt-8 ps-8 md:ml-0 md:mt-0 w-full md:w-1/2 ${isLeft ? "md:pr-4 lg:pr-8" : "md:pl-4 lg:pl-8"
+          }`}
       >
         <div className="mx-auto bg-white dark:bg-zinc-800 rounded-xl shadow-md overflow-hidden">
           <div className="lg:flex min-h-52">

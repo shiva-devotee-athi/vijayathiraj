@@ -7,15 +7,21 @@
   "Projects": "Projets",
   "Contact": "Contact",
   "Frontend": "L'extrémité avant",
+  "FULL STACK": "PILE COMPLÈTE",
   "Developer": "Développeuse",
   "Hi! I'm": "Salut ! Je suis",
-  "A creative Frontend Developer with 3+ years of experience in building high-performance, scalable, and responsive web solutions": "Un développeur front-end créatif avec plus de 3 ans d'expérience dans la création de solutions Web performantes, évolutives et réactives",
+  "Driven by Logic. Defined by Adaptability.":"Guidée par la logique. Caractérisée par l'adaptabilité.",
+  "a developer who thrives where design meets data. After years of perfecting the Frontend, I stepped into the Backend trenches to ensure seamless system continuity. Today, I leverage a deep stack including Node.js, Sequelize, and Cloud Infrastructure to build applications that are as powerful on the inside as they are beautiful on the outside.": "Développeur passionné par l'alliance du design et des données, j'ai perfectionné pendant des années le frontend avant de me consacrer au backend pour garantir la continuité du système. Aujourd'hui, je maîtrise une stack technique complète incluant Node.js, Sequelize et l'infrastructure cloud pour concevoir des applications aussi performantes en interne qu'esthétiques en externe.",
 
   "Hello. my name is vijay athiraj. nice to meet you I would like to welcome you with my personal portfolio": "Bonjour. Je m'appelle Vijay Athiraj. Enchanté de vous rencontrer, je vous souhaite la bienvenue avec mon portfolio personnel.",
 
   "About Me": "Sur moi",
   "Passionate web developer skilled in HTML, CSS, JavaScript, Node.js, React.js, and Next.js. Dedicated to creating seamless and engaging user experiences through high-quality web solutions.": "Développeur web passionné, expert en HTML, CSS, JavaScript, Node.js, React.js et Next.js. Dédié à la création d'expériences utilisateur fluides et engageantes grâce à des solutions web de haute qualité.",
   "Explore my portfolio to see samples of my work that highlight my UI design standards and attention to detail.": "Explorez mon portfolio pour voir des exemples de mon travail qui mettent en valeur mes normes de conception d'interface utilisateur et mon souci du détail.",
+  "I am a Full Stack Developer with 4.1 years of professional experience in building scalable, high-performance web applications. My foundation is built on Logical Reasoning and Mathematics, which I translate into clean, efficient code across the entire MERN and NestJS ecosystem.": "Je suis un développeur Full Stack avec 4,1 ans d'expérience professionnelle dans la création d'applications Web évolutives et performantes. ",
+  "While my expertise began in crafting pixel-perfect, responsive user interfaces, my recent experience has seen me step deep into the backend trenches. I specialize in architecting robust APIs, managing PostgreSQL and MongoDB databases, and streamlining deployments using AWS and Docker.": "Bien que mon expertise ait commencé dans la création d'interfaces utilisateur réactives et au pixel près, mon expérience récente m'a permis de pénétrer profondément dans les tranchées du backend. ",
+  "I thrive in environments that require adaptability—whether it's leading a frontend transition or taking full ownership of server-side infrastructure. I don't just write code; I build seamless digital experiences that are as powerful on the inside as they are beautiful on the outside.": "Je m'épanouis dans des environnements qui nécessitent de l'adaptabilité, qu'il s'agisse de diriger une transition front-end ou de prendre pleinement possession de l'infrastructure côté serveur. ",
+
 
   "Name": "Nom",
   "Date of birth": "Date de naissance",
@@ -28,11 +34,14 @@
   "Download CV": "Télécharger le CV",
   "For HRs": "Pour les RH",
 
-  "HUMAN BEING": "ÊTRE HUMAIN",
-  "UI UX DESIGN": "CONCEPTION UI UX",
-  "PHOTOSHOP BEGINNER": "PHOTOSHOP DÉBUTANT",
-  "UI UX DEVELOPMENT": "DÉVELOPPEMENT UI UX",
-  "ICON DESIGN": "CONCEPTION D'ICÔNES",
+"FULL STACK DEVELOPMENT": "DÉVELOPPEMENT FULL-STACK",
+  "NEST.JS & NODE.JS BACKEND": "BACKEND NEST.JS ET NODE.JS",
+  "REACT & NEXT.JS EXPERT": "EXPERT REACT & NEXT.JS",
+  "AWS CLOUD INFRASTRUCTURE": "INFRASTRUCTURE CLOUÉE AWS",
+  "SCALABLE SYSTEM DESIGN": "CONCEPTION DE SYSTÈME ÉVOLUTIVE",
+  "POSTGRESQL & MONGODB": "POSTGRESQL & MONGODB",
+  "DOCKER & CI/CD PIPELINES": "PIPELINES DOCKER ET CI/CD",
+  "UI/UX IMPLEMENTATION": "MISE EN ŒUVRE DE L'UI/UX",
 
   "My journey of learning has been a continuous adventure, shaping me into the professional I am today. Here's a look at my academic background and key milestones that have equipped me with the knowledge and skills to excel.": "Une petite rivière nommée Duden coule près de chez eux et leur fournit les regelialia nécessaires. C'est un pays paradisiaque, où des fragments de phrases grillées vous sautent aux lèvres.",
   "MSC (MATHEMATICS)": "MSC (MATHÉMATIQUES)",
@@ -49,7 +58,7 @@
   "My M.Sc. journey at Ayya Nadar Janaki Ammal College in Sivakasi was an enriching chapter of my life. The institution not only honed my mathematical skills but also became the canvas for countless memories. From late-night study sessions to joyous celebrations, I experienced a spectrum of emotions. The college, with its dedicated faculty and supportive peers, fostered an environment for both academic growth and personal development. It's where I cultivated lasting friendships, faced challenges, and celebrated triumphs, creating a tapestry of happy and sometimes bittersweet moments that I'll cherish forever. and Still i have four Arrears..": "Mon master au Collège Ayya Nadar Janaki Ammal de Sivakasi a été un chapitre enrichissant de ma vie. Cet établissement a non seulement perfectionné mes compétences en mathématiques, mais est aussi devenu le support d'innombrables souvenirs. Des séances d'étude nocturnes aux joyeuses célébrations, j'ai vécu une palette d'émotions variées. Grâce à son corps professoral dévoué et à son soutien constant, l'université a créé un environnement propice à la croissance académique et au développement personnel. C'est là que j'ai noué des amitiés durables, relevé des défis et célébré des victoires, créant un tableau de moments heureux et parfois doux-amers que je chérirai à jamais. Et pourtant, j'ai quatre arriérés…",
 
   "Bachelor's Degree in Mathematics": "Licence en mathématiques",
-  "My B.Sc. journey at Arulmigu Kalasalingam College of Arts & Science, Krishnankoil, began with uncertainty about my course choice. However, as time went on, I found clarity and realized my passion for mathematics. The college provided a nurturing environment that allowed me to discover and develop my skills. It was a transformative period, where I not only gained knowledge but also honed my abilities, setting the foundation for my academic and personal growth.": "Mon parcours en licence à l'Arulmigu Kalasalingam College of Arts & Science, à Krishnankoil, a débuté dans l'incertitude quant à mon choix de cursus. Cependant, avec le temps, j'ai trouvé la clarté et pris conscience de ma passion pour les mathématiques. L'université m'a offert un environnement stimulant qui m'a permis de découvrir et de développer mes compétences. Ce fut une période transformatrice, où j'ai non seulement acquis des connaissances, mais aussi perfectionné mes compétences, posant ainsi les bases de mon développement académique et personnel.",
+  "My B.Sc. journey at Arulmigu Kalasalingam College of Arts & Science, Krishnankoil, began with uncertainty about my course choice. However, as time went on, I found clarity and realized my passion for mathematics. The college provided a nurturing environment that allowed me to discover and develop my skills. It was a transformative period, where I not only gained knowledge but also honed my abilities, setting the foundation for my academic and personal growth. Focused on advanced calculus, linear algebra, and numerical methods. Developed a strong foundation in logical reasoning and analytical problem-solving, which I now apply to complex algorithm design.": "Spécialisé en calcul avancé, algèbre linéaire et méthodes numériques, j'ai acquis de solides bases en raisonnement logique et en résolution analytique de problèmes, que j'applique désormais à la conception d'algorithmes complexes.",
 
   "High school education (TN)": "Enseignement secondaire (TN)",
   "My school days were truly special, filled with cherished memories and valuable experiences. I had a wonderful group of friends, and we shared countless fun and mischievous moments together. I was dedicated to my studies, always respectful towards my teachers, and valued good behavior. Though I received a few silly punishments from my teachers, they only added to the charm and humor of my school life. The school provided a nurturing environment that encouraged us to excel academically and socially. Those years were a time of laughter, learning, and personal development, laying a strong foundation for my future endeavors.": "ExpériencMes années d'école étaient vraiment spéciales, remplies de précieux souvenirs et d'expériences précieuses. J'avais un groupe d'amis formidable et nous partagions d'innombrables moments de plaisir et de bonne humeur. Je me consacrais entièrement à mes études, toujours respectueux envers mes professeurs et valorisais les bonnes manières. Même si j'ai reçu quelques punitions ridicules de la part de mes professeurs, elles n'ont fait qu'ajouter au charme et à l'humour de ma vie scolaire. L'école offrait un environnement stimulant qui nous encourageait à exceller sur le plan scolaire et social. Ces années furent une période de rires, d'apprentissage et de développement personnel, qui ont posé des bases solides pour mes projets futurs.",
@@ -70,7 +79,7 @@
   "Building responsive and dynamic user interfaces": "Créer des interfaces utilisateur réactives et dynamiques",
   "Creating robust APIs and server-side applications": "Création d'API robustes et d'applications côté serveur",
   "Managing and designing efficient data storage solutions": "Gérer et concevoir des solutions de stockage de données efficaces",
-  "Deployment, CI/CD, and server management": "Deployment, CI/CD, and server management",
+  "Deployment, CI/CD, and server management": "Déploiement, CI/CD et gestion des serveurs",
   "Core web development concepts and best practices": "Concepts de base et meilleures pratiques en matière de développement Web",
 
   "Experience": "Expérience",
@@ -111,6 +120,15 @@
   "Responsive Design": "Conception réactive",
   "An emphasis on cutting-edge design and modern usability standards": "L'accent est mis sur la conception de pointe et les normes d'utilisation modernes",
   "Personal": "Personnel",
+
+  "This project is a modern, terminal-based personal portfolio that offers a unique, interactive experience for showcasing my work. It is built entirely on Node.js and leverages TypeScript for robust, strictly-typed code architecture. The application uses the Chalk library to deliver a visually engaging, styled, and colorful user interface directly within the command line.":"Ce projet est un portfolio personnel moderne, basé sur le terminal, offrant une expérience unique et interactive pour présenter mon travail. Il est entièrement construit sur Node.js et exploite TypeScript pour une architecture de code robuste et fortement typée. L'application utilise la librairie Chalk pour fournir une interface utilisateur visuellement attrayante, stylisée et colorée, directement dans la ligne de commande.",
+  "This project is a modern, responsive User Interface (UI) designed to aggregate and visualize GitHub activity data for individual developers or small teams. It transforms raw API data—often scattered across various GitHub pages—into a single, cohesive, and insightful dashboard.":"Ce projet est une Interface Utilisateur (UI) moderne et réactive, conçue pour agréger et visualiser les données d'activité GitHub pour des développeurs individuels ou de petites équipes. Il transforme les données API brutes — souvent dispersées sur différentes pages GitHub — en un tableau de bord unique, cohérent et perspicace.",
+  "This project is a detailed, front-end clone of the Sun NXT Over-The-Top (OTT) streaming service user interface. Built with React JS, the application features a modular and efficient architecture. It utilizes highly responsive, and pixel-perfect design across all devices. React Slick is implemented to power the smooth, dynamic carousels for browsing movies and series collections.":"Ce projet est un clone frontal détaillé de l'interface utilisateur du service de streaming Over-The-Top (OTT) Sun NXT. Construit avec React JS, l'application présente une architecture modulaire et efficace. Elle utilise un design très réactif et au pixel près sur tous les appareils. React Slick est implémenté pour alimenter les carrousels fluides et dynamiques permettant de parcourir les collections de films et de séries.",
+  "Basic Idea, User Creation, Role based Authentication, Customer Order Food, Delivery Boy Deliver the food, Table Booking, Check Availability, Admin Handle the User under Department Designation.":
+  "Idée de base, Création d'utilisateur, Authentification basée sur les rôles, Commande de nourriture par le client, Livraison de la nourriture par le livreur, Réservation de table, Vérification des disponibilités, Gestion des utilisateurs par l'administrateur selon le département et la désignation.",
+  "User Creation, Quiz question preparation and also user able to answer the questions and get the answer score under user. Question Patterns: Single Select Multiple Choice Question, Breif Answer Question (TEXT), Multi select Multiple Choice Questions":
+  "Création d'utilisateur, Préparation des questions de quiz et possibilité pour l'utilisateur de répondre aux questions et d'obtenir le score de réponse sous son profil. Formats de questions : Question à Choix Multiples à Sélection Unique, Question à Réponse Courte (TEXTE), Questions à Choix Multiples à Sélections Multiples.",
+  "A real-time chat application designed for seamless communication, featuring modern frontend and backend technologies,Secure authentication with JWT and OAuth, Optimized backend using Express, Redis, and Sequelize, File upload handling with Multer, PostgreSQL database for structured data storage":"A real-time chat application Une application de chat en temps réel conçue pour une communication fluide, intégrant des technologies frontend et backend modernes, une authentification sécurisée avec JWT et OAuth, un backend optimisé utilisant Express, Redis et Sequelize, la gestion du téléchargement de fichiers avec Multer, et une base de données PostgreSQL pour le stockage de données structurées.",
 
   "Happiness": "Bonheur",
   "Hoppies": "Houblons",

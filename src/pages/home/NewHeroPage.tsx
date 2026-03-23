@@ -45,66 +45,80 @@ export default function NewHeroPage() {
       style={{ height: "calc(100vh - 70px)" }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 w-full">
-        <div className="justify-between items-center flex md:hidden">
+        <div className="justify-between order-2 md:order-1 items-center flex md:hidden">
           <div className="flex flex-col justify-center items-center w-full">
             <motion.h1
-              className="banner-title slide-up-and-fade leading-[.95] text-2xl xs:text-3xl font-anton"
+              className="banner-title slide-up-and-fade leading-[.95] mt-0 my-3 text-2xl xs:text-3xl font-anton"
               variants={slideUpAndFade}
               initial="hidden"
               animate="visible"
             >
               <span className="text-primary font-bold text-amber-700 dark:text-amber-500">
-                {t("Frontend")}
+                {t("FULL STACK")}
               </span>{" "}
               <span className="font-bold">{t("Developer")}</span>
               <br />
             </motion.h1>
             <motion.p
-              className="banner-description slide-up-and-fade my-3 text-sm text-center text-muted-foreground"
+              className="banner-description slide-up-and-fade mt-0 my-3 text-sm text-center text-muted-foreground"
+              variants={slideUpAndFade}
+              initial="hidden"
+              animate="visible"
+            >
+              {t('Driven by Logic. Defined by Adaptability.')}
+            </motion.p>
+            <motion.p
+              className="banner-description slide-up-and-fade mt-0 my-3 text-xs text-center text-muted-foreground"
               variants={slideUpAndFade}
               initial="hidden"
               animate="visible"
             >
               {t("Hi! I'm")}{" "}
-              <span className="font-medium text-foreground">Vijay Athiraj</span>
+              <span className="font-medium text-amber-700 dark:text-amber-500">Vijay Athiraj</span>
               .{" "}
               {t(
-                "A creative Frontend Developer with 3.2+ years of experience in building high-performance, scalable, and responsive web solutions"
+                "a developer who thrives where design meets data. After years of perfecting the Frontend, I stepped into the Backend trenches to ensure seamless system continuity. Today, I leverage a deep stack including Node.js, Sequelize, and Cloud Infrastructure to build applications that are as powerful on the inside as they are beautiful on the outside."
               )}
-              .
             </motion.p>
           </div>
         </div>
 
-        <div className="max-md:pb-10 justify-between items-center max-md:flex-col hidden md:flex">
+        <div className="max-md:pb-10 order-2 md:order-1 justify-between items-center max-md:flex-col hidden md:flex">
           <div className="max-md:grow max-md:flex flex-col justify-center items-start me-auto max-w-[544px]">
             <motion.h1
-              className="banner-title slide-up-and-fade leading-[.95] text-6xl lg:text-[80px] font-anton"
+              className="banner-title slide-up-and-fade leading-[.95] text-5xl lg:text-[70px] font-anton"
               variants={slideUpAndFade}
               initial="hidden"
               animate="visible"
             >
               <span className="text-primary font-bold text-amber-700 dark:text-amber-500">
-                {t("FRONTEND")}
+                {t("FULL STACK")}
               </span>
               <br />
               <span className="ml-4 font-bold">{t("DEVELOPER")}</span>
               <br />
             </motion.h1>
             <motion.p
-              className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground"
+              className="banner-description slide-up-and-fade mt-4 text-xl text-muted-foreground"
+              variants={slideUpAndFade}
+              initial="hidden"
+              animate="visible"
+            >
+              {t('Driven by Logic. Defined by Adaptability.')}
+            </motion.p>
+            <motion.p
+              className="banner-description slide-up-and-fade mt-4 text-base text-muted-foreground"
               variants={slideUpAndFade}
               initial="hidden"
               animate="visible"
             >
               {t("Hi! I'm")}{" "}
-              <span className="font-medium text-foreground">
+              <span className="font-medium text-amber-700 dark:text-amber-500">
                 Vijay Athiraj.{" "}
               </span>
               {t(
-                "A creative Frontend Developer with 3+ years of experience in building high-performance, scalable, and responsive web solutions"
+                "a developer who thrives where design meets data. After years of perfecting the Frontend, I stepped into the Backend trenches to ensure seamless system continuity. Today, I leverage a deep stack including Node.js, Sequelize, and Cloud Infrastructure to build applications that are as powerful on the inside as they are beautiful on the outside."
               )}
-              .
             </motion.p>
 
             <div className="flex space-x-4 mt-9 vj-pf-social-icons">
@@ -123,7 +137,7 @@ export default function NewHeroPage() {
           </div>
         </div>
 
-        <div className="w-full justify-center flex">
+        <div className="w-full order-1 md:order-2 justify-center flex">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -165,12 +179,12 @@ export default function NewHeroPage() {
                 width="100%"
                 alt="Digital artwork of Obito from Naruto Piece 2"
                 loading="eager"
-                // srcSet="
-                //   /vijayathiraj/assets/Obito-Piece-2-480w.webp 480w,
-                //   /vijayathiraj/assets/Obito-Piece-2-768w.webp 768w,
-                //   /vijayathiraj/assets/Obito-Piece-2-1280w.webp 1280w
-                // "
-                // sizes="(max-width: 768px) 100vw, 70vh"
+              // srcSet="
+              //   /vijayathiraj/assets/Obito-Piece-2-480w.webp 480w,
+              //   /vijayathiraj/assets/Obito-Piece-2-768w.webp 768w,
+              //   /vijayathiraj/assets/Obito-Piece-2-1280w.webp 1280w
+              // "
+              // sizes="(max-width: 768px) 100vw, 70vh"
               />
             </motion.div>
             <motion.div

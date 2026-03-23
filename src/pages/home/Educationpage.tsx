@@ -123,7 +123,6 @@ const Educationpage: React.FC = () => {
           <Link
             aria-label="Education Know More Details"
             to="/info/education"
-            target="_blank"
             className="btn-main bg-btn2 lnk py-4 px-8 rounded-full"
           >
             {t("Know More")}

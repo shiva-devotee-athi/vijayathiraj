@@ -11,14 +11,14 @@ const MarqueePage: React.FC = () => {
       <div className="bg-green-900 dark:bg-yellow-300 text-green-100 dark:text-gray-900 font-bold text-center p-4 text-lg w-[110%] rotate-6 absolute -left-5 top-0 z-2 skill-rippon">
         <Marquee className="skill-rippon" direction="right" pauseOnHover>
           {marqueeSkills.map((item, index) => (
-            <span key={index}>{t(item)}</span>
+            <span key={index}>{t(item)} • </span>
           ))}
         </Marquee>
       </div>
       <div className="bg-green-900 dark:bg-yellow-300 text-green-100 dark:text-gray-900 font-bold text-center p-4 text-lg w-[120%] -rotate-6 absolute -left-5 top-3 z-1 opacity-65">
         <Marquee className="skill-rippon" direction="left" pauseOnHover>
           {marqueeSkills.map((item, index) => (
-            <span key={index}>{t(item)}</span>
+            <span key={index}>{t(item)} • </span>
           ))}
         </Marquee>
       </div>

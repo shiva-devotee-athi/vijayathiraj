@@ -4,21 +4,28 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { footerLinks } from "../data/navigation";
 
-
 const Footer: React.FC = () => {
   const { t } = useTranslation();
+  
+  const scrollToSection = (elemId: string) => {
+    const targetElement = document.querySelector(elemId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <footer className="bg-slate-950 dark:bg-transparent">
       <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
-          {footerLinks.map((item) => (
-            <div className="px-5 py-2" key={item.href}>
-              <a
-                href={item.href}
+          {footerLinks.map((link) => (
+            <div className="px-5 py-2" key={link.href}>
+              <button
+                aria-label="Footer Nav Link"
+                onClick={() => scrollToSection(link.href)}
                 className="text-base leading-6 text-gray-300 hover:text-gray-400 dark:text-gray-300 dark:hover:text-white"
               >
-                {t(item.title)}
-              </a>
+                {t(link.title)}
+              </button>
             </div>
           ))}
         </nav>

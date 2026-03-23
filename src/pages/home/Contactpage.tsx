@@ -142,13 +142,22 @@ const Contactpage: React.FC = () => {
                 </h2>
               </motion.div>
               <motion.p
+                className="text-gray-700 dark:text-gray-400  !m-0 !pb-0"
+                variants={slideUpAndFade}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                {t("Native")}: Srivilliputtur, Virudhunagar
+              </motion.p>
+              <motion.p
                 className="text-gray-700 dark:text-gray-400"
                 variants={slideUpAndFade}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
               >
-                {t("Native")}: Srivilliputtur, Virudhunagar | {t("Current")}: Chennai
+                {t("Current")}: Guindy, Chennai
               </motion.p>
 
               <motion.div
@@ -199,7 +208,7 @@ const Contactpage: React.FC = () => {
               {/* Google Maps Embed */}
               <iframe
                 title="Contact Address Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1967.4357405000003!2d77.62873034853568!3d9.519893899188508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06dde538106b27%3A0xfb987ddf4df7167d!2sGaurava%20Naidu%20Kalyana%20Mandapam!5e0!3m2!1sen!2sin!4v1661324000630!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7774.934633242949!2d80.20944436273258!3d13.005885774813876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52672b75b6a945%3A0xbaa516dd69265ce9!2sAK%20Mens%20PG%20Hostel!5e0!3m2!1sen!2sin!4v1774156450947!5m2!1sen!2sin"
                 className="w-full h-72 mt-4 rounded-lg shadow-lg border-0"
                 allowFullScreen
               ></iframe>

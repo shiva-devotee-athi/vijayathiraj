@@ -2,9 +2,10 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
-const HeroInfo: React.FC<{ title: string; imgClass?: string }> = ({
+const HeroInfo: React.FC<{ title: string; imgClass?: string;href:string }> = ({
   title = "Title",
   imgClass = "human-resource-bg",
+  href="/"
 }) => {
   const { t } = useTranslation();
 
@@ -98,12 +99,12 @@ const HeroInfo: React.FC<{ title: string; imgClass?: string }> = ({
                 </li>
 
                 <li className="breadcrumb-item">
-                  <a
-                    href="#"
+                  <Link
+                    to={href}
                     className="inline-flex items-center gap-1.5 text-sm text-stone-800 transition-colors duration-300 ease-in hover:text-stone-200 dark:hover:text-black rounded bg-stone-200 px-2 py-1 hover:bg-amber-700 dark:hover:bg-amber-500"
                   >
                     {t(title)}
-                  </a>
+                  </Link>
                 </li>
               </ol>
             </nav>

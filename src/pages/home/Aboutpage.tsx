@@ -89,7 +89,29 @@ const Aboutpage: React.FC = () => {
                 viewport={{ once: true, amount: 0.3 }}
               >
                 {t(
-                  "Passionate web developer skilled in HTML, CSS, JavaScript, Node.js, React.js, and Next.js. Dedicated to creating seamless and engaging user experiences through high-quality web solutions."
+                  "I am a Full Stack Developer with 4.1 years of professional experience in building scalable, high-performance web applications. My foundation is built on Logical Reasoning and Mathematics, which I translate into clean, efficient code across the entire MERN and NestJS ecosystem.",
+                )}
+              </motion.p>
+              <motion.p
+                className="text-gray-600 dark:text-white/45  mt-2"
+                variants={slideUpAndFade}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                {t(
+                  "While my expertise began in crafting pixel-perfect, responsive user interfaces, my recent experience has seen me step deep into the backend trenches. I specialize in architecting robust APIs, managing PostgreSQL and MongoDB databases, and streamlining deployments using AWS and Docker.",
+                )}
+              </motion.p>
+              <motion.p
+                className="text-gray-600 dark:text-white/45  mt-2"
+                variants={slideUpAndFade}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                {t(
+                  "I thrive in environments that require adaptability—whether it's leading a frontend transition or taking full ownership of server-side infrastructure. I don't just write code; I build seamless digital experiences that are as powerful on the inside as they are beautiful on the outside.",
                 )}
               </motion.p>
               <motion.p
@@ -100,7 +122,7 @@ const Aboutpage: React.FC = () => {
                 viewport={{ once: true, amount: 0.3 }}
               >
                 {t(
-                  "Explore my portfolio to see samples of my work that highlight my UI design standards and attention to detail."
+                  "Explore my portfolio to see samples of my work that highlight my UI design standards and attention to detail.",
                 )}
               </motion.p>
             </div>
@@ -123,44 +145,37 @@ const Aboutpage: React.FC = () => {
               </li>
               <li className="flex">
                 <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                  {t("Date of birth")}
+                  {t("Current Role")}
                 </span>
                 <span className="text-gray-600 dark:text-gray-300">
-                  : June 02, 2000
+                  : Full Stack Developer
                 </span>
               </li>
               <li className="flex">
                 <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                  {t("Address")}
+                  {t("Primary Stack")}
                 </span>
                 <span className="text-gray-600 dark:text-gray-300">
-                  : 10A/39 Perumalpatti Nadar, 1st west st,
+                  : React, Next.js, Node.js, Nest.js, PostgreSQL
                 </span>
               </li>
               <li className="flex">
                 <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                  {t("City")}
+                  {t("Education")}
                 </span>
                 <span className="text-gray-600 dark:text-gray-300">
-                  : Srivilliputtur, Viruthunagar,
+                  : B.Sc. Mathematics (Logic & Analytics Foundation)
                 </span>
               </li>
               <li className="flex">
                 <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                  {t("Pin code")}
+                  {t("Languages")}
                 </span>
                 <span className="text-gray-600 dark:text-gray-300">
-                  : 626125
+                  : Tamil (Native), English
                 </span>
               </li>
-              <li className="flex">
-                <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
-                  {t("Email")}:
-                </span>
-                <span className="text-gray-600 dark:text-gray-300">
-                  : vijayathiraj99@gmail.com
-                </span>
-              </li>
+
               <li className="flex">
                 <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
                   {t("Phone")}
@@ -169,12 +184,38 @@ const Aboutpage: React.FC = () => {
                   : +91 8870762077
                 </span>
               </li>
+
+              <li className="flex">
+                <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
+                  {t("Email")}:
+                </span>
+                <span className="text-gray-600 dark:text-gray-300">
+                  : vijayathiraj99@gmail.com
+                </span>
+              </li>
+
               <li className="flex">
                 <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
                   {t("Current Location")}
                 </span>
                 <span className="text-gray-600 dark:text-gray-300">
-                  : Chennai
+                  : Guindy, Chennai
+                </span>
+              </li>
+              <li className="flex">
+                <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
+                  {t("Native Location")}
+                </span>
+                <span className="text-gray-600 dark:text-gray-300">
+                  : Srivilliputtur, Virudhunagar
+                </span>
+              </li>
+              <li className="flex">
+                <span className="font-semibold text-gray-700 w-32 dark:text-gray-300">
+                  {t("Date of birth")}
+                </span>
+                <span className="text-gray-600 dark:text-gray-300">
+                  : June 02, 2000
                 </span>
               </li>
             </motion.ul>

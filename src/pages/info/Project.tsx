@@ -6,6 +6,7 @@ import "swiper/swiper-bundle.css";
 import { motion } from "framer-motion";
 import HeroInfo from "./HeroInfo";
 import StackCard from "./StackingCard";
+import { TabsBtn, TabsContent, TabsProvider } from "@/components/tabs/Tabs";
 
 const slideUpAndFade = {
   hidden: { opacity: 0, y: 50 },
@@ -21,7 +22,7 @@ const Project: React.FC = () => {
 
   return (
     <div>
-      <HeroInfo title="Projects" />
+      <HeroInfo title="Projects" href="/info/projects" />
       <section
         id="project"
         className="py-16 bg-gray-100 dark:bg-transparent vj-pf-info-section"
@@ -63,8 +64,32 @@ const Project: React.FC = () => {
           <div className="relative mx-auto w-full px-4 py-12">
             {/* Vertical line */}
             {/* <StickyScroll content={content} /> */}
-          
-            <StackCard />
+
+            <TabsProvider defaultValue="Office" wobbly>
+              <div className="flex justify-center mb-10">
+                <div className="flex items-center w-fit dark:bg-[#1d2025] dark:text-gray-400 bg-gray-200 p-1 text-black rounded-md border dark:border-zinc-800">
+                  <TabsBtn value="Office">
+                    <span className="relative z-[2] uppercase text-sm sm:text-base font-semibold px-2">
+                      {t("Office Project")}
+                    </span>
+                  </TabsBtn>
+                  <TabsBtn value="Personal">
+                    <span className="relative z-[2] uppercase text-sm sm:text-base font-semibold px-2">
+                      {t("Personal Project")}
+                    </span>
+                  </TabsBtn>
+                </div>
+              </div>
+
+              <div className="w-full">
+                <TabsContent value="Office" className="p-0">
+                  <StackCard type="Office" />
+                </TabsContent>
+                <TabsContent value="Personal" className="p-0">
+                  <StackCard type="Personal" />
+                </TabsContent>
+              </div>
+            </TabsProvider>
           </div>
         </div>
       </section>
