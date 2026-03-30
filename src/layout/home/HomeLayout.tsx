@@ -7,11 +7,11 @@ import Footer from "@/pages/footer/Footer";
 const HomeLayout: React.FC = () => {
   return (
     <>
-      <Header/>
+      <Header />
       <main className="w-full">
         <Outlet />
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 };

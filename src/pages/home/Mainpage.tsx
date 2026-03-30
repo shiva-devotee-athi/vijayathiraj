@@ -14,7 +14,6 @@ import Projectpage from "../projects/Projectpage";
 const Mainpage: React.FC = () => {
   return (
     <div>
-      {/* <Heropage /> */}
       <NewHeroPage />
       <Aboutpage />
       <MarqueePage />

@@ -3,12 +3,12 @@ import { useTranslation } from "react-i18next";
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import HeroInfo from "./HeroInfo";
 import StackCard from "./StackingCard";
 import { TabsBtn, TabsContent, TabsProvider } from "@/components/tabs/Tabs";
 
-const slideUpAndFade = {
+const slideUpAndFade: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,

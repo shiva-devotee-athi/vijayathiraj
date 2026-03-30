@@ -135,7 +135,7 @@ const Skillpage: React.FC = () => {
                       style={CSSstyle}
                     >
                       <div className="imgBx">
-                        <img src={image} alt="nike-air-shoe" />
+                        <img src={image} alt="" />
                       </div>
                       <div className="contentBx">
                         <h2>{t(title)}</h2>

@@ -6,7 +6,7 @@ import { footerLinks } from "../data/navigation";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
-  
+
   const scrollToSection = (elemId: string) => {
     const targetElement = document.querySelector(elemId);
     if (targetElement) {

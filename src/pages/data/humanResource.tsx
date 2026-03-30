@@ -18,11 +18,12 @@ export const experience = [
     experience: "8 months",
   },
 ];
+
 export const education = [
   {
     date: "2020-2022",
     title: "Master Degree in Mathematics",
-    score: "6.72",
+    score: "6.9",
     scoreType: "CGPA",
   },
   {

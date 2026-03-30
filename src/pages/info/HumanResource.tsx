@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import HeroInfo from "./HeroInfo";
 import personalDp from "@/assets/images/personal/personal-dp.webp";
 import {
@@ -15,7 +15,7 @@ import {
 import { TOTAL_YEARS_OF_EXPERIENCE } from "../data/information";
 import { useTheme } from "@/context/ThemeContext";
 
-const slideUpAndFade = {
+const slideUpAndFade: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -111,23 +111,22 @@ const HumanResource: React.FC = () => {
           <div className="relative mx-auto w-full px-4 py-12">
             {/* Vertical line */}
             <div className="md:mx-auto rounded shadow-xl w-full md:w-1/2 overflow-hidden">
-            <p>
-              <span className="text-red-500 dark:text-red-700">*</span>
-              {t("You can copy the details to the clipboard when you hover over the underlined text click")}.
-            </p>
+              <p>
+                <span className="text-red-500 dark:text-red-700">*</span>
+                {t("You can copy the details to the clipboard when you hover over the underlined text click")}.
+              </p>
             </div>
 
             <div className="bg-white dark:bg-[#1d2025] md:mx-auto rounded shadow-xl w-full md:w-1/2 overflow-hidden">
               <div
-                className={`h-[140px] ${
-                  theme === "light"
+                className={`h-[140px] ${theme === "light"
                     ? "human-resource-banner-bg"
                     : "dark-human-resource-banner-bg"
-                }`}
-                // style={{
-                //   background:
-                //     "linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%)",
-                // }}
+                  }`}
+              // style={{
+              //   background:
+              //     "linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%)",
+              // }}
               />
               <div className="px-5 py-2 flex flex-col gap-3 pb-6">
                 <div className="h-[90px] shadow-md w-[90px] rounded-full border-4 overflow-hidden -mt-14 border-white dark:border-slate-500">
@@ -138,11 +137,10 @@ const HumanResource: React.FC = () => {
                 </div>
                 <div className="">
                   <h3
-                    className={`text-xl w-fit relative font-bold leading-6 hover:underline cursor-pointer ${
-                      copied?.field === "intro-name"
+                    className={`text-xl w-fit relative font-bold leading-6 hover:underline cursor-pointer ${copied?.field === "intro-name"
                         ? "text-green-500 dark:text-green-700"
                         : "text-slate-900 dark:text-white"
-                    }`}
+                      }`}
                     onClick={() =>
                       handleCopyClick(`Vijayathiraj S`, 100, "intro-name")
                     }
@@ -152,11 +150,10 @@ const HumanResource: React.FC = () => {
                       : "Vijayathiraj S"}
                   </h3>
                   <p
-                    className={`text-sm py-1 w-fit hover:underline cursor-pointer ${
-                      copied?.field === "intro-email"
+                    className={`text-sm py-1 w-fit hover:underline cursor-pointer ${copied?.field === "intro-email"
                         ? "text-green-500 dark:text-green-700"
                         : "text-gray-600 dark:text-slate-500"
-                    }`}
+                      }`}
                     onClick={() =>
                       handleCopyClick(
                         `vijayathiraj99@gmail.com`,
@@ -170,11 +167,10 @@ const HumanResource: React.FC = () => {
                       : "vijayathiraj99@gmail.com"}
                   </p>
                   <p
-                    className={`text-sm pb-1 w-fit hover:underline cursor-pointer ${
-                      copied?.field === "intro-mobile"
+                    className={`text-sm pb-1 w-fit hover:underline cursor-pointer ${copied?.field === "intro-mobile"
                         ? "text-green-500 dark:text-green-700"
                         : "text-gray-600 dark:text-slate-500"
-                    }`}
+                      }`}
                     onClick={() =>
                       handleCopyClick(`8870762077`, 102, "intro-mobile")
                     }
@@ -191,15 +187,14 @@ const HumanResource: React.FC = () => {
                       onClick={() =>
                         handleCopyClick(`${skill}`, index, "intro-skill")
                       }
-                      className={`rounded-sm px-3 py-1 text-xs font-medium hover:underline cursor-pointer ${
-                        copied?.index === index &&
-                        copied?.field === "intro-skill"
+                      className={`rounded-sm px-3 py-1 text-xs font-medium hover:underline cursor-pointer ${copied?.index === index &&
+                          copied?.field === "intro-skill"
                           ? "bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300"
                           : "bg-indigo-100 dark:bg-indigo-950 text-indigo-800 dark:text-indigo-300"
-                      }`}
+                        }`}
                     >
                       {copied?.index === index &&
-                      copied?.field === "intro-skill"
+                        copied?.field === "intro-skill"
                         ? "Copied!"
                         : skill}
                     </span>
@@ -261,12 +256,11 @@ const HumanResource: React.FC = () => {
                       </svg>
                       <div className="leading-3">
                         <p
-                          className={`text-sm font-bold hover:underline cursor-pointer ${
-                            copied?.index === index &&
-                            copied?.field === "work-company"
+                          className={`text-sm font-bold hover:underline cursor-pointer ${copied?.index === index &&
+                              copied?.field === "work-company"
                               ? "text-green-500 dark:text-green-700"
                               : "text-slate-700 dark:text-slate-400"
-                          }`}
+                            }`}
                           onClick={() =>
                             handleCopyClick(
                               `${item.company}`,
@@ -276,33 +270,31 @@ const HumanResource: React.FC = () => {
                           }
                         >
                           {copied?.index === index &&
-                          copied?.field === "work-company"
+                            copied?.field === "work-company"
                             ? "Copied"
                             : item.company}
                         </p>
                         <span
-                          className={`text-xs hover:underline cursor-pointer ${
-                            copied?.index === index &&
-                            copied?.field === "work-date"
+                          className={`text-xs hover:underline cursor-pointer ${copied?.index === index &&
+                              copied?.field === "work-date"
                               ? "text-green-500 dark:text-green-700"
                               : "text-slate-600 dark:text-slate-500"
-                          }`}
+                            }`}
                           onClick={() =>
                             handleCopyClick(`${item.date}`, index, "work-date")
                           }
                         >
                           {copied?.index === index &&
-                          copied?.field === "work-date"
+                            copied?.field === "work-date"
                             ? "Copied"
                             : item.date}
                         </span>
                         <span
-                          className={`text-xs ms-1 hover:underline cursor-pointer ${
-                            copied?.index === index &&
-                            copied?.field === "work-experience"
+                          className={`text-xs ms-1 hover:underline cursor-pointer ${copied?.index === index &&
+                              copied?.field === "work-experience"
                               ? "text-green-500 dark:text-green-700"
                               : "text-blue-600"
-                          }`}
+                            }`}
                           onClick={() =>
                             handleCopyClick(
                               `${item.experience}`,
@@ -312,7 +304,7 @@ const HumanResource: React.FC = () => {
                           }
                         >
                           {copied?.index === index &&
-                          copied?.field === "work-experience"
+                            copied?.field === "work-experience"
                             ? "Copied"
                             : item.experience}
                         </span>
@@ -322,12 +314,11 @@ const HumanResource: React.FC = () => {
                           As{" "}
                         </span>
                         <span
-                          className={`hover:underline cursor-pointer ${
-                            copied?.index === index &&
-                            copied?.field === "work-role"
+                          className={`hover:underline cursor-pointer ${copied?.index === index &&
+                              copied?.field === "work-role"
                               ? "text-green-500 dark:text-green-700"
                               : "text-slate-500 dark:text-slate-400"
-                          }`}
+                            }`}
                           onClick={() =>
                             handleCopyClick(
                               `${item.company}`,
@@ -337,7 +328,7 @@ const HumanResource: React.FC = () => {
                           }
                         >
                           {copied?.index === index &&
-                          copied?.field === "work-role"
+                            copied?.field === "work-role"
                             ? "Copied"
                             : item.role}
                         </span>
@@ -360,45 +351,42 @@ const HumanResource: React.FC = () => {
                       </div>
                       <div className="w-11/12">
                         <p
-                          className={`text-sm hover:underline cursor-pointer ${
-                            copied?.index === index &&
-                            copied?.field === "edu-title"
+                          className={`text-sm hover:underline cursor-pointer ${copied?.index === index &&
+                              copied?.field === "edu-title"
                               ? "text-green-500 dark:text-green-700"
                               : "text-black dark:text-slate-400"
-                          }`}
+                            }`}
                           onClick={() =>
                             handleCopyClick(`${item.title}`, index, "edu-title")
                           }
                         >
                           {copied?.index === index &&
-                          copied?.field === "edu-title"
+                            copied?.field === "edu-title"
                             ? "Copied"
                             : item.title}
                         </p>
                         <p className="text-xs">
                           <span
-                            className={`hover:underline cursor-pointer ${
-                              copied?.index === index &&
-                              copied?.field === "edu-date"
+                            className={`hover:underline cursor-pointer ${copied?.index === index &&
+                                copied?.field === "edu-date"
                                 ? "text-green-500 dark:text-green-700"
                                 : "text-gray-500 dark:text-slate-500"
-                            }`}
+                              }`}
                             onClick={() =>
                               handleCopyClick(`${item.date}`, index, "edu-date")
                             }
                           >
                             {copied?.index === index &&
-                            copied?.field === "edu-date"
+                              copied?.field === "edu-date"
                               ? "Copied"
                               : item.date}{" "}
                           </span>
                           <span
-                            className={`hover:underline cursor-pointer ${
-                              copied?.index === index &&
-                              copied?.field === "edu-score"
+                            className={`hover:underline cursor-pointer ${copied?.index === index &&
+                                copied?.field === "edu-score"
                                 ? "text-green-500 dark:text-green-700"
                                 : "text-blue-600"
-                            }`}
+                              }`}
                             onClick={() =>
                               handleCopyClick(
                                 `${item.score} ${item.scoreType}`,
@@ -408,7 +396,7 @@ const HumanResource: React.FC = () => {
                             }
                           >
                             {copied?.index === index &&
-                            copied?.field === "edu-score"
+                              copied?.field === "edu-score"
                               ? "Copied"
                               : `${item.score} ${item.scoreType}`}
                           </span>
@@ -435,12 +423,11 @@ const HumanResource: React.FC = () => {
                       </span>
                       <span
                         title={"Click to copy"}
-                        className={`ms-1 hover:underline cursor-pointer ${
-                          copied?.index === index &&
-                          copied?.field === "personal-list"
+                        className={`ms-1 hover:underline cursor-pointer ${copied?.index === index &&
+                            copied?.field === "personal-list"
                             ? "text-green-500 dark:text-green-700"
                             : "text-gray-700 dark:text-slate-500"
-                        }`}
+                          }`}
                         onClick={() =>
                           handleCopyClick(
                             `${item.value}`,
@@ -450,7 +437,7 @@ const HumanResource: React.FC = () => {
                         }
                       >
                         {copied?.index === index &&
-                        copied?.field === "personal-list"
+                          copied?.field === "personal-list"
                           ? "Copied!"
                           : item.value}
                       </span>
