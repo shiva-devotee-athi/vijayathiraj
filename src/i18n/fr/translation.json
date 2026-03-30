@@ -104,7 +104,7 @@
   "Dev": "Développeur",
   "Repositories": "Dépôts",
   "Hoarding happiness in my free time, I love diving into the world of cartoons and anime. You can often find me laughing along with the antics of Naruto, Shinchan, and Tom and Jerry. I also enjoy revisiting classics like Ben 10, Courage the Cowardly Dog, Ninja Hattori, Doraemon, and Oggy. These shows are my go-to for a dose of fun and nostalgia.": "Pendant mon temps libre, j'adore me plonger dans l'univers des dessins animés et des animes. On me retrouve souvent à rire en écoutant les pitreries de Naruto, Shinchan et Tom et Jerry. J'aime aussi revisiter des classiques comme Ben 10, Courage le chien froussard, Ninja Hattori, Doraemon et Oggy. Ces séries sont mes préférées pour une dose de fun et de nostalgie.",
-
+  "A curated selection of my recent professional and personal projects. Each artifact demonstrates my capabilities in full-stack development, robust code architecture using TypeScript, and effective user interface creation with modern frameworks like React and Node.js. Explore the repository links below to see how I translate complex ideas into functional, real-world applications.": "Une sélection organisée de mes récents projets professionnels et personnels. ",
   "Projet VIJAY-MERN": "Projet VIJAY-MERN",
   "I'm excited to introduce my MERN project, a web application that combines the power of MongoDB, Express.js, React, and Node.js to create a seamless user experience. This project focuses on two essential aspects: User Authentication, Profile Page Management with File System": "Je suis ravi de vous présenter mon projet MERN, une application web qui combine la puissance de MongoDB, Express.js, React et Node.js pour créer une expérience utilisateur fluide. Ce projet se concentre sur deux aspects essentiels : l'authentification des utilisateurs et la gestion des pages de profil avec le système de fichiers.",
 
@@ -129,7 +129,10 @@
   "User Creation, Quiz question preparation and also user able to answer the questions and get the answer score under user. Question Patterns: Single Select Multiple Choice Question, Breif Answer Question (TEXT), Multi select Multiple Choice Questions":
   "Création d'utilisateur, Préparation des questions de quiz et possibilité pour l'utilisateur de répondre aux questions et d'obtenir le score de réponse sous son profil. Formats de questions : Question à Choix Multiples à Sélection Unique, Question à Réponse Courte (TEXTE), Questions à Choix Multiples à Sélections Multiples.",
   "A real-time chat application designed for seamless communication, featuring modern frontend and backend technologies,Secure authentication with JWT and OAuth, Optimized backend using Express, Redis, and Sequelize, File upload handling with Multer, PostgreSQL database for structured data storage":"A real-time chat application Une application de chat en temps réel conçue pour une communication fluide, intégrant des technologies frontend et backend modernes, une authentification sécurisée avec JWT et OAuth, un backend optimisé utilisant Express, Redis et Sequelize, la gestion du téléchargement de fichiers avec Multer, et une base de données PostgreSQL pour le stockage de données structurées.",
-
+  "Books": "Livres",
+  "Beliefs": "Croyances",
+  "I’m a beginner in reading, but it has slowly become a habit I truly enjoy. I was inspired to start this journey by my colleague Rajapandeeswaran. These days, I love reading during quiet moments—especially at bedtime, while traveling, or in peaceful places surrounded by nature. Each book I pick adds something new to my thoughts and perspective.": "Je suis débutant en lecture, mais c'est peu à peu devenu une habitude que j'apprécie vraiment. ",
+  "Reading": "En lisant",
   "Happiness": "Bonheur",
   "Hoppies": "Houblons",
 

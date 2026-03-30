@@ -362,8 +362,8 @@ html {
 //about page
 .vj-pf-about {
   .mask1 {
-    -webkit-mask-image: url(../../assets//images//icons/sqare-mask-1.webp);
-    mask-image: url(../../assets//images//icons/sqare-mask-1.webp);
+    -webkit-mask-image: url("/images/icons/sqare-mask-1.webp");
+    mask-image: url("/images/icons/sqare-mask-1.webp");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -615,7 +615,7 @@ html {
 }
 .vj-pf-counter {
   .block-18 {
-    display: block;
+    display: inline-table;
     width: 100%;
     text-align: center;
     padding: 30px 20px;
@@ -693,7 +693,7 @@ html {
 }
 
 .vj-pf-hireme {
-  background: url(/src/assets/images/banner/hokage_stone_faces.webp)
+  background: url("/images/banner/hokage_stone_faces.webp")
     rgb(135, 95, 95);
   z-index: 0;
   background-position-y: 20%;

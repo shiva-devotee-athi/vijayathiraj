@@ -4,7 +4,7 @@ import en from "./en/translation.json";
 import fr from "./fr/translation.json";
 import ja from "./ja/translation.json";
 
-const savedLang = localStorage.getItem("site-lang") || "en";
+const savedLang = typeof window !== "undefined" ? localStorage.getItem("site-lang") || "en" : "en";
 
 export default i18next.use(initReactI18next).init({
   lng: savedLang, // default language

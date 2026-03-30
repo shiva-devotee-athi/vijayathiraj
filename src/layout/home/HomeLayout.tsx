@@ -1,15 +1,19 @@
+'use client'
 import React from "react";
-import { Outlet } from "react-router";
 import "@/styles/scss/homepage.scss";
-import Header from "@/pages/header/Header";
-import Footer from "@/pages/footer/Footer";
+import Header from "@/sections/header/Header";
+import Footer from "@/sections/footer/Footer";
 
-const HomeLayout: React.FC = () => {
+interface HomeLayoutProps {
+  children: React.ReactNode;
+}
+
+const HomeLayout: React.FC<HomeLayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
       <main className="w-full">
-        <Outlet />
+        {children}
       </main>
       <Footer />
     </>

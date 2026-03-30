@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import seal_png from "@/assets/images/icons/naruto_seal.png";
-import seal_dark_png from "@/assets/images/icons/naruto_seal_dark.png";
 import { useTheme } from "@/context/ThemeContext";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const variants = {
   open: {
@@ -53,14 +52,18 @@ export const MenuItem: React.FC<{ title: string; href: string }> = ({
       >
         <div className="icon-placeholder" style={style}>
           {theme === "light" ? (
-            <img
-              src={seal_png}
+            <Image
+              width={20}
+              height={20}
+              src="/images/icons/naruto_seal.png"
               className="w-5 h-5 object-contain"
               alt="seal logo"
             />
           ) : (
-            <img
-              src={seal_dark_png}
+            <Image
+              width={20}
+              height={20}
+              src="/images/icons/naruto_seal_dark.png"
               className="w-5 h-5 object-contain"
               alt="seal logo"
             />

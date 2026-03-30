@@ -1,9 +1,10 @@
+'use client'
 import useDarkMode from "@/hooks/useDarkMode";
 import React, { createContext, ReactNode, useContext } from "react";
 
 interface ThemeContextType {
   theme: string;
-  setTheme: (theme: string) => void;
+  setTheme: (theme: "light" | "dark") => void;
 }
 
 interface ThemeProviderProps {

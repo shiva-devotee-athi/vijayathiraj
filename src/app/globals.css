@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+:root {
+  --vj-pf-nav-active-link-color: #bb4d00;
+  --vj-pf-root-bg-color: #f3f4f6;
+  --vj-pf-navbar-scrolled: #ffffff;
+  --vj-pf-navbar-link-color: #000000;
+  --vj-pf-social-icon-color: #ffffff;
+}
+
+:root[class~="dark"] {
+  --vj-pf-nav-active-link-color: #ff9d23;
+  --vj-pf-root-bg-color: #121212;
+  --vj-pf-navbar-scrolled: #000000;
+  --vj-pf-navbar-link-color: #ffffff;
+  --vj-pf-social-icon-color: #393939;
+}
+
+
+html {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background: var(--vj-pf-root-bg-color); */
+  background: var(--vj-pf-root-bg-color);
+}
+
+html.dark {
+  color-scheme: dark !important;
+  background: var(--vj-pf-root-bg-color) !important;
+  margin: 0;
+  background: inherit;
+}

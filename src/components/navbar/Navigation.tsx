@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
-import { headerLinks } from "@/pages/data/navigation";
+import { headerLinks } from "@/data/navigation";
 
 const variants = {
   open: {
@@ -13,7 +13,7 @@ const variants = {
 
 export const Navigation = () => (
   <motion.ul variants={variants} className="vj_pf_mobile_nav_bar_ul">
-    {headerLinks.map((item,index) => (
+    {headerLinks.map((item, index) => (
       <MenuItem title={item.title} href={item.href} key={index} />
     ))}
   </motion.ul>

@@ -1,17 +1,20 @@
 'use client'
 import React from "react";
-import { Outlet } from "react-router";
 import "@/styles/scss/homepage.scss";
 import "@/styles/scss/infopage.scss";
-import InfoHeader from "@/pages/header/InfoHeader";
-import InfoFooter from "@/pages/footer/InfoFooter";
+import InfoHeader from "@/sections/header/InfoHeader";
+import InfoFooter from "@/sections/footer/InfoFooter";
 
-const InfoLayout: React.FC = () => {
+interface InfoLayoutProps {
+  children: React.ReactNode;
+}
+
+const InfoLayout: React.FC<InfoLayoutProps> = ({ children }) => {
   return (
     <>
       <InfoHeader />
       <main className="w-full">
-        <Outlet />
+        {children}
       </main>
       <InfoFooter />
     </>

@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from "react";
 import BotMessage from "@/components/chatbot/ui/BotMessage";
 import UserMessage from "@/components/chatbot/ui/UserMessage";
@@ -29,12 +30,12 @@ export default function Chatbot() {
   const { t } = useTranslation();
   const [showChat, setShowChat] = useState(false);
   const [botMessages, setBotMessages] = useState<IBotmessage[]>(() => {
-    const savedMessages = localStorage.getItem("chatMessages");
+    const savedMessages = typeof window !== "undefined" ? localStorage.getItem("chatMessages") : null;
     return savedMessages ? JSON.parse(savedMessages) : [];
   });
 
   useEffect(() => {
-    const savedMessages = localStorage.getItem("chatMessages");
+    const savedMessages = typeof window !== "undefined" ? localStorage.getItem("chatMessages") : null;
     if (savedMessages) {
       setBotMessages(JSON.parse(savedMessages));
     }

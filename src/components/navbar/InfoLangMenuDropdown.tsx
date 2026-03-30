@@ -1,4 +1,4 @@
-import { languages } from "@/pages/data/navigation";
+import { languages } from "@/data/navigation";
 import i18next from "i18next";
 import React, { useEffect, useRef, useState } from "react";
 
