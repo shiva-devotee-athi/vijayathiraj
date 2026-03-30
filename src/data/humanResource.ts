@@ -23,7 +23,7 @@ export const education = [
   {
     date: "2020-2022",
     title: "Master Degree in Mathematics",
-    score: "6.9",
+    score: "6.72",
     scoreType: "CGPA",
   },
   {
@@ -48,8 +48,8 @@ export const personalInfo = [
   { title: "Total Experience", value: "4.1 Years" },
   { title: "Current Location", value: "Guindy, Chennai" },
   { title: "Native Location", value: "Srivilliputtur, Virudhunagar" },
-  { title: "Current CTC", value: "3.82 laks" },
-  { title: "Expected CTC", value: "above 6 laks" },
+  { title: "Current CTC", value: "4.44 LPA" },
+  { title: "Expected CTC", value: "above 7 LPA" },
   { title: "Languages", value: "English, Tamil" },
 ];
 export const skillTags = [

@@ -568,3 +568,33 @@ export const books = [
     status: "reading",
   },
 ];
+
+
+export const workExperience = [
+  {
+    company: "Wherever the wind takes me...",
+    role: "AI & Machine Learning Aspirant",
+    duration: "Future",
+    description: "I am currently exploring the exciting field of Artificial Intelligence and Machine Learning. My focus is on understanding core concepts, working with relevant technologies, and building projects that leverage AI to solve real-world problems. I am passionate about learning and growing in this domain, and I am excited about the future possibilities that AI offers.",
+    experience: null,
+  },
+  {
+    company: "Infoapto Technologies",
+    role: "Full Stack Developer",
+    duration: "SEP 2023 - Present",
+    description: "Joining InfoApto Technologies as a Frontend Developer was an exhilarating step forward in my professional journey. Here, I embraced the opportunity to work with an array of cutting-edge technologies, including Electron, React Native for mobile applications, Next.js, and React with TypeScript, and the backend with Node.js and Express database with MongoDB, Postgres, and Redis and deployment on AWS EC2. And also learn Docker, CI/CD pipelines, developer unit testing, and also learn about the software development life cycle (SDLC). This diverse tech stack allowed me to not only craft sophisticated and user-friendly interfaces but also develop cross-platform applications that deliver exceptional user experiences. My role at InfoApto Technologies extended beyond development. I gained invaluable knowledge about deploying applications on AWS, managing SSL configurations, and ensuring the highest standards of security and performance. This holistic experience not only enhanced my technical skills but also broadened my understanding of the end-to-end development lifecycle. Working with a dynamic and innovative team at InfoApto Technologies has been a remarkable journey. It has enriched my expertise, fueled my passion for frontend development, and set me on a path of continuous learning and growth. This experience has been instrumental in propelling my career to new heights and expanding my horizons in the world of web and mobile application development.",
+    experience: "2 years 8 months",
+  },{
+    company:"RAMSOL PVT LTD",
+    role:"Consultant Front-end Dev",
+    duration:"FEB 2023 - AUG 2023",
+    description: "Joining Ramsol Private Ltd as a Frontend Developer marked the next exciting chapter in my career. In this role, I took on the responsibility of crafting engaging and user-friendly interfaces for web applications. Working with cutting-edge frontend technologies, I had the privilege of contributing to projects that aimed to deliver exceptional user experiences. My time at Ramsol Private Ltd further deepened my frontend development skills and allowed me to collaborate with a dynamic team dedicated to innovation. It has been a valuable experience that has expanded my horizons and propelled my career in web development to new heights.",
+    experience: "7 months",
+  },{
+    company:"Azure Soft Tech Solutions",
+    role:"Software Associate",
+    duration:"JUL 2022 - JAN 2023",
+    description: "During my tenure at Azure Soft Tech Solutions, I served as a Software Associate, contributing to the development of various software solutions. This experience allowed me to apply my skills and knowledge in practical settings, working on diverse projects that enriched my understanding of software development processes and technologies. I collaborated closely with a talented team, gaining valuable insights into problem-solving, coding best practices, and project management. My time at Azure Softtech Solutions was instrumental in shaping my career and providing a strong foundation for my future endeavors.",
+    experience: "8 months",
+  }
+]
