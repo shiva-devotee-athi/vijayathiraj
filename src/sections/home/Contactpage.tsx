@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { CustomToast } from "@/components/toast/CustomToast";
 import { toast } from "react-toastify";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -20,7 +20,7 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-const slideUpAndFade = {
+const slideUpAndFade: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
@@ -238,11 +238,10 @@ const Contactpage: React.FC = () => {
                     id="name"
                     {...register("name")}
                     className={`block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-[#121212] border-0 border-b-2 appearance-none dark:text-white peer focus:outline-none focus:ring-0
-                            ${
-                              errors.name
-                                ? "border-red-500 dark:border-red-600 focus:border-red-500 dark:focus:border-red-600"
-                                : "border-gray-300 dark:border-gray-600 focus:border-amber-600 dark:focus:border-amber-500"
-                            }
+                            ${errors.name
+                        ? "border-red-500 dark:border-red-600 focus:border-red-500 dark:focus:border-red-600"
+                        : "border-gray-300 dark:border-gray-600 focus:border-amber-600 dark:focus:border-amber-500"
+                      }
                       `}
                     placeholder=""
                     required
@@ -260,11 +259,10 @@ const Contactpage: React.FC = () => {
                     id="email"
                     {...register("email")}
                     className={`block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-[#121212] border-0 border-b-2 appearance-none dark:text-white peer focus:outline-none focus:ring-0
-                            ${
-                              errors.name
-                                ? "border-red-500 dark:border-red-600 focus:border-red-500 dark:focus:border-red-600"
-                                : "border-gray-300 dark:border-gray-600 focus:border-amber-600 dark:focus:border-amber-500"
-                            }
+                            ${errors.name
+                        ? "border-red-500 dark:border-red-600 focus:border-red-500 dark:focus:border-red-600"
+                        : "border-gray-300 dark:border-gray-600 focus:border-amber-600 dark:focus:border-amber-500"
+                      }
                       `}
                     placeholder=" "
                     required
@@ -283,11 +281,10 @@ const Contactpage: React.FC = () => {
                   id="subject"
                   {...register("subject")}
                   className={`block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-[#121212] border-0 border-b-2 appearance-none dark:text-white peer focus:outline-none focus:ring-0
-                            ${
-                              errors.name
-                                ? "border-red-500 dark:border-red-600 focus:border-red-500 dark:focus:border-red-600"
-                                : "border-gray-300 dark:border-gray-600 focus:border-amber-600 dark:focus:border-amber-500"
-                            }
+                            ${errors.name
+                      ? "border-red-500 dark:border-red-600 focus:border-red-500 dark:focus:border-red-600"
+                      : "border-gray-300 dark:border-gray-600 focus:border-amber-600 dark:focus:border-amber-500"
+                    }
                       `}
                   placeholder=" "
                   required
@@ -328,11 +325,10 @@ const Contactpage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={!isDirty || !isValid || loading}
-                  className={`w-full px-4 py-2 rounded-md transition ${
-                    loading
+                  className={`w-full px-4 py-2 rounded-md transition ${loading
                       ? "bg-gray-400 cursor-not-allowed"
                       : "bg-amber-700 hover:bg-amber-800 text-white"
-                  }`}
+                    }`}
                 >
                   {loading ? t("Sending...") : t("Send Message")}
                 </button>

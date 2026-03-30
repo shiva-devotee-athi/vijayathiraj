@@ -5,7 +5,7 @@ interface chatbotFormData {
 }
 
 const chatbotSchema = z.object({
-  message: z.string({ required_error: "Empty Message Can't send" }).min(1, { message: "Empty Message Can't send" }) ,
+  message: z.string().trim().min(1, { message: "Empty Message Can't send" }),
 });
 
 export { chatbotSchema };

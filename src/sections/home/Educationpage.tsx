@@ -15,6 +15,26 @@ const slideUpAndFade: Variants = {
   },
 };
 
+const staggerContainer: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const staggerItem: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
 const Educationpage: React.FC = () => {
   const { t } = useTranslation();
   return (
@@ -74,40 +94,61 @@ const Educationpage: React.FC = () => {
 
               {educationDetails.map((item, index) => (
                 <TabsContent key={index} value={item.title} className="p-0">
-                  <div className="bg-white dark:bg-[#1d1e22] rounded-lg shadow-lg grid md:grid-cols-5">
-                    <picture className="w-full h-full group md:col-span-2 bg-black/20 rounded-t-lg md:rounded-none md:rounded-s-lg relative z-1 overflow-hidden">
+                  <motion.article
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate="visible"
+                    className="bg-white dark:bg-[#1d1e22] rounded-lg shadow-xl grid md:grid-cols-5 overflow-hidden border border-gray-100 dark:border-white/5 hover:shadow-2xl transition-shadow duration-300"
+                  >
+                    <motion.div
+                      variants={staggerItem}
+                      className="relative w-full h-64 md:h-full md:col-span-2 bg-black/5 dark:bg-white/5 relative z-1 overflow-hidden group"
+                    >
                       <Image
-                        width={100}
-                        height={100}
-                        className="absolute z-0 blur-md opacity-30 w-full h-full object-cover"
+                        fill
+                        className="absolute z-0 blur-xl opacity-20 dark:opacity-30 object-cover scale-110 transition-transform duration-700 group-hover:scale-125"
                         src={item.imgSrc}
-                        loading="lazy"
                         alt=""
-                      />
-                      <Image
-                        width={100}
-                        height={100}
-                        className="object-contain w-full h-full max-w-80 max-h-80 m-auto md:h-auto relative z-1"
-                        src={item.imgSrc}
                         loading="lazy"
-                        alt={item.title}
                       />
-                    </picture>
-                    <div className="flex flex-col justify-start px-4 py-4 md:px-6 md:py-6 leading-normal md:col-span-3">
-                      <span className="block text-amber-600 font-semibold">
+                      <div className="relative z-10 w-full h-full flex items-center justify-center p-6 md:p-8">
+                        <Image
+                          width={300}
+                          height={300}
+                          className="object-contain w-auto h-auto max-w-full max-h-full drop-shadow-2xl transform transition-transform duration-500 group-hover:scale-110 rounded-lg"
+                          src={item.imgSrc}
+                          loading="lazy"
+                          alt={item.title}
+                        />
+                      </div>
+                    </motion.div>
+                    <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-10 leading-normal md:col-span-3">
+                      <motion.span
+                        variants={staggerItem}
+                        className="block text-amber-600 font-bold tracking-wider uppercase text-sm mb-2"
+                      >
                         {t(item.date)}
-                      </span>
-                      <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mt-2">
+                      </motion.span>
+                      <motion.h3
+                        variants={staggerItem}
+                        className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2 leading-tight"
+                      >
                         {t(item.title)}
-                      </h2>
-                      <span className="block text-gray-600 dark:text-gray-400 italic">
+                      </motion.h3>
+                      <motion.span
+                        variants={staggerItem}
+                        className="block text-gray-500 dark:text-gray-400 font-medium italic mb-6 border-l-4 border-amber-600/30 pl-4"
+                      >
                         {t(item.position)}
-                      </span>
-                      <p className="mt-4 text-gray-600 dark:text-gray-400">
+                      </motion.span>
+                      <motion.p
+                        variants={staggerItem}
+                        className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg"
+                      >
                         {t(item.description)}
-                      </p>
+                      </motion.p>
                     </div>
-                  </div>
+                  </motion.article>
                 </TabsContent>
               ))}
             </TabsProvider>
