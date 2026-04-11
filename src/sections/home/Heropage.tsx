@@ -1,136 +1,233 @@
-import React, { useRef, useState } from "react";
-import "@/styles/scss/homepage.scss";
-import hero_img from "@/assets/images/hero/tobi.webp";
-
-import { motion } from "framer-motion";
-import clsx from "clsx";
+import { motion, useScroll, useSpring, useTransform, type Variants } from "framer-motion";
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { socialIcons } from "@/data/navigation";
 import Image from "next/image";
 
-
-const Heropage: React.FC = () => {
-  const audioRef = useRef<HTMLAudioElement>(null);
+export default function HeroPage() {
+  const ref = useRef(null);
   const { t } = useTranslation();
-  const [isKamui, setIsKamui] = useState(false);
-  const text = t(
-    "Hello. my name is vijay athiraj. nice to meet you I would like to welcome you with my personal portfolio"
-  ).split(" ");
 
-  const handleIllusion = () => {
-    setIsKamui(true);
-    handlePlayKamui();
-    setTimeout(() => {
-      setIsKamui(false);
-    }, 5000);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  // Apply easing to make motion smoother
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    mass: 0.8,
+  });
+
+  // const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  // const textY = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+  // const fontSize = useTransform(scrollYProgress, [0, 1], ["6em", "3.5em"]);
+  const slideUP = useTransform(smoothProgress, [0, 1], ["0%", "-150%"]);
+  const slideDown = useTransform(smoothProgress, [0, 1], ["0%", "150%"]);
+
+  const fadeIn: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
-  const handlePlayKamui = () => {
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
+  const slideUpAndFade: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
-  const kamuiClassName = clsx(
-    "max-w-screen-sm mx-auto absolute bottom-0 left-0 right-0 obito_uchicha_container",
-    {
-      "before:!block": isKamui,
-      "before:!hidden": !isKamui,
-    }
-  );
   return (
-    <section
+    <div
       id="hero"
-      // style={{background:'#2f2f2f'}}
-      className="relative vj-pf-hero-section w-full h-screen bg-white dark:bg-transparent overflow-hidden"
+      ref={ref}
+      className="w-full overflow-hidden relative grid place-items-center container h-[100svh] min-h-[530px] "
+      style={{ height: "calc(100vh - 70px)" }}
     >
-      <div className="container">
-        <div className="flex justify-center">
-          <motion.div
-            animate={{
-              scale: [1, 1.2, 1.1, 1.2, 1],
-              transition: {
-                duration: 3,
-                visualDuration: 1,
-                ease: ["easeIn", "easeOut"],
-              },
-            }}
-          >
-            <h1 className="heading-name text-center text-amber-700 dark:text-[#ff9d23]">
-              VIJAY ATHI RAJ
-            </h1>
-          </motion.div>
-          <h1 className="heading-name"></h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full">
+        <div className="justify-between order-2 md:order-1 items-center flex md:hidden">
+          <div className="flex flex-col justify-center items-center w-full">
+            <motion.h1
+              className="banner-title slide-up-and-fade leading-[.95] mt-0 my-3 text-2xl xs:text-3xl font-anton"
+              variants={slideUpAndFade}
+              initial="hidden"
+              animate="visible"
+            >
+              <span className="text-primary font-bold text-amber-700 dark:text-amber-500">
+                {t("FULL STACK")}
+              </span>{" "}
+              <span className="font-bold">{t("Developer")}</span>
+              <br />
+            </motion.h1>
+            <motion.p
+              className="banner-description slide-up-and-fade mt-0 my-3 text-sm text-center text-muted-foreground"
+              variants={slideUpAndFade}
+              initial="hidden"
+              animate="visible"
+            >
+              {t('Driven by Logic. Defined by Adaptability.')}
+            </motion.p>
+            <motion.p
+              className="banner-description slide-up-and-fade mt-0 my-3 text-xs text-center text-muted-foreground"
+              variants={slideUpAndFade}
+              initial="hidden"
+              animate="visible"
+            >
+              {t("Hi! I'm")}{" "}
+              <span className="font-medium text-amber-700 dark:text-amber-500">Vijay Athiraj</span>
+              .{" "}
+              {t(
+                "a developer who thrives where design meets data. After years of perfecting the Frontend, I stepped into the Backend trenches to ensure seamless system continuity. Today, I leverage a deep stack including Node.js, Sequelize, and Cloud Infrastructure to build applications that are as powerful on the inside as they are beautiful on the outside."
+              )}
+            </motion.p>
+          </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 relative z-0  px-4 sm:px-0">
-          <motion.span
-            transition={{
-              y: {
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeOut",
-              },
-            }}
-            animate={{
-              y: ["0rem", "2rem", "0rem"],
-            }}
-          >
-            <p className="text-gray-800 dark:text-black bg-[#fbe0d4] dark:bg-[#cb5000] p-4 rounded-lg text-xs font-semibold sm:text-sm lg:text-base after:bg-[#fbe0d4] dark:after:bg-[#cb5000] vj-pf-hero-thoughts">
-              {text.map((el, i) => (
-                <motion.span
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: i / 5,
-                  }}
-                  key={i}
+
+        <div className="max-md:pb-10 order-2 md:order-1 justify-between items-center max-md:flex-col hidden md:flex">
+          <div className="max-md:grow max-md:flex flex-col justify-center items-start me-auto max-w-[544px]">
+            <motion.h1
+              className="banner-title slide-up-and-fade leading-[.95] text-5xl lg:text-[70px] font-anton"
+              variants={slideUpAndFade}
+              initial="hidden"
+              animate="visible"
+            >
+              <span className="text-primary font-bold text-amber-700 dark:text-amber-500">
+                {t("FULL STACK")}
+              </span>
+              <br />
+              <span className="ml-4 font-bold">{t("DEVELOPER")}</span>
+              <br />
+            </motion.h1>
+            <motion.p
+              className="banner-description slide-up-and-fade mt-4 text-xl text-muted-foreground"
+              variants={slideUpAndFade}
+              initial="hidden"
+              animate="visible"
+            >
+              {t('Driven by Logic. Defined by Adaptability.')}
+            </motion.p>
+            <motion.p
+              className="banner-description slide-up-and-fade mt-4 text-base text-muted-foreground"
+              variants={slideUpAndFade}
+              initial="hidden"
+              animate="visible"
+            >
+              {t("Hi! I'm")}{" "}
+              <span className="font-medium text-amber-700 dark:text-amber-500">
+                Vijay Athiraj.{" "}
+              </span>
+              {t(
+                "a developer who thrives where design meets data. After years of perfecting the Frontend, I stepped into the Backend trenches to ensure seamless system continuity. Today, I leverage a deep stack including Node.js, Sequelize, and Cloud Infrastructure to build applications that are as powerful on the inside as they are beautiful on the outside."
+              )}
+            </motion.p>
+
+            <div className="flex space-x-4 mt-9 vj-pf-social-icons">
+              {socialIcons.map(({ href, icon, ariaLabel }, index) => (
+                <motion.a
+                  key={index}
+                  href={href}
+                  variants={fadeIn}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ delay: index * 0.1 }}
+                  aria-label={ariaLabel}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {el}{" "}
-                </motion.span>
+                  <span className="text-xl">{icon}</span>
+                </motion.a>
               ))}
-            </p>
-            <div className="flex flex-col items-center">
-              <span className="dash dash-1 bg-[#f9c2aa] dark:bg-[#cb6c2f]"></span>
-              <span className="dash dash-2 bg-[#fba37c] dark:bg-[#cb7c49]"></span>
-              <span className="dash dash-3 bg-[#f48b5c] dark:bg-[#c8865c]"></span>
             </div>
-          </motion.span>
+          </div>
         </div>
-        <div
-          // className={`max-w-screen-sm mx-auto absolute bottom-0 left-0 right-0 obito_uchicha_container ${
-          //   isKamui ? "before:!block" : "before:!hidden"
-          // }`}
-          className={kamuiClassName}
-        // className="max-w-screen-sm mx-auto absolute bottom-0 left-0 right-0 "
-        >
-          <Image
-            src={hero_img.src}
-            loading="eager"
-            className="obito_uchicha"
-            width={500}
-            height={500}
-            alt="hero-img"
-          />
-        </div>
-      </div>
 
-      <div className="max-w-screen-sm absolute bottom-0 left-0 right-0 mx-auto flex justify-center">
-        <label htmlFor="kamui-toggle" className="vj-pf-nav-switch">
-          <input
-            id="kamui-toggle"
-            type="checkbox"
-            className="vj-pf-nav-switch-chk"
-            checked={isKamui}
-            aria-label="Kamui Activator"
-            onChange={handleIllusion}
-          />
-          <span className="vj-pf-nav-switch-slider"></span>
-          <audio className="hidden" ref={audioRef} src="/audios/kamui_track.mp3" />
-        </label>
+        <div className="w-full order-1 md:order-2 justify-center flex">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              visible: { opacity: 1, translateY: 0 },
+              hidden: { opacity: 0, translateY: -350 },
+            }}
+            style={{ translateY: slideUP }}
+          >
+            <Image
+              src="/images/hero/Obito-Piece-1.webp"
+              className="w-full max-h-[45vh] md:max-h-[60vh]"
+              width={100}
+              height={100}
+              sizes="(max-width: 768px) 100vw, 70vh"
+              priority
+              loading="eager"
+              alt="Digital artwork of Obito from Naruto Piece 1"
+            />
+          </motion.div>
+          <div className="flex flex-row items-end pb-8">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 15,
+                duration: 0.5,
+              }}
+              variants={{
+                visible: { opacity: 1, translateX: 0 },
+                hidden: { opacity: 0, translateX: -10 },
+              }}
+            >
+              <Image
+                src="/images/hero/Obito-Piece-2.webp"
+                className="w-full h-[55vh] md:h-[70vh] object-cover"
+                width={100}
+                height={100}
+                sizes="(max-width: 768px) 100vw, 70vh"
+                priority
+                alt="Digital artwork of Obito from Naruto Piece 2"
+                loading="eager"
+              // srcSet="
+              //   /vijayathiraj/assets/Obito-Piece-2-480w.webp 480w,
+              //   /vijayathiraj/assets/Obito-Piece-2-768w.webp 768w,
+              //   /vijayathiraj/assets/Obito-Piece-2-1280w.webp 1280w
+              // "
+              // sizes="(max-width: 768px) 100vw, 70vh"
+              />
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                visible: { opacity: 1, translateY: 0 },
+                hidden: { opacity: 0, translateY: 350 },
+              }}
+              style={{ translateY: slideDown }}
+            >
+              <Image
+                src="/images/hero/Obito-Piece-3.webp"
+                className="w-full max-h-[45vh] md:max-h-[60vh]"
+                width={100}
+                height={100}
+                sizes="(max-width: 768px) 100vw, 70vh"
+                priority
+                loading="eager"
+                alt="Digital artwork of Obito from Naruto Piece 3"
+              />
+            </motion.div>
+          </div>
+        </div>
       </div>
-      {/* <Samplepage/> */}
-    </section>
+    </div>
   );
-};
-
-export default Heropage;
+}

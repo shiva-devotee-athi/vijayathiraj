@@ -1,5 +1,6 @@
-import { motion, useScroll, useSpring, useTransform, type Variants } from "framer-motion";
-import { useRef } from "react";
+'use client';
+import { motion, useScroll, useSpring, useTransform, AnimatePresence, type Variants } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { socialIcons } from "@/data/navigation";
 import Image from "next/image";
@@ -7,6 +8,38 @@ import Image from "next/image";
 export default function NewHeroPage() {
   const ref = useRef(null);
   const { t } = useTranslation();
+
+  const images = [
+    "/images/hero/Obito-Piece-94.webp",
+    "/images/hero/Obito-Piece-74.webp",
+    "/images/hero/Obito-Piece-64.webp",
+    "/images/hero/Obito-Piece-84.webp",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  // Carousel Logic: 5-second interval with pause capability
+  useEffect(() => {
+    if (isPaused) return;
+
+    const duration = 10000; // 10 seconds
+    const intervalTime = 100; // Update every 50ms for smooth progress
+    const step = (intervalTime / duration) * 100;
+
+    const timer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+          return 0;
+        }
+        return prev + step;
+      });
+    }, intervalTime);
+
+    return () => clearInterval(timer);
+  }, [isPaused, images.length]);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -20,9 +53,7 @@ export default function NewHeroPage() {
     mass: 0.8,
   });
 
-  // const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  // const textY = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
-  // const fontSize = useTransform(scrollYProgress, [0, 1], ["6em", "3.5em"]);
+  // Parallax effects
   const slideUP = useTransform(smoothProgress, [0, 1], ["0%", "-150%"]);
   const slideDown = useTransform(smoothProgress, [0, 1], ["0%", "150%"]);
 
@@ -50,7 +81,8 @@ export default function NewHeroPage() {
       className="w-full overflow-hidden relative grid place-items-center container h-[100svh] min-h-[530px] "
       style={{ height: "calc(100vh - 70px)" }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full items-center">
+        {/* Mobile Title Section */}
         <div className="justify-between order-2 md:order-1 items-center flex md:hidden">
           <div className="flex flex-col justify-center items-center w-full">
             <motion.h1
@@ -89,6 +121,7 @@ export default function NewHeroPage() {
           </div>
         </div>
 
+        {/* Desktop Title Section */}
         <div className="max-md:pb-10 order-2 md:order-1 justify-between items-center max-md:flex-col hidden md:flex">
           <div className="max-md:grow max-md:flex flex-col justify-center items-start me-auto max-w-[544px]">
             <motion.h1
@@ -147,84 +180,41 @@ export default function NewHeroPage() {
           </div>
         </div>
 
-        <div className="w-full order-1 md:order-2 justify-center flex">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              visible: { opacity: 1, translateY: 0 },
-              hidden: { opacity: 0, translateY: -350 },
-            }}
-            style={{ translateY: slideUP }}
+        {/* Framer Motion Carousel Section */}
+        <div className="w-full order-1 md:order-2 justify-center flex items-center relative py-10">
+          <div
+            className="w-full relative h-[45vh] md:h-[60vh] cursor-pointer"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
           >
-            <Image
-              src="/images/hero/Obito-Piece-1.webp"
-              className="w-full max-h-[45vh] md:max-h-[60vh]"
-              width={100}
-              height={100}
-              sizes="(max-width: 768px) 100vw, 70vh"
-              priority
-              loading="eager"
-              alt="Digital artwork of Obito from Naruto Piece 1"
-            />
-          </motion.div>
-          <div className="flex flex-row items-end pb-8">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 15,
-                duration: 0.5,
-              }}
-              variants={{
-                visible: { opacity: 1, translateX: 0 },
-                hidden: { opacity: 0, translateX: -10 },
-              }}
-            >
-              <Image
-                src="/images/hero/Obito-Piece-2.webp"
-                className="w-full h-[55vh] md:h-[70vh] object-cover"
-                width={100}
-                height={100}
-                sizes="(max-width: 768px) 100vw, 70vh"
-                priority
-                alt="Digital artwork of Obito from Naruto Piece 2"
-                loading="eager"
-              // srcSet="
-              //   /vijayathiraj/assets/Obito-Piece-2-480w.webp 480w,
-              //   /vijayathiraj/assets/Obito-Piece-2-768w.webp 768w,
-              //   /vijayathiraj/assets/Obito-Piece-2-1280w.webp 1280w
-              // "
-              // sizes="(max-width: 768px) 100vw, 70vh"
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="w-full h-full relative"
+              >
+                <Image
+                  src={images[currentIndex]}
+                  alt={`Hero Piece ${currentIndex + 1}`}
+                  fill
+                  className="object-contain"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Custom Progress Bar */}
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[40%] h-[3px] bg-white/10 rounded-full overflow-hidden z-10">
+              <motion.div
+                className="h-full bg-amber-700 dark:bg-amber-500 rounded-full"
+                animate={{ width: `${progress}%` }}
+                transition={{ duration: 0.1, ease: "linear" }}
               />
-            </motion.div>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                visible: { opacity: 1, translateY: 0 },
-                hidden: { opacity: 0, translateY: 350 },
-              }}
-              style={{ translateY: slideDown }}
-            >
-              <Image
-                src="/images/hero/Obito-Piece-3.webp"
-                className="w-full max-h-[45vh] md:max-h-[60vh]"
-                width={100}
-                height={100}
-                sizes="(max-width: 768px) 100vw, 70vh"
-                priority
-                loading="eager"
-                alt="Digital artwork of Obito from Naruto Piece 3"
-              />
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
