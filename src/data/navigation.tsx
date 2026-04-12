@@ -41,21 +41,18 @@ export const socialIcons = [
     href: "https://www.instagram.com/shiva_devotee_athi",
     icon: <SiInstagram />,
     ariaLabel: "Instagram Profile",
-
     color: "#E4405F", // Instagram Pink
   },
   {
     href: "https://github.com/shiva-devotee-athi",
     icon: <SiGithub />,
     ariaLabel: "Github Profile",
-
     color: "#000000", // GitHub Black
   },
   {
     href: "https://www.linkedin.com/mwlite/in/vijayathiraj-s-519966210",
     icon: <FaLinkedinIn />,
     ariaLabel: "Linkedin Profile",
-
     color: "#000000", // GitHub Black
   },
   {

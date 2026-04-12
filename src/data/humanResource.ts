@@ -49,7 +49,7 @@ export const personalInfo = [
   { title: "Current Location", value: "Guindy, Chennai" },
   { title: "Native Location", value: "Srivilliputtur, Virudhunagar" },
   { title: "Current CTC", value: "4.44 LPA" },
-  { title: "Expected CTC", value: "above 7 LPA" },
+  { title: "Expected CTC", value: "above 9 LPA" },
   { title: "Languages", value: "English, Tamil" },
 ];
 export const skillTags = [

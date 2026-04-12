@@ -142,7 +142,7 @@ export const educationInstidutionGallery = [
   },
 ];
 
-export const marqueeSkills = [
+export const marqueeHeadlines = [
   "FULL STACK DEVELOPMENT",
   "NEST.JS & NODE.JS BACKEND",
   "REACT & NEXT.JS EXPERT",
