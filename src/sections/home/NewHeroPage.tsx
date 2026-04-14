@@ -208,7 +208,7 @@ export default function NewHeroPage() {
             </AnimatePresence>
 
             {/* Custom Progress Bar */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[40%] h-[3px] bg-white/10 rounded-full overflow-hidden z-10">
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[40%] h-[3px] bg-gray-300 dark:bg-gray-800 rounded-full overflow-hidden z-10">
               <motion.div
                 className="h-full bg-amber-700 dark:bg-amber-500 rounded-full"
                 animate={{ width: `${progress}%` }}

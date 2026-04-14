@@ -238,7 +238,7 @@ const Aboutpage: React.FC = () => {
             <div className="mt-6 flex flex-wrap gap-2 md:gap-4">
               <motion.a
                 aria-label="Download CV"
-                href="https://drive.google.com/file/d/1hpvqEdq3Ejxzef_-dRG6WIS_jYTz48ks/view?usp=sharing"
+                href="/docs/vijayathiraj-resume.pdf"
                 target="_blank"
                 download={true}
                 className="btn-main bg-btn2 lnk py-3 px-6 rounded-md"

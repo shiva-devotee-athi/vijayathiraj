@@ -1,4 +1,3 @@
-
 export const TOTAL_YEARS_OF_EXPERIENCE = 4.1;
 
 export const educationDetails = [
@@ -225,7 +224,7 @@ export const projects = [
     type: "Office",
     title: "RECRUBOT: AI VIDEO ASSESSMENT & JOB PLATFORM",
     description:
-      "<p>Engineered an end-to-end recruitment platform featuring automated video assessments. I developed the infrastructure to capture user video, store it securely in **AWS S3**, and trigger transcription services to generate candidate reports. I handled the entire lifecycle from development to deployment on **AWS EC2**, implementing strict Role-Based Access Control (RBAC) for complex hiring workflows.</p>",
+      "<p>Engineered an end-to-end recruitment platform featuring automated video assessments. I developed the infrastructure to capture user video, store it securely in AWS S3, and trigger transcription services to generate candidate reports. I handled the entire lifecycle from development to deployment on AWS EC2, implementing strict Role-Based Access Control (RBAC) for complex hiring workflows.</p>",
     src: "/images/project/proj-17.webp",
     link: "https://your-link.com",
     color: "#E91E63",
@@ -237,14 +236,14 @@ export const projects = [
       "Video Processing",
       "Transcription API",
       "RBAC",
-      "Structured Reporting"
+      "Structured Reporting",
     ],
   },
   {
     type: "Office",
     title: "DBGENIE: CROSS-PLATFORM RECRUITMENT DATA HUB",
     description:
-      "<p>A massive multi-platform project comprising an **Electron desktop app**, a **React 19 Admin portal**, and a **Node.js/Express** backend. I built a sophisticated Boolean Search engine to parse and retrieve resumes in seconds. The system features AI-driven resume gathering using **LangChain and Hugging Face**, allowing recruiters to automate talent pool creation directly from their desktops.</p>",
+      "<p>A massive multi-platform project comprising an Electron desktop app, a React 19 Admin portal, and a Node.js/Express backend. I built a sophisticated Boolean Search engine to parse and retrieve resumes in seconds. The system features AI-driven resume gathering using LangChain and Hugging Face, allowing recruiters to automate talent pool creation directly from their desktops.</p>",
     src: "/images/project/proj-13.webp",
     link: "https://infoaptotech.com/dbgenie",
     color: "#673AB7",
@@ -256,14 +255,14 @@ export const projects = [
       "MongoDB/Mongoose",
       "LangChain/OpenAI",
       "Elasticsearch",
-      "Vite"
+      "Vite",
     ],
   },
   {
     type: "Office",
     title: "AI-INTEGRATED TASK MANAGEMENT SYSTEM",
     description:
-      "<p>Developed a hierarchy-based productivity suite designed for high-performance teams. I integrated **OpenAI** to provide automated performance insights and progress tracking. The backend was built with **NestJS** and **Sequelize**, featuring complex data relations to handle multi-level task assignments and real-time team collaboration.</p>",
+      "<p>Developed a hierarchy-based productivity suite designed for high-performance teams. I integrated OpenAI to provide automated performance insights and progress tracking. The backend was built with NestJS and Sequelize, featuring complex data relations to handle multi-level task assignments and real-time team collaboration.</p>",
     src: "/images/project/proj-16.webp",
     link: "https://your-link.com",
     color: "#00BCD4",
@@ -275,14 +274,14 @@ export const projects = [
       "OpenAI API",
       "Team Hierarchy Logic",
       "Winston Logging",
-      "Socket.io"
+      "Socket.io",
     ],
   },
   {
     type: "Office",
     title: "REPPLYD: TRANSPARENT INTERVIEW FEEDBACK NETWORK",
     description:
-      "<p>Built a community platform focused on interview transparency. I developed a feedback engine that connects candidates with company insights, allowing for honest ratings and suggested improvements. I automated the deployment process using **Custom Shell Commands**, ensuring a fast and reliable CI/CD pipeline for the **NestJS** and **Next.js** environment.</p>",
+      "<p>Built a community platform focused on interview transparency. I developed a feedback engine that connects candidates with company insights, allowing for honest ratings and suggested improvements. I automated the deployment process using Custom Shell Commands, ensuring a fast and reliable CI/CD pipeline for the NestJS and Next.js environment.</p>",
     src: "/images/project/proj-18.webp",
     link: "https://repplyd.com",
     color: "#FF5722",
@@ -294,14 +293,14 @@ export const projects = [
       "SendGrid",
       "Shell Scripting",
       "AWS S3",
-      "Social Sign-in"
+      "Social Sign-in",
     ],
   },
   {
     type: "Office",
     title: "SENDHOPECARDS: DIGITAL GREETING ECOSYSTEM",
     description:
-      "<p>Architected the backend infrastructure and deployment procedures for a digital greeting card platform. I implemented a secure payment gateway using **Razorpay** and automated email delivery systems via **SendGrid**. The entire backend was **Dockerized** to ensure environment consistency and scalable deployment across cloud providers.</p>",
+      "<p>Architected the backend infrastructure and deployment procedures for a digital greeting card platform. I implemented a secure payment gateway using Razorpay and automated email delivery systems via SendGrid. The entire backend was Dockerized to ensure environment consistency and scalable deployment across cloud providers.</p>",
     src: "/images/project/proj-15.webp",
     link: "https://sendhopecards.com",
     color: "#3F51B5",
@@ -313,7 +312,7 @@ export const projects = [
       "SendGrid",
       "Handlebars (Templating)",
       "AWS S3",
-      "Schedule Jobs"
+      "Schedule Jobs",
     ],
   },
   {
@@ -339,7 +338,7 @@ export const projects = [
     type: "Office",
     title: "WHATSAPP AUTOMATION & CAMPAIGN MANAGER",
     description:
-      "<p>Developed a high-performance messaging platform similar to Whatomate. I engineered the UI for dynamic template creation, bulk campaign scheduling, and real-time message tracking. Leveraging **React 19** and **Tailwind CSS v4**, I implemented a highly responsive chat interface with webhook integration, allowing businesses to manage thousands of contacts and automated flows with ease.</p>",
+      "<p>Developed a high-performance messaging platform similar to Whatomate. I engineered the UI for dynamic template creation, bulk campaign scheduling, and real-time message tracking. Leveraging React 19 and Tailwind CSS v4, I implemented a highly responsive chat interface with webhook integration, allowing businesses to manage thousands of contacts and automated flows with ease.</p>",
     src: "/images/project/proj-12.webp",
     link: "https://your-link.com",
     color: "#25D366",
@@ -358,7 +357,7 @@ export const projects = [
     type: "Office",
     title: "RECRUITER HUB: INTERACTIVE Q&A COMMUNITY",
     description:
-      "<p>Architected the frontend for a specialized social platform for recruitment professionals. Built using **Vite and TypeScript**, the platform features a Stack Overflow-style Q&A engine, threaded discussions, and user-generated content handling. I focused on optimized performance and a clean, 'Recruiter-first' UI that facilitates professional knowledge sharing and community growth.</p>",
+      "<p>Architected the frontend for a specialized social platform for recruitment professionals. Built using Vite and TypeScript, the platform features a Stack Overflow-style Q&A engine, threaded discussions, and user-generated content handling. I focused on optimized performance and a clean, 'Recruiter-first' UI that facilitates professional knowledge sharing and community growth.</p>",
     src: "/images/project/proj-13.webp",
     link: "https://your-link.com",
     color: "#3178C6",
@@ -395,7 +394,7 @@ export const projects = [
     type: "Office",
     title: "INFOAPTO TECHNOLOGIES CORPORATE SITE",
     description:
-      "<p>Developed the official corporate identity website for Infoapto Technologies. This project was focused on high-end visual storytelling, utilizing **Framer Motion** for smooth scroll animations and interactive UI components. The site is fully optimized for SEO and lightning-fast performance across all modern browsers.</p>",
+      "<p>Developed the official corporate identity website for Infoapto Technologies. This project was focused on high-end visual storytelling, utilizing Framer Motion for smooth scroll animations and interactive UI components. The site is fully optimized for SEO and lightning-fast performance across all modern browsers.</p>",
     src: "/images/project/proj-14.webp",
     link: "https://infoapto.com",
     color: "#FFD700",
@@ -569,32 +568,37 @@ export const books = [
   },
 ];
 
-
 export const workExperience = [
   {
     company: "Wherever the wind takes me...",
     role: "AI & Machine Learning Aspirant",
     duration: "Future",
-    description: "I am currently exploring the exciting field of Artificial Intelligence and Machine Learning. My focus is on understanding core concepts, working with relevant technologies, and building projects that leverage AI to solve real-world problems. I am passionate about learning and growing in this domain, and I am excited about the future possibilities that AI offers.",
+    description:
+      "I am currently exploring the exciting field of Artificial Intelligence and Machine Learning. My focus is on understanding core concepts, working with relevant technologies, and building projects that leverage AI to solve real-world problems. I am passionate about learning and growing in this domain, and I am excited about the future possibilities that AI offers.",
     experience: null,
   },
   {
     company: "Infoapto Technologies",
     role: "Full Stack Developer",
     duration: "SEP 2023 - Present",
-    description: "Joining InfoApto Technologies as a Frontend Developer was an exhilarating step forward in my professional journey. Here, I embraced the opportunity to work with an array of cutting-edge technologies, including Electron, React Native for mobile applications, Next.js, and React with TypeScript, and the backend with Node.js and Express database with MongoDB, Postgres, and Redis and deployment on AWS EC2. And also learn Docker, CI/CD pipelines, developer unit testing, and also learn about the software development life cycle (SDLC). This diverse tech stack allowed me to not only craft sophisticated and user-friendly interfaces but also develop cross-platform applications that deliver exceptional user experiences. My role at InfoApto Technologies extended beyond development. I gained invaluable knowledge about deploying applications on AWS, managing SSL configurations, and ensuring the highest standards of security and performance. This holistic experience not only enhanced my technical skills but also broadened my understanding of the end-to-end development lifecycle. Working with a dynamic and innovative team at InfoApto Technologies has been a remarkable journey. It has enriched my expertise, fueled my passion for frontend development, and set me on a path of continuous learning and growth. This experience has been instrumental in propelling my career to new heights and expanding my horizons in the world of web and mobile application development.",
+    description:
+      "Joining InfoApto Technologies as a Frontend Developer was an exhilarating step forward in my professional journey. Here, I embraced the opportunity to work with an array of cutting-edge technologies, including Electron, React Native for mobile applications, Next.js, and React with TypeScript, and the backend with Node.js and Express database with MongoDB, Postgres, and Redis and deployment on AWS EC2. And also learn Docker, CI/CD pipelines, developer unit testing, and also learn about the software development life cycle (SDLC). This diverse tech stack allowed me to not only craft sophisticated and user-friendly interfaces but also develop cross-platform applications that deliver exceptional user experiences. My role at InfoApto Technologies extended beyond development. I gained invaluable knowledge about deploying applications on AWS, managing SSL configurations, and ensuring the highest standards of security and performance. This holistic experience not only enhanced my technical skills but also broadened my understanding of the end-to-end development lifecycle. Working with a dynamic and innovative team at InfoApto Technologies has been a remarkable journey. It has enriched my expertise, fueled my passion for frontend development, and set me on a path of continuous learning and growth. This experience has been instrumental in propelling my career to new heights and expanding my horizons in the world of web and mobile application development.",
     experience: "2 years 8 months",
-  },{
-    company:"RAMSOL PVT LTD",
-    role:"Consultant Front-end Dev",
-    duration:"FEB 2023 - AUG 2023",
-    description: "Joining Ramsol Private Ltd as a Frontend Developer marked the next exciting chapter in my career. In this role, I took on the responsibility of crafting engaging and user-friendly interfaces for web applications. Working with cutting-edge frontend technologies, I had the privilege of contributing to projects that aimed to deliver exceptional user experiences. My time at Ramsol Private Ltd further deepened my frontend development skills and allowed me to collaborate with a dynamic team dedicated to innovation. It has been a valuable experience that has expanded my horizons and propelled my career in web development to new heights.",
+  },
+  {
+    company: "RAMSOL PVT LTD",
+    role: "Consultant Front-end Dev",
+    duration: "FEB 2023 - AUG 2023",
+    description:
+      "Joining Ramsol Private Ltd as a Frontend Developer marked the next exciting chapter in my career. In this role, I took on the responsibility of crafting engaging and user-friendly interfaces for web applications. Working with cutting-edge frontend technologies, I had the privilege of contributing to projects that aimed to deliver exceptional user experiences. My time at Ramsol Private Ltd further deepened my frontend development skills and allowed me to collaborate with a dynamic team dedicated to innovation. It has been a valuable experience that has expanded my horizons and propelled my career in web development to new heights.",
     experience: "7 months",
-  },{
-    company:"Azure Soft Tech Solutions",
-    role:"Software Associate",
-    duration:"JUL 2022 - JAN 2023",
-    description: "During my tenure at Azure Soft Tech Solutions, I served as a Software Associate, contributing to the development of various software solutions. This experience allowed me to apply my skills and knowledge in practical settings, working on diverse projects that enriched my understanding of software development processes and technologies. I collaborated closely with a talented team, gaining valuable insights into problem-solving, coding best practices, and project management. My time at Azure Softtech Solutions was instrumental in shaping my career and providing a strong foundation for my future endeavors.",
+  },
+  {
+    company: "Azure Soft Tech Solutions",
+    role: "Software Associate",
+    duration: "JUL 2022 - JAN 2023",
+    description:
+      "During my tenure at Azure Soft Tech Solutions, I served as a Software Associate, contributing to the development of various software solutions. This experience allowed me to apply my skills and knowledge in practical settings, working on diverse projects that enriched my understanding of software development processes and technologies. I collaborated closely with a talented team, gaining valuable insights into problem-solving, coding best practices, and project management. My time at Azure Softtech Solutions was instrumental in shaping my career and providing a strong foundation for my future endeavors.",
     experience: "8 months",
-  }
-]
+  },
+];
