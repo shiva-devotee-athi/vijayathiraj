@@ -51,7 +51,7 @@ export const personalInfo = [
   { title: "Mobile", value: "8870762077" },
   { title: "Gender", value: "Male" },
   { title: "Birthday", value: "2 June, 2000" },
-  { title: "Total Experience", value: "4.1 Years" },
+  { title: "Total Experience", value: "3.75 Years" },
   { title: "Current Location", value: "Guindy, Chennai" },
   { title: "Native Location", value: "Srivilliputtur, Virudhunagar" },
   { title: "Current CTC", value: "4.44 LPA" },
