@@ -87,7 +87,7 @@ const Aboutpage: React.FC = () => {
                 viewport={{ once: true, amount: 0.3 }}
               >
                 {t(
-                  "I am a Full Stack Developer with 4.1 years of professional experience in building scalable, high-performance web applications. My foundation is built on Logical Reasoning and Mathematics, which I translate into clean, efficient code across the entire MERN and NestJS ecosystem.",
+                  "I am a Full Stack Developer with 3.8 years of professional experience in building scalable, high-performance web applications. My foundation is built on Logical Reasoning and Mathematics, which I translate into clean, efficient code across the entire MERN and NestJS ecosystem.",
                 )}
               </motion.p>
               <motion.p

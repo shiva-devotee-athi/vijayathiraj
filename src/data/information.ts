@@ -1,4 +1,4 @@
-export const TOTAL_YEARS_OF_EXPERIENCE = 3.75;
+export const TOTAL_YEARS_OF_EXPERIENCE = 3.8;
 
 export const educationDetails = [
   {
