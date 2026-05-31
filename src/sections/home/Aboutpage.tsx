@@ -2,7 +2,7 @@ import React from "react";
 import { motion, type Variants } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import { TOTAL_YEARS_OF_EXPERIENCE } from "@/data/information";
+import { getTotalExperience } from "@/data/humanResource";
 
 const slideUpAndFade: Variants = {
   hidden: { opacity: 0, y: 50 },
@@ -86,9 +86,9 @@ const Aboutpage: React.FC = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
               >
-                {t(
-                  "I am a Full Stack Developer with 3.8 years of professional experience in building scalable, high-performance web applications. My foundation is built on Logical Reasoning and Mathematics, which I translate into clean, efficient code across the entire MERN and NestJS ecosystem.",
-                )}
+                {
+                  `I am a Full Stack Developer with ${getTotalExperience().decimal} years of professional experience in building scalable, high-performance web applications. My foundation is built on Logical Reasoning and Mathematics, which I translate into clean, efficient code across the entire MERN and NestJS ecosystem.`
+                }
               </motion.p>
               <motion.p
                 className="text-gray-600 dark:text-white/45  mt-2"
@@ -227,7 +227,7 @@ const Aboutpage: React.FC = () => {
               viewport={{ once: true, amount: 0.3 }}
             >
               <div className="text-4xl font-bold text-green-600 dark:text-green-500">
-                {TOTAL_YEARS_OF_EXPERIENCE}
+                {getTotalExperience().decimal}
               </div>
               <span className="text-gray-600 dark:text-gray-300">
                 {t("Years Experience")}
@@ -264,7 +264,7 @@ const Aboutpage: React.FC = () => {
                   target="_blank"
                   className="btn-main bg-btn4 lnk py-3 px-6 rounded-md"
                 >
-                  {t("For HRs")}
+                  {"Recruiter Hub"}
                   <i className="fas fa-chevron-right fa-icon"></i>
                   <span className="circle"></span>
                 </Link>

@@ -70,7 +70,7 @@ export const MenuItem: React.FC<{ title: string; href: string }> = ({
           )}
         </div>
 
-        <div className="text-placeholder dark:text-white/80 leading-4.5">
+        <div className="text-placeholder text-left text-black/80 dark:text-white/80 leading-4.5">
           {t(title)}
         </div>
       </button>

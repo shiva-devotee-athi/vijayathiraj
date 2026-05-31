@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
           </a>
           <a
             aria-label="Linkedin Profile"
-            href="https://www.linkedin.com/mwlite/in/vijayathiraj-s-519966210"
+            href="https://www.linkedin.com/in/vijayathiraj"
             className="text-gray-400 hover:text-gray-500"
             target="_blank"
             rel="noopener noreferrer"

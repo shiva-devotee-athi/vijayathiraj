@@ -39,7 +39,7 @@ const Projectpage: React.FC = () => {
     //   : swiper.params.slidesPerView;
     setSlidesPerView(swiper.params.slidesPerView);
   };
-  const totalBullets = Math.ceil(projects.filter((item) => item.type === "Office").slice(0, 6).length / slidesPerView);
+  const totalBullets = Math.ceil(projects.filter((item) => item.type === "Professional").slice(0, 6).length / slidesPerView);
 
   return (
     <section
@@ -114,7 +114,7 @@ const Projectpage: React.FC = () => {
             }}
             onSwiper={(swiper) => setSwiperPage(swiper)}
           >
-            {projects.filter((item) => item.type === "Office").slice(0, 6).map((item, index) => (
+            {projects.filter((item) => item.type === "Professional").slice(0, 6).map((item, index) => (
               <SwiperSlide key={index}>
                 <article className="w-full h-full bg-transparent hover:bg-white dark:hover:bg-[#1d1e22] rounded-lg hover:shadow-lg overflow-hidden">
                   <div>
@@ -138,10 +138,10 @@ const Projectpage: React.FC = () => {
                         {item.type === "Personal" && (
                           <FaGithub className="me-1" />
                         )}
-                        {item.type === "Office" && (
+                        {item.type === "Professional" && (
                           <FaBuilding className="me-1" />
                         )}
-                        {item.type === "Personal" ? t("Personal") : t("Office")}
+                        {item.type === "Personal" ? t("Personal") : t("Professional")}
                       </button>
                     </span>
                     <div

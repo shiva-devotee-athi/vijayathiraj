@@ -58,14 +58,14 @@ export const myskills = [
         title: "Next.js",
         icon: <SiNextdotjs className="size-4 text-[#000000]" />,
       },
-      {
-        title: "React Native*",
-        icon: <SiReact className="size-4 text-[#61DAFB]" />,
-      },
-      {
-        title: "Electron.js*",
-        icon: <SiElectron className="size-4 text-[#47848F]" />,
-      },
+      // {
+      //   title: "React Native*",
+      //   icon: <SiReact className="size-4 text-[#61DAFB]" />,
+      // },
+      // {
+      //   title: "Electron.js*",
+      //   icon: <SiElectron className="size-4 text-[#47848F]" />,
+      // },
       { title: "Redux", icon: <SiRedux className="size-4 text-[#764ABC]" /> },
       {
         title: "Tailwind CSS",
@@ -141,7 +141,7 @@ export const myskills = [
         icon: <SiPostman className="size-4 text-[#FF6C37]" />,
       },
       { title: "Cpanel", icon: <SiCpanel className="size-4 text-[#FF6C2C]" /> },
-      { title: "Render", icon: <SiRender className="size-4 text-[#000000]" /> },
+      // { title: "Render", icon: <SiRender className="size-4 text-[#000000]" /> },
       {
         title: "Apache Config",
         icon: <SiApache className="size-4 text-[#D22128]" />,

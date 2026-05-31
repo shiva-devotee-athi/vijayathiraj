@@ -3,6 +3,8 @@ import "@/styles/scss/auth.scss";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { workExperience } from "@/data/information";
+import { format } from "date-fns";
+import { getExperienceDuration } from "@/data/humanResource";
 
 const Experience: React.FC = () => {
   const { t } = useTranslation();
@@ -31,11 +33,11 @@ const Experience: React.FC = () => {
             <h4 className="text-left font-medium text-gray-900 text-sm dark:text-zinc-300">
               {workExperience[0].role}
             </h4>
-            <h5 className="text-left font-normal text-sm text-gray-900 text-base dark:text-zinc-300">
-              {workExperience[0].duration}
+            <h5 className="text-left font-normal text-sm text-gray-900 dark:text-zinc-300">
+              Future
+              {/* {`${format(workExperience[0].from, "MMM yyyy")} - ${format(workExperience[0].to, "MMM yyyy")}`} */}
             </h5>
-            <h6 className="text-left font-normal text-sm text-gray-900 text-base dark:text-zinc-300">
-              {workExperience[0].experience}
+            <h6 className="text-left font-normal text-sm text-gray-900 dark:text-zinc-300">
             </h6>
             <p className="text-justify text-zinc-700 dark:text-zinc-400">
               {workExperience[0].description}
@@ -64,11 +66,11 @@ const Experience: React.FC = () => {
             <h4 className="text-right font-medium text-gray-900 text-sm dark:text-zinc-300">
               {workExperience[1].role}
             </h4>
-            <h5 className="text-right font-normal text-sm text-gray-900 text-base dark:text-zinc-300">
-              {workExperience[1].duration}
+            <h5 className="text-right font-normal text-sm text-gray-900 dark:text-zinc-300">
+              {`${format(workExperience[1].from, "MMM yyyy")} - ${format(workExperience[1].to, "MMM yyyy")}`}
             </h5>
-            <h6 className="text-right font-normal text-sm text-gray-900 text-base dark:text-zinc-300">
-              {workExperience[1].experience}
+            <h6 className="text-right font-normal text-sm text-gray-900 dark:text-zinc-300">
+               {getExperienceDuration(workExperience[1].from, workExperience[1].to)}
             </h6>
             <p className="text-justify text-zinc-700 dark:text-zinc-400">
               {workExperience[1].description}
@@ -97,16 +99,14 @@ const Experience: React.FC = () => {
             <h4 className="text-left font-medium text-gray-900 text-sm dark:text-zinc-300">
               {workExperience[2].role}
             </h4>
-            <h5 className="text-left font-normal text-sm text-gray-900 text-base dark:text-zinc-300">
-              {workExperience[2].duration}
+            <h5 className="text-left font-normal text-sm text-gray-900 dark:text-zinc-300">
+              {`${format(workExperience[2].from, "MMM yyyy")} - ${format(workExperience[2].to, "MMM yyyy")}`}
             </h5>
-            <h6 className="text-left font-normal text-sm text-gray-900 text-base dark:text-zinc-300">
-              {workExperience[2].experience}
+            <h6 className="text-left font-normal text-sm text-gray-900 dark:text-zinc-300">
+              {getExperienceDuration(workExperience[2].from, workExperience[2].to)}
             </h6>
             <p className="text-justify text-zinc-700 dark:text-zinc-400">
-              {
-                workExperience[2].description
-              }
+              {workExperience[2].description}
             </p>
           </div>
         </motion.div>
@@ -132,11 +132,11 @@ const Experience: React.FC = () => {
             <h4 className="text-right font-medium text-gray-900 text-base dark:text-zinc-300">
               {workExperience[3].role}
             </h4>
-            <h5 className="text-right font-normal text-sm text-gray-900 text-base dark:text-zinc-300">
-              {workExperience[3].duration}
+            <h5 className="text-right font-normal text-sm text-gray-900 dark:text-zinc-300">
+              {`${format(workExperience[3].from, "MMM yyyy")} - ${format(workExperience[3].to, "MMM yyyy")}`}
             </h5>
-            <h6 className="text-right font-normal text-sm text-gray-900 text-base dark:text-zinc-300">
-              {workExperience[3].experience}
+            <h6 className="text-right font-normal text-sm text-gray-900 dark:text-zinc-300">
+              {getExperienceDuration(workExperience[3].from, workExperience[3].to)}
             </h6>
             <p className="text-justify text-base text-zinc-700 dark:text-zinc-400">
               {workExperience[3].description}

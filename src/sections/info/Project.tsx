@@ -65,12 +65,12 @@ const Project: React.FC = () => {
             {/* Vertical line */}
             {/* <StickyScroll content={content} /> */}
 
-            <TabsProvider defaultValue="Office" wobbly>
+            <TabsProvider defaultValue="Professional" wobbly>
               <div className="flex justify-center mb-10">
                 <div className="flex items-center w-fit dark:bg-[#1d2025] dark:text-gray-400 bg-gray-200 p-1 text-black rounded-md border dark:border-zinc-800">
-                  <TabsBtn value="Office">
+                  <TabsBtn value="Professional">
                     <span className="relative z-[2] uppercase text-sm sm:text-base font-semibold px-2">
-                      {t("Office Project")}
+                      {t("Professional Project")}
                     </span>
                   </TabsBtn>
                   <TabsBtn value="Personal">
@@ -82,8 +82,8 @@ const Project: React.FC = () => {
               </div>
 
               <div className="w-full">
-                <TabsContent value="Office" className="p-0">
-                  <StackCard type="Office" />
+                <TabsContent value="Professional" className="p-0">
+                  <StackCard type="Professional" />
                 </TabsContent>
                 <TabsContent value="Personal" className="p-0">
                   <StackCard type="Personal" />

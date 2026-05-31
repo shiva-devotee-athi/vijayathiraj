@@ -50,7 +50,7 @@ export const socialIcons = [
     color: "#000000", // GitHub Black
   },
   {
-    href: "https://www.linkedin.com/mwlite/in/vijayathiraj-s-519966210",
+    href: "https://www.linkedin.com/in/vijayathiraj",
     icon: <FaLinkedinIn />,
     ariaLabel: "Linkedin Profile",
     color: "#000000", // GitHub Black

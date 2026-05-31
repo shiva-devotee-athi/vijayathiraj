@@ -102,8 +102,8 @@ export const NewStackingCards: React.FC<CardProps> = ({
                     className="px-3 py-1 text-xs font-medium text-center inline-flex items-center text-blue-500 bg-blue-100 rounded-lg  focus:ring-0 focus:outline-none  dark:text-blue-100 dark:bg-blue-900"
                   >
                     {type === "Personal" && <FaGithub className="me-1" />}
-                    {type === "Office" && <FaBuilding className="me-1" />}
-                    {type === "Personal" ? t("Personal") : t("Office")}
+                    {type === "Professional" && <FaBuilding className="me-1" />}
+                    {type === "Personal" ? t("Personal") : t("Professional")}
                   </button>
                 </span>
                 <div dangerouslySetInnerHTML={{ __html: description }} className="mt-0 leading-relaxed text-sm text-justify text-black dark:text-slate-300 max-sm:text-justify">

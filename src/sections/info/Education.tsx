@@ -76,7 +76,7 @@ const Education: React.FC = () => {
               viewport={{ once: true, amount: 0.3 }}
             >
               {t(
-                "Hoarding happiness in my free time, I love diving into the world of cartoons and anime. You can often find me laughing along with the antics of Naruto, Shinchan, and Tom and Jerry. I also enjoy revisiting classics like Ben 10, Courage the Cowardly Dog, Ninja Hattori, Doraemon, and Oggy. These shows are my go-to for a dose of fun and nostalgia."
+                "My journey of learning has been a continuous adventure, shaping me into the professional I am today. Here's a look at my academic background and key milestones that have equipped me with the knowledge and skills to excel."
               )}
             </motion.p>
           </div>
@@ -140,15 +140,15 @@ const Education: React.FC = () => {
                           <tbody>
                             <tr className="bg-white border-b border-[#44202d] dark:border-zinc-900 text-xs">
                               <td className="px-1 text-left">Semester-1</td>
-                              <td className="px-1">25</td>
+                              <td className="px-1">-</td>
                             </tr>
                             <tr className="bg-white border-b border-[#44202d] dark:border-zinc-900">
                               <td className="px-1 text-left">Semester-2</td>
-                              <td className="px-1">30</td>
+                              <td className="px-1">6.92</td>
                             </tr>
                             <tr className="bg-white border-b border-[#44202d] dark:border-zinc-900">
                               <td className="px-1 text-left">Semester-3</td>
-                              <td className="px-1">40</td>
+                              <td className="px-1">6.72</td>
                             </tr>
                           </tbody>
                         </table>
@@ -157,7 +157,7 @@ const Education: React.FC = () => {
                   </span>
                 </dt>
                 <dd className="order-first text-5xl font-semibold tracking-tight text-white">
-                  6.72
+                  -
                 </dd>
               </div>
               <div className="flex flex-col gap-1 bg-white/5 p-8">
@@ -221,7 +221,7 @@ const Education: React.FC = () => {
               viewport={{ once: true, amount: 0.3 }}
             >
               {t(
-                "Hoarding happiness in my free time, I love diving into the world of cartoons and anime. You can often find me laughing along with the antics of Naruto, Shinchan, and Tom and Jerry. I also enjoy revisiting classics like Ben 10, Courage the Cowardly Dog, Ninja Hattori, Doraemon, and Oggy. These shows are my go-to for a dose of fun and nostalgia."
+                "My journey of learning has been a continuous adventure, shaping me into the professional I am today. Here's a look at my academic background and key milestones that have equipped me with the knowledge and skills to excel."
               )}
             </motion.p>
           </div>
