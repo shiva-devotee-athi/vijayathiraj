@@ -10,7 +10,7 @@ export const experience = [
     company: "Infoapto Technologies",
     role: "Full Stack Developer",
     from: new Date("Sep 2023"),
-    to: new Date(),
+    to: new Date("June 2026"),
   },
   {
     company: "RAMSOL PVT LTD",

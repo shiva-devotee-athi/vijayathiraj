@@ -588,7 +588,7 @@ export const workExperience = [
     description:
       "Joining InfoApto Technologies as a Frontend Developer was an exhilarating step forward in my professional journey. Here, I embraced the opportunity to work with an array of cutting-edge technologies, including Electron, React Native for mobile applications, Next.js, and React with TypeScript, and the backend with Node.js and Express database with MongoDB, Postgres, and Redis and deployment on AWS EC2. And also learn Docker, CI/CD pipelines, developer unit testing, and also learn about the software development life cycle (SDLC). This diverse tech stack allowed me to not only craft sophisticated and user-friendly interfaces but also develop cross-platform applications that deliver exceptional user experiences. My role at InfoApto Technologies extended beyond development. I gained invaluable knowledge about deploying applications on AWS, managing SSL configurations, and ensuring the highest standards of security and performance. This holistic experience not only enhanced my technical skills but also broadened my understanding of the end-to-end development lifecycle. Working with a dynamic and innovative team at InfoApto Technologies has been a remarkable journey. It has enriched my expertise, fueled my passion for frontend development, and set me on a path of continuous learning and growth. This experience has been instrumental in propelling my career to new heights and expanding my horizons in the world of web and mobile application development.",
     from: new Date("Sep 2023"),
-    to: new Date(),
+    to: new Date("June 2026"),
   },
   {
     company: "RAMSOL PVT LTD",
