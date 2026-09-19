@@ -1,24 +1,25 @@
 import { useEffect, useState } from "react";
 
-export const useDimensions = (ref:React.RefObject<HTMLDivElement>) => {
+export const useDimensions = (ref: React.RefObject<HTMLDivElement | null>) => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    if (ref.current) {
-      const handleResize = () => {
-        setDimensions({
-          width: ref.current?.offsetWidth || 0,
-          height: ref.current?.offsetHeight || 0
-        });
-      };
+    const element = ref.current;
 
-      handleResize();
+    if (!element) return;
+    const handleResize = () => {
+      setDimensions({
+        width: element.offsetWidth || 0,
+        height: element.offsetHeight || 0,
+      });
+    };
 
-      window.addEventListener('resize', handleResize);
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, [ref]);
 
   return dimensions;

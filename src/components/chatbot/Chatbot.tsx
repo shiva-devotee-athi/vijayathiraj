@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
 import BotMessage from "@/components/chatbot/ui/BotMessage";
 import UserMessage from "@/components/chatbot/ui/UserMessage";
@@ -30,12 +30,18 @@ export default function Chatbot() {
   const { t } = useTranslation();
   const [showChat, setShowChat] = useState(false);
   const [botMessages, setBotMessages] = useState<IBotmessage[]>(() => {
-    const savedMessages = typeof window !== "undefined" ? localStorage.getItem("chatMessages") : null;
+    const savedMessages =
+      typeof window !== "undefined"
+        ? localStorage.getItem("chatMessages")
+        : null;
     return savedMessages ? JSON.parse(savedMessages) : [];
   });
 
   useEffect(() => {
-    const savedMessages = typeof window !== "undefined" ? localStorage.getItem("chatMessages") : null;
+    const savedMessages =
+      typeof window !== "undefined"
+        ? localStorage.getItem("chatMessages")
+        : null;
     if (savedMessages) {
       setBotMessages(JSON.parse(savedMessages));
     }
@@ -86,7 +92,7 @@ export default function Chatbot() {
         return updatedMessages;
       });
 
-      const response = await axios.post("http://localhost:8000/chat/", {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}chat/`, {
         message: data.message,
       });
 
@@ -105,7 +111,7 @@ export default function Chatbot() {
             const updatedMessages = [...prev.slice(0, -1), botResponse];
             localStorage.setItem(
               "chatMessages",
-              JSON.stringify(updatedMessages)
+              JSON.stringify(updatedMessages),
             );
             return updatedMessages;
           });
@@ -121,8 +127,6 @@ export default function Chatbot() {
   const handleCustomMessage = async (message: string) => {
     try {
       const currentTime = new Date().toISOString();
-
-      // First, add the user's message
       const userMessage: IBotmessage = {
         user: {
           message,
@@ -130,46 +134,60 @@ export default function Chatbot() {
           status: "delivered",
         },
         bot: {
-          message:
-            "He Visitor,\n Sorry for the inconvenience.\n I've developed a chatbot using a custom-trained TensorFlow model and NLP methods, which performs well in my local environment. However, I've faced difficulties deploying it on free cloud services. I intend to deploy it on a dedicated cloud server (AWS, Google Cloud) or a local 24/7 server once I have the resources. I apologize for any inconvenience this may cause and appreciate your understanding.",
-          createdAt: currentTime,
-          status: "delivered",
+          message: "",
+          createdAt: "",
+          status: "",
         },
       };
 
-      setBotMessages((prev) => {
-        const updatedMessages = [...prev, userMessage];
-        localStorage.setItem("chatMessages", JSON.stringify(updatedMessages));
-        return updatedMessages;
-      });
+      // First, add the user's message
+      // const userMessage: IBotmessage = {
+      //   user: {
+      //     message,
+      //     createdAt: currentTime,
+      //     status: "delivered",
+      //   },
+      //   bot: {
+      //     message:
+      //       "He Visitor,\n Sorry for the inconvenience.\n I've developed a chatbot using a custom-trained TensorFlow model and NLP methods, which performs well in my local environment. However, I've faced difficulties deploying it on free cloud services. I intend to deploy it on a dedicated cloud server (AWS, Google Cloud) or a local 24/7 server once I have the resources. I apologize for any inconvenience this may cause and appreciate your understanding.",
+      //     createdAt: currentTime,
+      //     status: "delivered",
+      //   },
+      // };
 
-      // const response = await axios.post("http://localhost:8000/chat/", {
-      //   message,
+      // setBotMessages((prev) => {
+      //   const updatedMessages = [...prev, userMessage];
+      //   localStorage.setItem("chatMessages", JSON.stringify(updatedMessages));
+      //   return updatedMessages;
       // });
 
-      // if (response.status === 200) {
-      //   const botResponse: IBotmessage = {
-      //     ...userMessage,
-      //     bot: {
-      //       message: response.data.data.bot.message, // Ensure response structure
-      //       createdAt: new Date().toISOString(),
-      //       status: "delivered",
-      //     },
-      //   };
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}chat/`, {
+        message,
+      });
 
-      //   setTimeout(() => {
-      //     setBotMessages((prev) => {
-      //       const updatedMessages = [...prev.slice(0, -1), botResponse];
-      //       localStorage.setItem(
-      //         "chatMessages",
-      //         JSON.stringify(updatedMessages)
-      //       );
-      //       return updatedMessages;
-      //     });
-      //   }, 1000); // Delay to simulate bot response
+      if (response.status === 200) {
+        const botResponse: IBotmessage = {
+          ...userMessage,
+          bot: {
+            message: response.data.data.bot.message, // Ensure response structure
+            createdAt: new Date().toISOString(),
+            status: "delivered",
+          },
+        };
 
-      //   reset();
-      // }
+        setTimeout(() => {
+          setBotMessages((prev) => {
+            const updatedMessages = [...prev.slice(0, -1), botResponse];
+            localStorage.setItem(
+              "chatMessages",
+              JSON.stringify(updatedMessages),
+            );
+            return updatedMessages;
+          });
+        }, 1000); // Delay to simulate bot response
+
+        reset();
+      }
     } catch (error) {
       console.error(error);
     }
@@ -264,10 +282,10 @@ export default function Chatbot() {
                   placeholder="Type your message here"
                   className="flex h-12 w-full rounded-md dark:placeholder:text-gray-300/70 focus-within:outline-none px-3 text-sm text-black dark:text-gray-200"
                 />
-                <div className="flex gap-3 pe-2 text-gray-900 cursor-not-allowed disabled:text-gray-600 dark:text-gray-300">
+                <div className="flex gap-3 pe-2 text-gray-900 dark:text-gray-300">
                   <LuPaperclip className="w-5 h-5" />
 
-                  <button type="submit" disabled style={{ all: "unset" }}>
+                  <button type="submit" style={{ all: "unset" }}>
                     <IoSend className="w-5 h-5" />
                   </button>
                 </div>
